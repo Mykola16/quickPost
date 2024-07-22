@@ -1,0 +1,273 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 100px;
+}
+
+
+
+
+
+.login-container {
+    background-color: #EFEFEF;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 550px;
+    border: 3px solid black;
+
+}
+
+.login-container h2 {
+    margin-top: 50px;
+    margin-bottom: 35px;
+
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+
+
+    color: #2E2E2E;
+
+}
+
+
+
+
+
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+.social-login img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+
+
+
+/* або */
+.divider {
+
+
+    margin-top: 35px;
+
+
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+
+
+    color: #2E2E2E;
+
+
+}
+
+
+
+
+
+/* Увійти */
+/* Зареєструватись */
+#nav {
+
+    /* justify-content: center; */
+    margin-bottom: 35px;
+    margin-top: 35px;
+
+}
+
+#nav ul {
+    display: flex;
+	margin: 0;
+	padding: 0;
+    list-style: none;
+}
+
+ul{
+    margin: 0;
+	padding: 0;
+}
+
+/* #nav li {
+
+   margin-left: 97px;
+} */
+
+#nav a {
+    display: block;
+
+
+    text-decoration: none;
+    font-size: 24px;
+	font-weight: 550;
+    position: relative;
+}
+
+
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    background-color: #EFEFEF;
+
+
+}
+.dropdown-label {
+    margin-right: 10px;
+    background-color: #EFEFEF;
+}
+.dropdown-select {
+    border-left: 5px solid #2E2E2E;
+    border-right: 5px solid #2E2E2E;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 505px;
+    height: 40px;
+    background-color: #EFEFEF;
+    margin-left: 25px;
+
+    border-top: none;
+    border-bottom: none;
+}
+
+
+
+
+/* label, input email */
+/* labal, input password*/
+.login-form {
+    text-align: left;
+}
+
+.login-form label {
+    display: block;
+    font-size: 20px;
+	font-weight: 550;
+    margin-bottom: 15px;
+	margin-left: 25px;
+}
+
+
+.login-form input {
+    background-color: #EFEFEF;
+    width: 500px;
+    height: 40px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+	margin-left: 25px;
+}
+
+.login-form a {
+    display: block;
+    font-size: 20px;
+	font-weight: 300;
+    color: #2E2E2E;
+    text-decoration: none;
+    margin-bottom: 35px;
+	margin-left: 15px;
+}
+
+.login-form button {
+    width: 200px;
+    height: 50px;
+    background-color: #2E2E2E;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 24px;
+	font-weight: 550;
+    cursor: pointer;
+	margin-bottom: 50px;
+    margin-top: 35px;
+}
+
+.login-form button:hover {
+    background-color: #000000;
+}
+
+.login{
+	margin-left: 60px;
+	padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+
+.login a{
+	color: #A1A1A1;
+}
+
+.registr a{
+	padding-left: 10px;
+    padding-right: 10px;
+	color: #2E2E2E;
+}
+
+.login a:hover{
+	color: #2E2E2E;
+}
+
+.registr{
+	margin-left: 120px;
+	border-bottom: 3px solid black;
+
+}
+
+label {
+    color: #2E2E2E;
+}
+
+
+
+
+
+
+/* Під час входу ви погоджуєтесь з нашими  */
+.terms {
+	font-size: 20px;
+	font-weight: 300;
+    color: #2E2E2E;
+}
+
+/* .pass {
+    color: #2E2E2E;
+} */
+
+
+/* Умовами користування */
+.private {
+
+	margin-bottom: 50px;
+}
+
+.private a{
+	color: #2E2E2E;
+    text-decoration: none;
+	font-size: 20px;
+	font-weight: 550;
+}
+
+
+
+
+
+
+
+

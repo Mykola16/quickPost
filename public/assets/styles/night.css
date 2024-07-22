@@ -1,0 +1,107 @@
+body{
+	background-color: #2A2A2A;
+}
+
+.logo{
+
+	filter: invert(1) grayscale(1) brightness(2);
+}
+
+
+.day{
+	filter: invert(1) grayscale(1) brightness(2);
+}
+
+.night{
+	filter: invert(1) grayscale(1) brightness(2);
+}
+
+.profile{
+
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.selected{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.cart{
+
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.slider:before {
+    background-color: #FFFFFF;
+}
+
+.switch input:checked + .slider {
+    background-color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+
+}
+
+.switch input:checked + .slider:before{
+    background-color: #2A2A2A;
+}
+
+.search, .search_map {
+    border: 3px solid #FFFFFF;
+}
+
+.search input, .search_map input{
+    background-color: #2A2A2A;
+    color: #A1A1A1;
+}
+
+.search img,  .search_map img{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+button  {
+    background-color: #FFFFFF;
+    border: 3px solid #FFFFFF;
+}
+
+button p {
+    color: #2A2A2A;
+}
+
+button img{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+/* footer */
+
+.logo-footer{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+hr{
+
+    border: 5px solid #FFFFFF;
+}
+
+.footer-list a{
+
+    color: #FFFFFF;
+}
+
+
+.title a{
+
+    color: #FFFFFF;
+}
+
+.images{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+/*  */
+h1{
+    color: #FFFFFF;
+}
+
+p{
+    color: #FFFFFF;
+}
+/*  */
