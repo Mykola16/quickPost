@@ -12,17 +12,26 @@ use App\Livewire\SelectedComponent;
 use App\Livewire\User\UserDashboardComponent;
 use App\Livewire\Admin\AdminDashboardComponent;
 
+use App\Http\Controllers\CategoryController;
 
+use App\Livewire\CategoriesIndex;
+use App\Livewire\CategoryShow;
 
 //Route::get('/', function () {
 //    return view('welcome');
 //});
 
-Route::get('/' , \App\Livewire\HomeComponent::class)->name('Home');
+Route::get('/' , \App\Livewire\HomeComponent::class )->name('Home');
 
 Route::get('cart',\App\Livewire\CartComponent::class)->name('Cart');
 
-Route::get("/selected", \App\Livewire\SelectedComponent::class)->name('Selected');
+Route::get("selected", \App\Livewire\SelectedComponent::class)->name('Selected');
+
+Route::get('categories', CategoriesIndex::class)->name('categories.index');
+Route::get('categories/{category}', CategoryShow::class)->name('categories.show');
+Route::get('product/{id}', \App\Livewire\ProductShow::class)->name('product.show');
+
+
 
 Route::middleware([
     'auth:sanctum',

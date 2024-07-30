@@ -1,3 +1,9 @@
+
+
+
+
+
+
 body{
     margin: 0;
     padding: 0;
@@ -21,7 +27,7 @@ li {
     width: 70%;
     min-width: 1300px;
     max-width: 1300px;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 
 .header{
@@ -220,7 +226,7 @@ li {
 .search input {
 
     width: 575px;
-    height: 45px;
+    height: 40px;
     margin-top: 3px;
 
 }
@@ -239,7 +245,7 @@ li {
     border: none;
     outline: none;
     border-radius: 15px;
-    font-family: 'Montserrat';
+    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -278,7 +284,7 @@ li {
     /* margin-top: 3px; */
 
     width: 245px;
-    height: 45px;
+    height: 40px;
     margin-top: 3px;
 
 }
@@ -304,12 +310,12 @@ li {
     align-items: center;
 }
 
-button{
+.button_search{
 
 
     display: flex;
     width: 310px;
-    height: 54.8px;
+    height: 50px;
     text-align: center;
     cursor: pointer;
     /* background: #2E2E2E; */
@@ -319,10 +325,10 @@ button{
 
 }
 
-button p{
+.button_search p{
 
 
-    font-family: 'Ubuntu';
+    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -345,7 +351,7 @@ button p{
 .line1 .category{
     width: 310px;
     height: 385px;
-    background-color: #A1A1A1;
+    /*background-color: #A1A1A1;*/
 }
 
 .line1 .slider1{
@@ -381,7 +387,7 @@ button p{
 
 
 
-    font-family: 'Montserrat';
+    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
@@ -401,13 +407,165 @@ button p{
 
 
 
+.dropdown-container {
+
+    align-items: center;
+    margin-bottom: 25px;
+    background-color: #EFEFEF;
+
+
+}
+.dropdown-label {
+    margin-right: 10px;
+    background-color: #EFEFEF;
+}
+.dropdown-select {
+    width: 310px;
+    height: 30px;
+    border-left: 5px solid #2E2E2E;
+    border-radius: 5px;
+    font-size: 16px;
+
+    /*margin-bottom: 10px;*/
 
 
 
 
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+}
 
 
+.Categories{
 
+
+    margin: 50px 0;
+}
+
+
+.cat-text{
+    margin-bottom: 10px;
+
+
+}
+
+.cat_a {
+    text-decoration: none;
+    color: #2E2E2E;
+}
+
+.cat_a:hover{
+
+    color: #A1A1A1;
+}
+
+.cat_esc{
+    margin-top: 30px;
+}
+
+/* slider */
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    transform: translateY(-50%);
+}
+
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+/* .prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+} */
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot_div {
+    position: absolute;
+    bottom: 19px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: 1px solid #2E2E2E;
+    transition: background-color 0.6s ease;
+}
+
+
+.active, .dot:hover {
+    background-color: #2E2E2E;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+}
 
 
 
@@ -453,7 +611,7 @@ button p{
 .footer-list a{
     text-decoration: none;
 
-    font-family: 'Montserrat';
+    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -470,7 +628,7 @@ button p{
 .title a{
 
 
-    font-family: 'Montserrat';
+    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -514,4 +672,247 @@ button p{
     margin-top: 5px;
 
 
+}
+
+/*///////////////////////////////////////////////////////////*/
+/*Product-cart*/
+
+.Product-cart{
+    margin-top: 50px;
+    display: flex;
+}
+
+.Product-content{
+    margin-left: 20px;
+    height: 640px;
+}
+
+.product_img img{
+    width: 640px;
+    height: 640px;
+}
+
+.Product-cart h3{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    color: #2E2E2E;
+}
+
+
+
+
+.product_price{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+
+    color: #2E2E2E;
+
+}
+
+.Product-cart h2{
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+
+
+    color: #2E2E2E;
+
+}
+
+
+.Product-cart p{
+
+    font-family: "Tsukimi Rounded", sans-serif;
+
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    /* identical to box height, or 29px */
+
+    color: #2E2E2E;
+
+    margin-top: 35px;
+
+}
+.div_color_img
+{
+    font-size: 0;
+}
+
+.color_img{
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+
+}
+
+.video{
+    width: 220px;
+    height: 120px;
+
+}
+
+.img_det{
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+
+}
+
+.img_det img{
+    width: 145px;
+    height: 145px;
+
+    margin-top: 20px;
+    margin-right: 20px;
+
+    margin-bottom: 50px;
+}
+
+.button_buy{
+    background: #01B834;
+    border-color: #01B834;
+    border-radius: 15px;
+
+
+    width: 310px;
+    height: 78px;
+
+
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+
+
+    color: #FFFFFF;
+
+
+
+
+}
+
+.button_chat{
+
+
+    width: 310px;
+    height: 78px;
+
+    background: #2E2E2E;
+    border-color: #2E2E2E;
+    border-radius: 15px;
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+
+
+    color: #FFFFFF;
+}
+
+
+.desc-and-reviews{
+    display: flex;
+    margin-top: 50px;
+}
+
+
+.prod_desc{
+    /* Опис */
+
+    border-bottom: 3px solid black;
+    padding-left: 58px;
+    padding-right: 77px;
+    padding-bottom: 13px;
+    margin-left: 53px;
+
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+
+
+    color: #2E2E2E;
+
+
+}
+
+.prod_reviews{
+    /* Відгуки */
+
+    margin-left: 178px;
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+
+    color: #A1A1A1;
+
+
+}
+
+.product_description{
+
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+
+
+    color: #2E2E2E;
+    margin-bottom: 50px;
+
+}
+
+.recommendations{
+
+}
+
+.recommendations p{
+    /* Може зацікавити */
+
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+
+
+    color: #2E2E2E;
+    margin-bottom: 35px;
+
+}
+
+.product-rec{
+    display: flex;
+
+}
+
+.all-products
+{
+    margin-bottom: 50px;
 }
