@@ -33,71 +33,102 @@
 
 
     <div class="line1">
-        <div class="category">
 
+        <div class="category" style="overflow: hidden">
 
+                <div class="menu"  id="myBtn">
+                    @foreach ($categories as $category)
 
+                        <div class="menu-item" data-category-id="{{ $category->id }}" onclick="showSubCategories({{ $category->id }})">
+                            <p>{{ $category->name }}</p>
 
-{{--                <select class="dropdown-select"  style="margin-bottom: 10px">--}}
-{{--                    <option value="">Краса та здоров’я</option>--}}
-{{--                </select>--}}
-            <div>
-                @foreach ($categories as $category)
-                    <select class="dropdown-select" style="margin-bottom: 10px">
-                        <option class="cat_a" href="{{ route('categories.show', $category) }}">{{ $category->name }}</option>
-                        @if ($category->subCategories->isNotEmpty())
-                            @foreach ($category->subCategories as $subCategory)
-                                <option class="cat_a">{{ $subCategory->name }}</option>
-                            @endforeach
-                        @endif
-                    </select>
-                @endforeach
-            </div>
+                            <img src="{{ asset('assets/images/button_cat.png') }}" alt="">
 
+                        </div>
+                    @endforeach
+                </div>
 
+                <div id="myModal" class="modal" >
 
-{{--            <div style="margin-top: 50px;">--}}
-{{--                <a  class="cat_a"  href="{{route('categories.index')}}">Categories</a>--}}
-{{--            </div>--}}
+                        <div class="modal-content" style="display: flex">
 
+                            <div class="category-column">
+                                @foreach ($categories as $category)
 
+                                    <div class="menu-item" data-category-id="{{ $category->id }}" onclick="showSubCategories({{ $category->id }})">
+                                        <a href="{{ route('categories.show', $category) }}"><p>{{ $category->name }}</p></a>
 
+                                        <img src="{{ asset('assets/images/button_cat.png') }}" alt="">
 
+                                    </div>
+
+                                @endforeach
+                            </div>
+
+                            <div class="submenu-column">
+                                @foreach ($categories as $category)
+
+                                    <ul id="subcategories-{{ $category->id }}" class="subcategories" style="display: none;">
+
+                                        @foreach ($category->subCategories as $subCategory)
+
+                                            <a href="{{ route('categories.show', $subCategory) }}"><li style="margin-bottom: 10px" class="subCategory">{{ $subCategory->name }}</li>
+
+                                            @if ($subCategory->subCategories->isNotEmpty())
+                                                <ul >
+                                                    @foreach ($subCategory->subCategories as $subSubCategory)
+
+                                                        <a href="{{ route('categories.show', $subSubCategory) }}"><li style="margin-left: 20px" class="subSubCategory">{{ $subSubCategory->name }}</li></a>
+
+                                                    @endforeach
+                                                </ul>
+                                            @endif
+                                        @endforeach
+                                    </ul>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
 
 
         </div>
+
+
+
+
 
         <div class="slider1" id="blockSlider">
             <div class="slideshow-container">
 
                 <div class="mySlides fade">
-                    <img src="{{ asset('assets/images/slider/постер6.png')}}" style="width:100%" alt="постер">
+                    <img src="{{ asset('assets/images/slider/постер1.png')}}" style="width:100%" alt="постер">
                     <!-- <div class="text">Caption Text</div> -->
                 </div>
 
                 <div class="mySlides fade">
-                    <img src="{{ asset('assets/images/slider/постер1.png')}}" style="width:100%" alt="постер">
+                    <img src="{{ asset('assets/images/slider/постер2.png')}}" style="width:100%" alt="постер">
                     <!-- <div class="text">Caption Two</div> -->
                 </div>
 
                 <div class="mySlides fade">
                     <!-- <div class="numbertext">3 / 3</div> -->
-                    <img src="{{ asset('assets/images/slider/постер2.png')}}" style="width:100%" alt="постер">
+                    <img src="{{ asset('assets/images/slider/постер6.png')}}" style="width:100%" alt="постер">
                     <!-- <div class="text">Caption Three</div> -->
                 </div>
 
                 <div class="mySlides fade">
-                    <img src="{{ asset('assets/images/slider/постер6.png')}}" style="width:100%" alt="постер">
+                    <img src="{{ asset('assets/images/slider/постер1.png')}}" style="width:100%" alt="постер">
                     <!-- <div class="text">Caption Text</div> -->
                 </div>
 
                 <div class="mySlides fade">
-                    <img src="{{ asset('assets/images/slider/постер1.png')}}" style="width:100%" alt="постер">
+                    <img src="{{ asset('assets/images/slider/постер2.png')}}" style="width:100%" alt="постер">
                     <!-- <div class="text">Caption Two</div> -->
                 </div>
 
-                <div class="mySlides fade" style="width:100%">
-                    <img src="{{ asset('assets/images/slider/постер2.png')}}" alt="постер">
+                <div class="mySlides fade">
+                    <!-- <div class="numbertext">3 / 3</div> -->
+                    <img src="{{ asset('assets/images/slider/постер6.png')}}" style="width:100%" alt="постер">
                     <!-- <div class="text">Caption Three</div> -->
                 </div>
 
@@ -132,7 +163,7 @@
 
 
     <div class="box">
-        <img src="{{ asset('favicon.png')}}">
+        <img src="{{ asset('favicon.png')}}" alt="">
         <p>Текст</p>
     </div>
 

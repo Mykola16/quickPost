@@ -257,7 +257,9 @@ li {
     position: absolute;
     width: 32px;
     height: 32px;
-    margin-top: 9px;
+    margin-top: 5px;
+
+
 }
 
 
@@ -293,7 +295,7 @@ li {
     position: absolute;
     width: 32px;
     height: 32px;
-    margin-top: 9px;
+    margin-top: 6px;
 
 
 
@@ -915,4 +917,211 @@ img {vertical-align: middle;}
 .all-products
 {
     margin-bottom: 50px;
+}
+
+
+
+
+
+.menu {
+
+    width: 400px;
+
+}
+.menu-item {
+    cursor: pointer;
+    box-sizing: border-box;
+
+    margin-bottom: 10px;
+    justify-content: space-between;
+    width: 310px;
+    height: 30px;
+
+
+    border-left: 5px solid #2E2E2E;
+    border-radius: 5px;
+
+
+
+
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+.menu-item p
+{
+    margin-left: 10px;
+
+    /* Краса та здоров’я */
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+
+
+    color: #2E2E2E;
+
+
+}
+
+.menu-item img
+{
+
+    width: 20px;
+    height: 20px;
+
+}
+
+.menu-item:hover, .menu-item:focus {
+    background-color: #f0f0f0;
+}
+
+
+
+body.modal-open {
+    overflow: hidden; /* Disable scroll on the body */
+}
+
+
+
+.modal {
+    display: none; /* Приховано за умовчанням */
+    position: fixed; /* Залишайтеся на місці */
+    z-index: 1; /* Сісти зверху */
+    padding-top: 250px; /* Розташування коробки */
+    left: 0;
+    top: 0;
+    width: 100%; /* Повна ширина */
+    height: 100%; /* Повний зріст */
+    /*overflow: auto; !* Увімкнути прокручування, якщо потрібно *!*/
+    background-color: rgb(0,0,0); /* Резервний колір */
+    background-color: rgba(0,0,0,0.7); /* Чорний з непрозорістю */
+    margin-right: 100px;
+
+
+}
+
+/* Modal Content */
+.modal-content {
+
+    /*margin-left: 120px;*/
+    /*margin-top: 250px;*/
+    border: 1px solid #FFFFFF;
+    /*width: 80%;*/
+    /*overflow: hidden ;*/
+
+
+    /* Rectangle 345 */
+
+
+
+    background: #FFFFFF;
+    border-radius: 35px;
+
+    /*pa: 125px;*/
+    min-width: 1350px;
+    max-width: 1350px;
+    min-height: 440px;
+    max-height: 440px;
+     /* Включаем вертикальный скролл */
+    margin: 0 auto;
+
+
+
+
+}
+
+.category-column{
+    width: 27%;
+    overflow-y: auto;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+.submenu-column{
+    width: 73%;
+    margin: 33px 25px 25px;
+    overflow-y: auto;
+}
+
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    margin-right: 25px;
+    margin-top: 25px;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*.modal-content::-webkit-scrollbar {*/
+/*    width: 12px;*/
+/*}*/
+
+/*.modal-content::-webkit-scrollbar-track {*/
+/*    background: #f1f1f1;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*.modal-content::-webkit-scrollbar-thumb {*/
+/*    background: #888;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*.modal-content::-webkit-scrollbar-thumb:hover {*/
+/*    background: #555;*/
+/*}*/
+
+.subCategory{
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    /* identical to box height, or 14px */
+
+    color: #2E2E2E;
+
+
+}
+
+.subSubCategory
+{
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+
+
+    color: #2E2E2E;
+
+
+}
+
+.menu-item a{
+    text-decoration: none;
+}
+
+/*.menu-item a:hover{*/
+/*    color: #A1A1A1;*/
+/*}*/
+
+.subcategories a{
+    text-decoration: none;
 }
