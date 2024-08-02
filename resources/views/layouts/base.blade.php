@@ -35,17 +35,22 @@
             </div>
 {{--profile.show--}}
             <ul class="page-menu">
-{{--                @if(Route::has('login'))--}}
-{{--                    @auth()--}}
-{{--                        @if(Auth::user()->utype === 'ADM')--}}
-{{--                            <li class="profile"><a href="{{ route('admin.dashboard') }}"><img src="{{ asset('assets/images/profile.png')}}" alt="profile"></a></li>--}}
-{{--                        @else--}}
-{{--                            <li class="profile"><a href="{{ route('user.dashboard') }}"><img src="{{ asset('assets/images/profile.png')}}" alt="profile"></a></li>--}}
-{{--                        @endif--}}
-{{--                    @endif--}}
 
-{{--                @endif--}}
-                <li class="profile"><a href="{{ route('profile.show') }}"><img src="{{ asset('assets/images/profile.png')}}" alt="profile"></a></li>
+
+                @if(Route::has('login'))
+
+                    @auth()
+                        @if(Auth::user()->utype === 'ADM')
+                            <li class="profile"><a href="{{ route('admin.dashboard') }}"><img src="{{ asset('assets/images/profile.png')}}" alt="profile"></a></li>
+                        @else
+                            <li class="profile"><a href="{{ route('user.dashboard') }}"><img src="{{ asset('assets/images/profile.png')}}" alt="profile"></a></li>
+                        @endif
+
+                @else()
+                        <li class="profile"><a href="{{ route('login') }}"><img src="{{ asset('assets/images/profile.png')}}" alt="profile"></a></li>
+                    @endauth
+                @endif
+
                 <li class="selected"><a href="{{ route('Selected') }}"><img src="{{ asset('assets/images/selected.png')}}" alt="selected"></a></li>
                 <li class="cart"><a href="{{ route('Cart') }}"><img src="{{ asset('assets/images/cart.png')}}" alt="cart"></a></li>
             </ul>
@@ -112,9 +117,11 @@
 
 </footer>
 
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script src="{{ asset('assets/script.js')}}"></script>
+<script src="{{ asset('assets/script2.js')}}"></script>
+<script src="{{ asset('assets/slider.js')}}"></script>
 @livewireScripts
 </body>
 </html>

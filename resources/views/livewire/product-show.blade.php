@@ -6,7 +6,19 @@
 
     <div class="Product-cart">
         <div class="product_img">
-            <img src="/assets/images/Products_img/{{ $product->image }}" alt="{{ $product->image }}">
+
+            @php
+                $image = '';
+                if(count($product->images) > 0)
+                {
+                    $image = $product->images[0]['img'];
+                }
+                else{
+                    $image = 'no_image.png';
+                }
+
+            @endphp
+            <img src="/assets/images/Products_img/{{ $image }}" alt="{{ $image }}">
 
         </div>
         <div class="Product-content">
@@ -25,12 +37,21 @@
         </div>
     </div>
 
-    <div style="display: flex">
-        <div class="img_det">
-            <img  src="/assets/images/Products_img/{{ $product->image }}" alt="{{ $product->image }}">
-            <img src="/assets/images/Products_img/{{ $product->image }}" alt="{{ $product->image }}">
-            <img src="/assets/images/Products_img/{{ $product->image }}" alt="{{ $product->image }}">
-            <img src="/assets/images/Products_img/{{ $product->image }}" alt="{{ $product->image }}">
+    <div style="display: flex;">
+        <div class="img_det" >
+
+            @if($image == 'no_image.png')
+
+            @else
+                @foreach($product->images as $img)
+                    @if($loop->first)
+                        <img class="detail_img active" data-image="/assets/images/Products_img/{{$img['img']}}" src="/assets/images/Products_img/{{$img['img']}}" alt="{{ $image }}">
+                    @else
+                        <img class="detail_img " data-image="/assets/images/Products_img/{{$img['img']}}" src="/assets/images/Products_img/{{$img['img']}}" alt="{{ $image }}">
+                    @endif
+                @endforeach
+
+            @endif
         </div>
 
         <div style="margin-top: 93px">
@@ -53,8 +74,21 @@
         <div class="all-products">
             <div class="product-rec">
                 @foreach($allProducts as $item)
+
+                    @php
+                        $image = '';
+                        if(count($item->images) > 0)
+                        {
+                            $image = $item->images[0]['img'];
+                        }
+                        else{
+                            $image = 'no_image.png';
+                        }
+
+                    @endphp
+
                     <div class="product-item" style="margin-right: 20px;">
-                        <img style="width: 145px; height: 250px" src="/assets/images/Products_img/{{ $item->image }}" alt="{{ $item->image }}">
+                        <img style="width: 145px; height: 250px" src="/assets/images/Products_img/{{ $image }}" alt="{{ $image }}">
                         <h3>
                             <a style="text-decoration: none; color: #2E2E2E; font-size: 8px" href="{{ route('product.show', $item->id) }}">
                                 {{ $item->name }}

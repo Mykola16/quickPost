@@ -72,13 +72,13 @@
 
                                         @foreach ($category->subCategories as $subCategory)
 
-                                            <a href="{{ route('categories.show', $subCategory) }}"><li style="margin-bottom: 10px" class="subCategory">{{ $subCategory->name }}</li>
+                                            <a href="{{ route('categories.show', $subCategory) }}"><li style="margin-bottom: 10px" class="subCategory">{{ $subCategory->name }}</li></a>
 
                                             @if ($subCategory->subCategories->isNotEmpty())
                                                 <ul >
                                                     @foreach ($subCategory->subCategories as $subSubCategory)
 
-                                                        <a href="{{ route('categories.show', $subSubCategory) }}"><li style="margin-left: 20px" class="subSubCategory">{{ $subSubCategory->name }}</li></a>
+                                                        <a href="{{ route('categories.show', $subSubCategory) }}"><li style="margin-bottom: 17px" class="subSubCategory">{{ $subSubCategory->name }}</li></a>
 
                                                     @endforeach
                                                 </ul>
@@ -88,7 +88,7 @@
                                 @endforeach
                             </div>
                         </div>
-                    </div>
+                </div>
 
 
         </div>

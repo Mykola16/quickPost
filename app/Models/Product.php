@@ -11,6 +11,11 @@ class Product extends Model
 
     protected $table = 'products';
 
+    public function images()
+    {
+        return $this->hasMany('App\Models\ProductImage');
+    }
+
     public function category()
     {
         return $this->belongsTo(Category::class);

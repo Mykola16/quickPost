@@ -12,7 +12,7 @@ use App\Livewire\SelectedComponent;
 use App\Livewire\User\UserDashboardComponent;
 use App\Livewire\Admin\AdminDashboardComponent;
 
-use App\Http\Controllers\CategoryController;
+
 
 use App\Livewire\CategoriesIndex;
 use App\Livewire\CategoryShow;
@@ -33,25 +33,25 @@ Route::get('product/{id}', \App\Livewire\ProductShow::class)->name('product.show
 
 
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+//Route::middleware([
+//    'auth:sanctum',
+//    config('jetstream.auth_session'),
+//    'verified',
+//])->group(function () {
+//    Route::get('/dashboard', function () {
+//        return view('dashboard');
+//    })->name('dashboard');
+//});
+
+// For User and Customer:
+Route::middleware(['auth:sanctum', 'verified'])->group(function() {
+    Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
 });
 
- //For User and Customer:
-//Route::middleware(['auth:sanctum', 'verified'])->group(function() {
-//    Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
-//});
-//
-//// For Admin:
-//Route::middleware(['auth:sanctum', 'verified', 'auth-admin'])->group(function() {
-//    Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
-//});
+// For Admin:
+Route::middleware(['auth:sanctum', 'verified', 'auth-admin'])->group(function() {
+    Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
+});
 
 
 Route::get('auth/google',[\App\Http\Controllers\GoogleController::class, 'googlepage'])->name('Googlepage');

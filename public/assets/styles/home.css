@@ -445,6 +445,41 @@ li {
     margin: 50px 0;
 }
 
+.Categories h3{
+    /* Фільтри */
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+
+
+    color: #2E2E2E;
+    margin: 0;
+    padding: 0;
+
+}
+
+.Categories p{
+
+
+
+    margin-top: 35px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+
+
+    color: #2E2E2E;
+
+
+
+}
+
+
 
 .cat-text{
     margin-bottom: 10px;
@@ -925,7 +960,8 @@ img {vertical-align: middle;}
 
 .menu {
 
-    width: 400px;
+    width: 310px;
+
 
 }
 .menu-item {
@@ -938,8 +974,9 @@ img {vertical-align: middle;}
     height: 30px;
 
 
+    border-radius: 5px 5px 5px 5px;
     border-left: 5px solid #2E2E2E;
-    border-radius: 5px;
+
 
 
 
@@ -953,7 +990,7 @@ img {vertical-align: middle;}
 
 .menu-item p
 {
-    margin-left: 10px;
+    /*margin-left: 10px;*/
 
     /* Краса та здоров’я */
 
@@ -965,7 +1002,7 @@ img {vertical-align: middle;}
 
 
     color: #2E2E2E;
-
+    margin: 0 0 0 10px;
 
 }
 
@@ -980,6 +1017,421 @@ img {vertical-align: middle;}
 .menu-item:hover, .menu-item:focus {
     background-color: #f0f0f0;
 }
+
+.sort_price{
+    cursor: pointer;
+    box-sizing: border-box;
+
+    /*margin-bottom: 10px;*/
+    justify-content: space-between;
+
+
+    display: flex;
+
+    align-items: center;
+
+    width: 140px;
+    height: 40px;
+
+    border: 3px solid #2E2E2E;
+    border-radius: 10px;
+
+    padding: 0;
+    margin: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+
+
+    color: #A2A2A2;
+
+}
+
+.Categories #input{
+    padding-left: 15px;
+}
+
+.type_advertisement{
+    margin-top: 50px;
+    display: flex;
+    gap: 25px;
+
+
+}
+
+.type_advertisement h3{
+
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+
+
+    color: #2E2E2E;
+
+
+}
+
+.type_active{
+    border-bottom: 3px solid #2E2E2E;
+}
+
+.page_link{
+    /* Головна/Одяг та взуття/Чоловічий одяг */
+
+
+    width: 660px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+
+    color: #8D8D8D;
+
+
+    display: flex;
+
+    align-items: flex-end;
+
+}
+
+.count
+{
+
+/* Ми знайшли понад 2000 оголошень */
+
+
+
+    font-family: "Montserrat", sans-serif;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+
+
+    color: #2E2E2E;
+
+
+}
+
+/*PRODUCT LIST IN CATEGORY*/
+
+
+.product_list{
+    /* Rectangle 274 */
+
+    display: flex;
+
+    box-sizing: border-box;
+
+
+    width: 1300px;
+    height: 270px;
+
+
+    background: #EFEFEF;
+    border-right: 5px solid #2E2E2E;
+    border-radius: 15px;
+
+    margin-bottom: 25px;
+
+
+}
+
+.product_list img{
+    width: 310px;
+    height: 270px;
+}
+
+.product_list a{
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    /* or 24px */
+
+    color: #000000;
+
+}
+
+.product_list p{
+    /* 36/M/48 */
+
+
+    font-family: "Montserrat", sans-serif;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #000000;
+
+
+}
+
+.product_right_part{
+
+}
+
+.product_right_part p{
+
+    display: flex;
+    justify-content: end;
+
+    margin-right: 25px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+
+    width: 340px;
+
+    color: #000000;
+
+
+
+}
+
+.el_flex-end
+{
+    display: flex; align-items: flex-end;
+}
+
+.list_product , .block_product, .currencies, .hryvnia, .dollar, .euro{
+    display: flex;
+    align-items: flex-end;
+}
+
+.list_product{
+    margin-left: 86px;
+}
+
+.block_product {
+    margin-left: 10px;
+}
+
+.currencies, .hryvnia, .euro, .dollar{
+    margin-bottom: 7px;
+}
+
+.currencies{
+    margin-left: 39px;
+
+}
+
+.hryvnia, .euro, .dollar{
+    margin-left: 25px;
+}
+
+
+.new{
+
+    width: 87px;
+    height: 38px;
+
+    background: #FFE710;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new a{
+    /* Нове */
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #595959;
+
+
+}
+
+.street{
+
+    display: flex;
+    align-items: flex-end;
+
+    height: 128px;
+}
+
+.street a{
+    /* Київ, якась там вулиця. 14 черня 2024 */
+
+
+
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 30px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    /* or 14px */
+
+    color: #A1A1A1;
+
+
+
+
+
+}
+
+.shop_btn{
+
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Rectangle 409 */
+
+    box-sizing: border-box;
+
+
+    width: 274px;
+    height: 50px;
+
+    border: 3px solid #2E2E2E;
+    border-radius: 15px;
+
+
+
+}
+
+.shop_btn a{
+    /* Додати в кошик */
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    /* identical to box height, or 24px */
+
+    color: #2E2E2E;
+
+
+}
+
+.shop_btn img{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+
+.btn_and_like{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 156px;
+}
+
+
+/*selected*/
+
+.con-like {
+    margin-left: 15px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-right: 25px;
+    margin-bottom: 14px;
+}
+
+.con-like .like {
+
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.con-like .checkmark {
+
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.con-like .outline{
+    fill: #2E2E2E;
+
+}
+.con-like .filled {
+
+    fill:#FFE800;
+    position: absolute;
+}
+
+.con-like .filled {
+    animation: kfr-filled 0.5s;
+    display: none;
+}
+
+.con-like .celebrate {
+    position: absolute;
+    animation: kfr-celebrate 0.5s;
+    animation-fill-mode: forwards;
+    display: none;
+}
+
+
+
+.con-like .like:checked ~ .checkmark .filled {
+    display: block
+}
+
+.con-like .like:checked ~ .checkmark .celebrate {
+    display: block
+}
+
+@keyframes kfr-filled {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+
+
+
+
 
 
 
@@ -1028,7 +1480,7 @@ body.modal-open {
     max-width: 1350px;
     min-height: 440px;
     max-height: 440px;
-     /* Включаем вертикальный скролл */
+
     margin: 0 auto;
 
 
