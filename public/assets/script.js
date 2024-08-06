@@ -23,19 +23,20 @@
     var btn = document.getElementById("myBtn");
 
 
-    // Коли користувач натискає кнопку, відкривається модальний
-    btn.onclick = function() {
-        modal.style.display = "block";
-        document.body.classList.add('modal-open');
-    }
+    if (modal && btn) {
+        // Коли користувач натискає кнопку, відкривається модальний
+        btn.onclick = function () {
+            modal.style.display = "block";
+            document.body.classList.add('modal-open');
+        }
 
 
-
-    // Коли користувач клацає будь-де за межами модального, закрийте його
-    window.onclick = function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-            document.body.classList.remove('modal-open');
+        // Коли користувач клацає будь-де за межами модального, закрийте його
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+                document.body.classList.remove('modal-open');
+            }
         }
     }
 
@@ -54,6 +55,22 @@
             selectedList.style.display = 'block';
         }
     }
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const navItems = document.querySelectorAll('.profile_menu_item a');
+        const currentLocation = window.location.href;
+
+        navItems.forEach(item => {
+            if (item.href === currentLocation) {
+                item.parentElement.classList.add('active1');
+            } else {
+                item.parentElement.classList.remove('active1');
+            }
+        });
+    });
+
 
 
 

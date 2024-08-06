@@ -40,7 +40,7 @@ return [
         'client_id' => '348981366457-6aod65k9i74qurhua450s82csqr5qph0.apps.googleusercontent.com',
         'client_secret' => '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',
         'redirect' => 'http://localhost:8000/auth/google/callback',
-
+//        'redirect' => 'http://quickpostapp.kesug.com/auth/google/callback',
     ],
 
     'facebook' => [
@@ -48,7 +48,7 @@ return [
         'client_id' => '1120966038973406',
         'client_secret' => '2b3352058748fbe45ea9c6f9764900c7',
         'redirect' => 'http://localhost:8000/auth/facebook/callback',
-
+//        'redirect' => 'http://quickpostapp.kesug.com/auth/facebook/callback',
     ],
 
 ];

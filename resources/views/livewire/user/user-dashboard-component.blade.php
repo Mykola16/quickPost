@@ -2,21 +2,37 @@
     USER
 @endsection
 
-
-
 <div>
-    <h1>USER</h1>
+    <div style="display: flex">
+        <div>
+            <h1 class="profile_page_name" >Ваші оголошення</h1>
+        </div>
 
-    @if (Auth::user())
+        <button class="create_btn" >
+            <a href="{{route('Create')}}"><p>Створити оголошення</p></a>
+        </button>
 
-        <!-- Authentication -->
-        <form method="POST" action="{{ route('logout') }}" x-data>
-            @csrf
+    </div>
 
-            <x-dropdown-link href="{{ route('logout') }}"
-                             @click.prevent="$root.submit();">
-                {{ __('Log Out') }}
-            </x-dropdown-link>
-        </form>
-    @endif
+    <div style="display: flex">
+        <div class="advertisement_menu_item">
+            <a href="#"><p>Активні</p></a>
+        </div>
+
+        <div class="advertisement_menu_item">
+            <a href="#"><p>Очікующі</p></a>
+        </div>
+
+        <div class="advertisement_menu_item">
+            <a href="#"><p>Неактивні</p></a>
+        </div>
+    </div>
+
+    <div class="My_product">
+
+    </div>
+
+
 </div>
+
+

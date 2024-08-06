@@ -34,7 +34,7 @@
                 </label>
                 <img class="night" src="{{ asset('assets/images/night.png')}}">
             </div>
-{{--profile.show--}}
+            {{--profile.show--}}
             <ul class="page-menu">
 
 
@@ -47,7 +47,7 @@
                             <li class="profile"><a href="{{ route('user.dashboard') }}"><img src="{{ asset('assets/images/profile.png')}}" alt="profile"></a></li>
                         @endif
 
-                @else()
+                    @else()
                         <li class="profile"><a href="{{ route('login') }}"><img src="{{ asset('assets/images/profile.png')}}" alt="profile"></a></li>
                     @endauth
                 @endif
@@ -59,10 +59,109 @@
         </div>
     </header>
 
+    <div class="content">
+        <div class="search">
+            <input type="text" name="text" id="input" placeholder="Що шукаєте?" autocomplete="off" autocorrect="off">
+            <label for="input">
+                <img class="micIcon" src="{{ asset('assets/images/mic_icon.png')}}" alt="mic_icon">
+            </label>
+        </div>
+
+        <div class="search_map">
+            <input type="text" name="text" class="input" id="input" placeholder="Вся Україна" autocomplete="off" autocorrect="off">
+            <label for="input">
+                <img src="{{ asset('assets/images/map.png')}}" alt="search__icon">
+            </label>
+        </div>
+
+        <div class="btn">
+            <button class="button_search" type="submit">
+                <p>Пошук</p>
+                <img src="{{ asset('assets/images/search_icon.png')}}" alt="search_icon">
+            </button>
+        </div>
+    </div>
+
+    <div class="profile_page">
+        <div class="profile_menu">
+
+            <div class="info_user">
+                <div class="avatar">
+                    <img src="{{ asset('assets/images/profile_menu_img/avatar2.png')}}" alt="avatar">
+                </div>
+                <div class="user_name">
+                    <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
+                </div>
+            </div>
+
+            <div style="margin-top: 25px">
+                <div class="profile_menu_item">
+                    <img src="{{ asset('assets/images/profile_menu_img/advertisement.png') }}" alt="">
+                    <a href="{{ route('user.dashboard') }}"><p>Ваші оголошення</p></a>
+                </div>
+
+                <div class="profile_menu_item">
+                    <img style="height: 25px" src="{{ asset('assets/images/profile_menu_img/message.png') }}" alt="">
+                    <a href="{{ route('Message') }}"><p>Повідомлення</p></a>
+                </div>
+
+                <div class="profile_menu_item">
+                    <img src="{{ asset('assets/images/profile_menu_img/selected.png') }}" alt="">
+                    <a href="{{ route('Chosen') }}"><p>Обране</p></a>
+                </div>
+
+                <div class="profile_menu_item">
+                    <img src="{{ asset('assets/images/profile_menu_img/history.png') }}" alt="">
+                    <a href="{{ route('History') }}"><p>Історія замовлень</p></a>
+                </div>
+
+                <div class="profile_menu_item">
+                    <img src="{{ asset('assets/images/profile_menu_img/reviews.png') }}" alt="">
+                    <a href="{{ route('Reviews') }}"><p>Мої відгуки</p></a>
+                </div>
+
+                <div class="profile_menu_item">
+                    <img src="{{ asset('assets/images/profile_menu_img/star.png') }}" alt="">
+                    <a href="{{ route('Subscription') }}"><p>Підписка</p></a>
+                </div>
+
+                <div class="profile_menu_item">
+                    <img src="{{ asset('assets/images/profile_menu_img/settings.png') }}" alt="">
+                    <a href="{{ route('Settings') }}"><p>Налаштування</p></a>
+                </div>
+
+                <div class="profile_menu_item">
+                    <img src="{{ asset('assets/images/profile_menu_img/exit.png') }}" alt="">
+
+                    @if (Auth::user())
+
+                        <!-- Authentication -->
+                        <form method="POST" action="{{ route('logout') }}" x-data>
+                            @csrf
+
+                            <a href="{{ route('logout') }}" @click.prevent="$root.submit();">
+                                <p style="margin-bottom: 18px; margin-left: 10px">Вийти</p>
+                            </a>
+                        </form>
+                    @endif
+
+                    {{--                    <a href="{{ route('logout') }}" ><p>Вийти</p></a>--}}
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="profile_content">
+            {{ $slot }}
+        </div>
+
+
+    </div>
 
 
 
-    {{ $slot }}
+
 
 
 
@@ -86,7 +185,7 @@
                     <li class="title"><a href="#">Про нас</a></li>
                     <li><a href="#">Про QuickPost</a></li>
                     <li><a href="#">Контактна інформація</a></li>
-                    <li><a href="#">Захист  легальності контенту</a></li>
+                    <li><a href="#">Захист легальності контенту</a></li>
                 </ul>
 
                 <ul class="second">
@@ -121,8 +220,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script src="{{ asset('assets/script.js')}}"></script>
-<script src="{{ asset('assets/script2.js')}}"></script>
-<script src="{{ asset('assets/slider.js')}}"></script>
+
 
 @livewireScripts
 </body>

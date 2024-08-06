@@ -14,6 +14,7 @@ use App\Livewire\Admin\AdminDashboardComponent;
 
 
 
+
 use App\Livewire\CategoriesIndex;
 use App\Livewire\CategoryShow;
 
@@ -31,6 +32,8 @@ Route::get('categories', CategoriesIndex::class)->name('categories.index');
 Route::get('categories/{category}', CategoryShow::class)->name('categories.show');
 Route::get('product/{id}', \App\Livewire\ProductShow::class)->name('product.show');
 
+Route::get('create', \App\Livewire\CreateAdvertisementPRV::class)->name('Create');
+
 
 
 //Route::middleware([
@@ -47,6 +50,14 @@ Route::get('product/{id}', \App\Livewire\ProductShow::class)->name('product.show
 Route::middleware(['auth:sanctum', 'verified'])->group(function() {
     Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
 });
+
+Route::get('message', \App\Livewire\Message::class)->name('Message');
+Route::get('chosen', \App\Livewire\Chosen::class)->name('Chosen');
+Route::get('history', \App\Livewire\History::class)->name('History');
+Route::get('reviews', \App\Livewire\Reviews::class)->name('Reviews');
+Route::get('subscription', \App\Livewire\Subscription::class)->name('Subscription');
+Route::get('settings', \App\Livewire\Settings::class)->name('Settings');
+
 
 // For Admin:
 Route::middleware(['auth:sanctum', 'verified', 'auth-admin'])->group(function() {

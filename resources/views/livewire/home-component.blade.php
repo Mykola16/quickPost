@@ -7,7 +7,7 @@
         <div class="search">
             <input type="text" name="text" id="input" placeholder="Що шукаєте?" autocomplete="off" autocorrect="off">
             <label for="input">
-                <img class="micIcon" src="{{ ('assets/images/mic_icon.png')}}" alt="mic_icon">
+                <img class="micIcon" src="{{ asset('assets/images/mic_icon.png')}}" alt="mic_icon">
             </label>
         </div>
 
