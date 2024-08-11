@@ -200,7 +200,7 @@
             <div class="product_list">
                 <div >
                     <a href="{{ route('product.show', $product->id) }}">
-                        <img src="/assets/images/Products_img/{{ $image }}" alt="{{ $image }}">
+                        <img src="{{Storage::url($image)}}" alt="">
                     </a>
                 </div>
                 <div style=" margin-left:20px; margin-top: 20px; width: 600px" >

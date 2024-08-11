@@ -48,7 +48,7 @@
                     @endforeach
                 </div>
 
-                <div id="myModal" class="modal" >
+                <div id="myModal" class="modal" style="display: none;" >
 
                         <div class="modal-content" style="display: flex">
 
@@ -112,23 +112,23 @@
 
                 <div class="mySlides fade">
                     <!-- <div class="numbertext">3 / 3</div> -->
-                    <img src="{{ asset('assets/images/slider/постер6.png')}}" style="width:100%" alt="постер">
+                    <img src="{{ asset('assets/images/slider/постер3.png')}}" style="width:100%" alt="постер">
                     <!-- <div class="text">Caption Three</div> -->
                 </div>
 
                 <div class="mySlides fade">
-                    <img src="{{ asset('assets/images/slider/постер1.png')}}" style="width:100%" alt="постер">
+                    <img src="{{ asset('assets/images/slider/постер4.png')}}" style="width:100%" alt="постер">
                     <!-- <div class="text">Caption Text</div> -->
                 </div>
 
                 <div class="mySlides fade">
-                    <img src="{{ asset('assets/images/slider/постер2.png')}}" style="width:100%" alt="постер">
+                    <img src="{{ asset('assets/images/slider/постер5.png')}}" style="width:100%" alt="постер">
                     <!-- <div class="text">Caption Two</div> -->
                 </div>
 
                 <div class="mySlides fade">
                     <!-- <div class="numbertext">3 / 3</div> -->
-                    <img src="{{ asset('assets/images/slider/постер6.png')}}" style="width:100%" alt="постер">
+                    <img src="{{ asset('assets/images/slider/постер3.png')}}" style="width:100%" alt="постер">
                     <!-- <div class="text">Caption Three</div> -->
                 </div>
 

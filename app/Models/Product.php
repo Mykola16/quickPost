@@ -11,6 +11,7 @@ class Product extends Model
 
     protected $table = 'products';
 
+
     public function images()
     {
         return $this->hasMany('App\Models\ProductImage');
@@ -19,5 +20,10 @@ class Product extends Model
     public function category()
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }

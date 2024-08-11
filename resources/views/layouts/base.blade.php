@@ -118,13 +118,16 @@
 
 </footer>
 
+
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<script src="{{ asset('assets/script.js')}}"></script>
+<script src="{{ asset('assets/script.js')}}" defer></script>
 <script src="{{ asset('assets/script2.js')}}"></script>
 <script src="{{ asset('assets/slider.js')}}"></script>
 
 @livewireScripts
+
 </body>
 </html>
 

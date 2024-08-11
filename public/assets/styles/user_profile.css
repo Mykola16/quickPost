@@ -156,6 +156,116 @@ form p{
 }
 
 
+.product_list_user{
+    /* Rectangle 274 */
+
+    /*margin-top: 50px;*/
+
+    display: flex;
+
+    box-sizing: border-box;
+
+
+    width: 970px;
+    height: 270px;
+
+
+    background: #EFEFEF;
+    border-right: 5px solid #2E2E2E;
+    border-radius: 15px;
+
+    margin-bottom: 25px;
+
+
+}
+
+.product_list_user img{
+    width: 310px;
+    height: 270px;
+}
+
+.product_list_user a{
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    /* or 24px */
+
+    color: #000000;
+
+}
+
+.product_list_user p{
+    /* 36/M/48 */
+
+
+    font-family: "Montserrat", sans-serif;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #000000;
+
+
+}
+
+.product_right_part_user{
+
+}
+
+.product_right_part_user p{
+
+    display: flex;
+    justify-content: end;
+
+    margin-right: 25px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+
+    width: 225px;
+
+    color: #000000;
+
+
+
+}
+
+.street_create{
+    display: flex;
+    align-items: flex-end;
+
+    height: 165px;
+}
+
+.street_create a{
+    /* Київ, якась там вулиця. 14 черня 2024 */
+
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 30px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    /* or 14px */
+
+    color: #A1A1A1;
+
+}
+
+
 
 /*//////////////////////////////////////////////*/
 
@@ -184,6 +294,8 @@ form p{
     margin-left: 351px;
     background: #2E2E2E;
     border-radius: 15px;
+
+
 }
 
 .create_btn a{
@@ -315,6 +427,13 @@ form p{
     margin-top: 35px;
 }
 
+create_content #input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
 .create_content label{
 
     font-family: 'Montserrat';
@@ -328,6 +447,7 @@ form p{
 
 .create_content input{
 
+    padding: 15px;
     margin-top: 15px;
     box-sizing: border-box;
 
@@ -339,14 +459,30 @@ form p{
 
 }
 
+.create_content textarea{
+
+    padding: 15px;
+    overflow: hidden; resize: none;
+
+    width: 640px;
+    height: 50px;
+
+    border: 3px solid #2E2E2E;
+    border-radius: 15px;
+}
+
 .qwe #input{
     padding: 10px;
 }
 
+.img_boxes{
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
 
 .img_box{
 
-    margin-top: 15px;    /*20px між бокс фото*/
+       /*20px між бокс фото*/
 
     margin-right: 20px;
     box-sizing: border-box;
@@ -387,3 +523,104 @@ form p{
 
 
 }
+
+.file_img{
+    width: 140px;
+    height: 140px;
+    border-radius: 15px;
+}
+
+.price_create label{
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+
+    color: #2E2E2E;
+
+
+}
+
+
+.price_create input{
+    width: 310px;
+    height: 50px"
+}
+
+.info_create{
+    margin-left: 20px;
+}
+
+.info_create input{
+    width: 310px;
+    height: 50px;
+}
+
+.vip_create{
+    margin-top: 35px;
+}
+
+.vip_create input{
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+}
+
+label.vip_create_item{
+    margin-left: 15px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+
+
+    color: #2E2E2E;
+
+
+}
+
+.QuickPlus_create_item{
+    height: 28px;
+    display: flex;
+
+    align-items: end;
+}
+
+label.QuickPlus_create_item{
+    /* Тільки з підпискою QuickPlus */
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    /* identical to box height, or 18px */
+
+    color: #A1A1A1;
+
+}
+
+.button_create{
+    width: 310px;
+    height: 60px;
+    background: #2E2E2E;
+    border-radius: 15px;
+    margin-left: 330px;
+    margin-top: 70px;
+}
+
+.button_create p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    color: #FFFFFF;
+}
+

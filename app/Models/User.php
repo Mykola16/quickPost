@@ -31,6 +31,7 @@ class User extends Authenticatable
         'facebook_id',
         'utype',
         'social_network',
+
     ];
 
     /**
@@ -65,5 +66,10 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
     }
 }

@@ -18,7 +18,7 @@
                 }
 
             @endphp
-            <img src="/assets/images/Products_img/{{ $image }}" alt="{{ $image }}">
+            <img src="{{Storage::url($image)}}" alt="">
 
         </div>
         <div class="Product-content">
@@ -45,9 +45,11 @@
             @else
                 @foreach($product->images as $img)
                     @if($loop->first)
-                        <img class="detail_img active" data-image="/assets/images/Products_img/{{$img['img']}}" src="/assets/images/Products_img/{{$img['img']}}" alt="{{ $image }}">
+                        <img class="detail_img active" data-image="{{Storage::url($image)}}" src="{{Storage::url($image)}}" alt="">
+
                     @else
-                        <img class="detail_img " data-image="/assets/images/Products_img/{{$img['img']}}" src="/assets/images/Products_img/{{$img['img']}}" alt="{{ $image }}">
+                        <img class="detail_img active" data-image="{{Storage::url($image)}}" src="{{Storage::url($image)}}" alt="">
+{{--                        <img class="detail_img " data-image="/assets/images/Products_img/{{$img['img']}}" src="/assets/images/Products_img/{{$img['img']}}" alt="{{ $image }}">--}}
                     @endif
                 @endforeach
 
@@ -88,7 +90,7 @@
                     @endphp
 
                     <div class="product-item" style="margin-right: 20px;">
-                        <img style="width: 145px; height: 250px" src="/assets/images/Products_img/{{ $image }}" alt="{{ $image }}">
+                        <img style="width: 145px; height: 250px" src="{{Storage::url($image)}}" alt="">
                         <h3>
                             <a style="text-decoration: none; color: #2E2E2E; font-size: 8px" href="{{ route('product.show', $item->id) }}">
                                 {{ $item->name }}
