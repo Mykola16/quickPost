@@ -103,6 +103,7 @@
                 <div class="mySlides fade">
                     <img src="{{ asset('assets/images/slider/постер1.png')}}" style="width:100%" alt="постер">
                     <!-- <div class="text">Caption Text</div> -->
+
                 </div>
 
                 <div class="mySlides fade">

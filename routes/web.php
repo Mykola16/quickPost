@@ -7,7 +7,7 @@ use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\FacebookController;
 
 use App\Livewire\CartComponent;
-use App\Livewire\SelectedComponent;
+use App\Livewire\OformlennyaComponent;
 
 use App\Livewire\User\UserDashboardComponent;
 use App\Livewire\Admin\AdminDashboardComponent;
@@ -26,7 +26,7 @@ Route::get('/' , \App\Livewire\HomeComponent::class )->name('Home');
 
 Route::get('cart',\App\Livewire\CartComponent::class)->name('Cart');
 
-Route::get("selected", \App\Livewire\SelectedComponent::class)->name('Selected');
+Route::get("oformlennya", \App\Livewire\OformlennyaComponent::class)->name('Oformlennya');
 
 Route::get('categories', CategoriesIndex::class)->name('categories.index');
 Route::get('categories/{category}', CategoryShow::class)->name('categories.show');
@@ -63,7 +63,7 @@ Route::get('settings', \App\Livewire\Settings::class)->name('Settings');
 Route::middleware(['auth:sanctum', 'verified', 'auth-admin'])->group(function() {
     Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
 });
-
+//
 
 Route::get('auth/google',[\App\Http\Controllers\GoogleController::class, 'googlepage'])->name('Googlepage');
 Route::get('auth/google/callback',[\App\Http\Controllers\GoogleController::class, 'googlecallback'])->name('Googlecallback');

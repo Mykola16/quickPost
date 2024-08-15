@@ -17,6 +17,36 @@
     @livewireStyles
 </head>
 <body>
+
+<div id="myModal2" class="modal-cont">
+
+    <!-- Modal content -->
+    <div class="modal-context">
+        <div class="df">
+            <img class="cart_img" src="{{asset('assets/images/кошик.png')}}" alt="">
+            <div><a>Кошик</a></div>
+            <div class="close_div"><img class="close" src="{{asset('assets/images/close.png')}}" alt=""></div>
+        </div>
+
+        <div class="cart_product_list">
+            <div class="cart_product_item">
+
+            </div>
+        </div>
+
+        <div class="cart_btn">
+            <div class="razom">
+                <a>Разом: 120000 грн</a>
+            </div>
+
+            <button onclick="location.href='{{route('Oformlennya')}}';" class="button_submit">
+                <a>Оформити замовлення</a>
+            </button>
+        </div>
+    </div>
+
+</div>
+
 <div class="wrapper">
     <!--header-->
     <header>
@@ -52,8 +82,8 @@
                     @endauth
                 @endif
 
-                <li class="selected"><a href="{{ route('Selected') }}"><img src="{{ asset('assets/images/selected.png')}}" alt="selected"></a></li>
-                <li class="cart"><a href="{{ route('Cart') }}"><img src="{{ asset('assets/images/cart.png')}}" alt="cart"></a></li>
+                <li class="selected"><a href="{{ route('Chosen') }}"><img src="{{ asset('assets/images/selected.png')}}" alt="selected"></a></li>
+                <li class="cart" id="myBtn2"><a><img src="{{ asset('assets/images/cart.png')}}" alt="cart"></a></li>
             </ul>
 
         </div>

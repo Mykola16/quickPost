@@ -201,6 +201,7 @@
                 <div >
                     <a href="{{ route('product.show', $product->id) }}">
                         <img src="{{Storage::url($image)}}" alt="">
+{{--                        <img src="/laravel/storage/app/public/photos/{{$image}}" alt="">--}}
                     </a>
                 </div>
                 <div style=" margin-left:20px; margin-top: 20px; width: 600px" >

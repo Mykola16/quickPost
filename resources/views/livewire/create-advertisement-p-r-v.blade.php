@@ -74,12 +74,14 @@
 
                     <div style="margin-top: 35px">
                         <label>Короткий опис</label><br>
-                        <textarea type="text" wire:model="short_description" required style="height: 90px"></textarea><br>
+                        <textarea type="text" wire:model="short_description"
+                                  required style="height: 90px;margin-top:15px" placeholder="Коротко опишіть ваш товар"></textarea><br>
                     </div>
 
                     <div style="margin-top: 35px">
                         <label>Опис</label><br>
-                        <textarea type="text" wire:model="description" required style="height: 250px"></textarea><br>
+                        <textarea type="text" wire:model="description" required
+                                  style="height: 250px;margin-top:15px;" placeholder="Опишіть ваш товар"></textarea><br>
                     </div>
 
                     <!-- Скрытое поле для category_id -->
@@ -125,19 +127,26 @@
                             <div class="price_create">
                                 <label>Ціна</label><br>
                                 <input type="number" wire:model="regular_price" required><br>
+
+                                <div class="vip_create">
+                                    <input type="checkbox">
+                                    <label class="vip_create_item">Помітити як “VIP”</label><br>
+                                    <label class="QuickPlus_create_item">Тільки з підпискою QuickPlus</label>
+                                </div>
                             </div>
 
                             <div class="info_create">
                                 <label>Контактні данні</label><br>
-                                <input type="number"><br>
+                                <input type="number" placeholder="Номер телефону"><br>
+
+                                <div style="margin-top:35px">
+                                    <label>Посилання на відео огляд (якщо є)</label><br>
+                                    <input type="number" placeholder="youtube посилання"><br>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="vip_create">
-                            <input type="checkbox">
-                            <label class="vip_create_item">Помітити як “VIP”</label><br>
-                            <label class="QuickPlus_create_item">Тільки з підпискою QuickPlus</label>
-                        </div>
+
 
                         <button type="submit" class="button_create">
                             <p>Опублікувати</p>
