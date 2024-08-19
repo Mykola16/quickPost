@@ -57,8 +57,8 @@
         </div>
 
         <div style="margin-top: 93px">
-            <button class="button_buy">Додати в кошик</button>
-            <button class="button_chat">Чат з продавцем</button>
+            <button class="button_buy" wire:click="addToCart({{ $product->id }})">Додати в кошик</button>
+            <button class="button_chat" wire:click="startConversation({{ $product->user_id }})">Чат з продавцем</button>
         </div>
 
     </div>

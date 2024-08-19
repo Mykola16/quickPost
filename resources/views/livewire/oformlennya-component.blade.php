@@ -74,14 +74,32 @@
                         </div>
 
                         <div class="cart_product_list">
-                            <div class="cart_product_item">
+                            @foreach($cartitems as $item)
+                                @php
 
-                            </div>
+                                    $image = 'no_image.png';
+                                    if ($item->product && $item->product->images && $item->product->images->count() > 0) {
+                                        $image = $item->product->images[0]->img;
+                                    }
+                                @endphp
+
+                                <div class="cart_product_item">
+                                    <img src="{{ Storage::url($image) }}" alt="">
+                                    <div class="cart_product_name"><p>{{ $item->product->name }}</p></div>
+                                    <div class="cart_product_price">
+                                        <div class="cart_product_menu_btn">
+                                            <img src="{{asset('assets/images/cart_product_menu_btn.png')}}" alt="">
+                                        </div>
+                                        <a>{{ $item->product->regular_price }} грн</a>
+                                    </div>
+                                </div>
+                            @endforeach
+
                         </div>
                         <div class="df" style="justify-content: center;">
                             <div class="cart_btn2">
                                 <div class="razom2">
-                                    <a>Разом: 120000 грн</a>
+                                    <a>Разом: {{$total}}.00 грн</a>
                                 </div>
                             </div>
                         </div>

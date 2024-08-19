@@ -1704,16 +1704,29 @@ body.modal-open {
 
 .cart_product_list{
     margin-top: 35px;
-    width: 500px;
+    width: 525px;
     height: 645px;
 
-    margin-left: 25px;
 
+
+    overflow-y: auto;
+    direction: rtl;
+
+    overflow-x: hidden;
 
     margin-bottom: 25px;
 }
 
+.scrollable-content::-webkit-scrollbar {
+    width: 50px; /* Ширина скроллбара */
+    height: 10px;
+}
+
 .cart_product_item{
+
+    direction: ltr;
+
+    display: flex;
 
     box-sizing: border-box;
 
@@ -1724,7 +1737,85 @@ body.modal-open {
     width: 500px;
     height: 150px;
 
+    margin-bottom: 15px;
 
+}
+
+.cart_product_item img{
+
+    width: 150px;
+    height: 150px;
+
+}
+.cart_product_name{
+    margin-left: 21px;
+    margin-top: 18px;
+    width: 150px;
+
+}
+
+.cart_product_item p{
+    /* Футболка, велика */
+
+    margin: 0;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+
+
+    color: #2E2E2E;
+
+
+}
+
+.cart_product_price{
+    width: 170px;
+    margin-bottom: 17px;
+    margin-top: 24px;
+}
+
+.cart_product_price img{
+    /* Group 270 */
+
+    width: 19.19px;
+    height: 10.75px;
+
+    margin-right: 22.81px;
+
+
+}
+
+.cart_product_menu_btn{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+
+
+}
+
+.cart_product_item a{
+    /* 4000 грн */
+    height: 100%;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #2E2E2E;
+
+
+    margin-right: 18px;
+    margin-left: 0;
+
+    display: flex;
+    justify-content: end;
+    align-items: end;
 
 }
 

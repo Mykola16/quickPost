@@ -222,7 +222,7 @@
                     </div>
 
                     <div class="btn_and_like">
-                        <div style=" height: 65px">
+                        <div style=" height: 65px" wire:click="addToCart({{ $product->id }})">
                             <div class="shop_btn">
                                 <a>Додати в кошик</a>
                                 <img src="{{ asset('assets/images/shop_icon.png') }}" alt="">

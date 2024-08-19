@@ -31,6 +31,7 @@ class User extends Authenticatable
         'facebook_id',
         'utype',
         'social_network',
+        'avatar',
 
     ];
 

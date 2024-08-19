@@ -18,36 +18,10 @@
 </head>
 <body>
 
-<div id="myModal2" class="modal-cont">
+@livewire('cart-component')
 
-    <!-- Modal content -->
-    <div class="modal-context">
-        <div class="df">
-            <img class="cart_img" src="{{asset('assets/images/кошик.png')}}" alt="">
-            <div><a>Кошик</a></div>
-            <div class="close_div"><img class="close" src="{{asset('assets/images/close.png')}}" alt=""></div>
-        </div>
 
-        <div class="cart_product_list">
-            <div class="cart_product_item">
-
-            </div>
-        </div>
-
-        <div class="cart_btn">
-            <div class="razom">
-                <a>Разом: 120000 грн</a>
-            </div>
-
-            <button onclick="location.href='{{route('Oformlennya')}}';" class="button_submit">
-                <a>Оформити замовлення</a>
-            </button>
-        </div>
-    </div>
-
-</div>
-
-<div class="wrapper">
+<div class="wrapper" >
     <!--header-->
     <header>
         <div class="header">
@@ -81,8 +55,13 @@
                         <li class="profile"><a href="{{ route('login') }}"><img src="{{ asset('assets/images/profile.png')}}" alt="profile"></a></li>
                     @endauth
                 @endif
-
-                <li class="selected"><a href="{{ route('Chosen') }}"><img src="{{ asset('assets/images/selected.png')}}" alt="selected"></a></li>
+                    @if(Route::has('login'))
+                        @auth()
+                            <li class="selected"><a href="{{ route('Chosen') }}"><img src="{{ asset('assets/images/selected.png')}}" alt="selected"></a></li>
+                        @else()
+                            <li class="selected"><a href="{{ route('login') }}"><img src="{{ asset('assets/images/selected.png')}}" alt="selected"></a></li>
+                        @endif
+                    @endif
                 <li class="cart" id="myBtn2"><a><img src="{{ asset('assets/images/cart.png')}}" alt="cart"></a></li>
             </ul>
 
@@ -117,7 +96,9 @@
 
             <div class="info_user">
                 <div class="avatar">
-                    <img src="{{ asset('assets/images/profile_menu_img/avatar2.png')}}" alt="avatar">
+                    {{--<img src="{{ asset('assets/images/profile_menu_img/avatar2.png')}}" alt="avatar">--}}
+                    <img src="{{Storage::url(Auth::user()->avatar)}}" alt="">
+                    {{--<img src="/laravel/storage/app/public/photos/{{$image}}" alt="">--}}
                 </div>
                 <div class="user_name">
                     <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
@@ -135,10 +116,12 @@
                     <a href="{{ route('Message') }}"><p>Повідомлення</p></a>
                 </div>
 
-                <div class="profile_menu_item">
-                    <img src="{{ asset('assets/images/profile_menu_img/selected.png') }}" alt="">
-                    <a href="{{ route('Chosen') }}"><p>Обране</p></a>
-                </div>
+
+                    <div class="profile_menu_item">
+                        <img src="{{ asset('assets/images/profile_menu_img/selected.png') }}" alt="">
+                        <a href="{{ route('Chosen') }}"><p>Обране</p></a>
+                    </div>
+
 
                 <div class="profile_menu_item">
                     <img src="{{ asset('assets/images/profile_menu_img/history.png') }}" alt="">

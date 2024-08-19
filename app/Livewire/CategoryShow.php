@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\ShoppingCart;
 use Livewire\Component;
 use App\Models\Category;
 
@@ -14,6 +15,16 @@ class CategoryShow extends Component
     {
         $this->category = $category;
         $this->products = $category->products;
+    }
+
+    public function addToCart($id){
+        $data = [
+            'user_id' => auth()->user()->id,
+            'product_id' => $id,
+        ];
+        ShoppingCart::updateOrCreate($data);
+
+
     }
 
     public function render()

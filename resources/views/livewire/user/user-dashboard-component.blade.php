@@ -9,7 +9,7 @@
         </div>
 
         <button class="create_btn" >
-            <a href="{{route('Create')}}"><p>Створити оголошення</p></a>
+            <a href="{{route('Create')}}"><p>Нове оголошення</p></a>
         </button>
 
     </div>
