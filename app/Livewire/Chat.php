@@ -30,14 +30,16 @@ class Chat extends Component
         $conversation = Conversation::find($this->conversationID);
 
         if (!$conversation) {
-            abort(404); // Или обработайте ситуацию, когда разговор не найден
+            abort(404);
         }
-
-        // Логика для работы с разговором
     }
 
     public function sendMessage()
     {
+        if (empty(trim($this->body))) {
+            return;
+        }
+
        Message::create([
            'conversation_id' => $this->selectedConversation->id,
            'user_id' => auth()->id(),

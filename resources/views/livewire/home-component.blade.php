@@ -3,28 +3,7 @@
 @endsection
 
 <div>
-    <div class="content">
-        <div class="search">
-            <input type="text" name="text" id="input" placeholder="Що шукаєте?" autocomplete="off" autocorrect="off">
-            <label for="input">
-                <img class="micIcon" src="{{ asset('assets/images/mic_icon.png')}}" alt="mic_icon">
-            </label>
-        </div>
-
-        <div class="search_map">
-            <input type="text" name="text" class="input" id="input" placeholder="Вся Україна" autocomplete="off" autocorrect="off">
-            <label for="input">
-                <img src="{{ asset('assets/images/map.png')}}" alt="search__icon">
-            </label>
-        </div>
-
-        <div class="btn">
-            <button class="button_search" type="submit">
-                <p>Пошук</p>
-                <img src="{{ asset('assets/images/search_icon.png')}}" alt="search_icon">
-            </button>
-        </div>
-    </div>
+    @livewire('search')
 
 {{--    @livewire('categories-list')--}}
 
@@ -161,13 +140,34 @@
     </div>
     </div>
 
+    @livewire('product-home-page')
 
 
     <div class="box">
-        <img src="{{ asset('favicon.png')}}" alt="">
-        <p>Текст</p>
+        <a href="https://t.me/Mashavaskul"><img src="{{ asset('favicon.png')}}" alt=""></a>
+
+        <p>
+            Вітаю! Я ваш дружній помічник. Якщо у вас виникли питання або потрібна допомога, просто натисніть на мене.
+            Ми завжди раді допомогти вам і відповісти на всі ваші запитання. Давайте разом зробимо ваш досвід ще приємнішим!
+        </p>
     </div>
 
 
+    <script>
+        const scrollContainer = document.querySelector('.bigness_product');
+        const scrollContainer2 = document.querySelector('.all-products');
+
+        scrollContainer.addEventListener('wheel', (evt) => {
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaY;
+        });
+
+        scrollContainer2.addEventListener('wheel', (evt) => {
+            evt.preventDefault();
+            scrollContainer2.scrollLeft += evt.deltaY;
+        });
+
+
+    </script>
 
 </div>

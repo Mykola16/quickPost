@@ -3,6 +3,7 @@ input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
 input[type="number"] {
     -moz-appearance: textfield;
 }
@@ -31,17 +32,24 @@ li {
 }
 
 
+/*//////////////////////////////////////*/
+/*HOME PAGE*/
+
 .wrapper{
-    width: 70%;
-    min-width: 1300px;
-    max-width: 1300px;
+    width: calc(100% - 100px);
+    max-width: 1300px; /* Максимальна ширина залишається, щоб обмежити контейнер */
     margin: 0 auto;
 }
+
+
+/*///////////////////////////////////////*/
+/*HEADER*/
 
 .header{
     display: flex;
 
 }
+
 
 .logo, .logo-footer{
 
@@ -59,16 +67,15 @@ li {
 .switch_div{
 
     display: flex;
-    width: 168px;
+    width: 140px;
     height: 40px;
-    margin-top: 55px;
-    margin-left: 523px;
+
+    margin-top: 15px;
 
 }
 
 
 .switch {
-    font-size: 17px;
     position: relative;
     display: inline-block;
     width: 3.5em;
@@ -137,10 +144,10 @@ li {
 }
 
 .night{
-    margin-left: 3px;
+    margin-left: 5px;
 
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    height: 34px;
 }
 
 
@@ -164,7 +171,12 @@ li {
 
 
 
-
+.header_item{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    /*align-items: center;*/
+}
 
 
 
@@ -203,8 +215,7 @@ li {
 
 .cart{
 
-
-
+    position: relative;
     width: 74px;
     height: 70px;
     margin-left: 41px;
@@ -214,9 +225,10 @@ li {
 
 
 .content{
-    margin-top: 50px;
-
     display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 20px;
 }
 
 
@@ -225,7 +237,7 @@ li {
 
 .search {
 
-    width: 640px;
+    min-width: 640px;
     height: 50px;
 
     border-radius: 15px;
@@ -259,6 +271,7 @@ li {
     font-weight: 600;
     font-size: 18px;
     line-height: 100%;
+
 }
 
 
@@ -281,8 +294,8 @@ li {
     /* width: 640px;
     height: 50px; */
 
-    margin-left: 20px;
-    width: 310px;
+    /*margin-left: 20px;*/
+    min-width: 310px;
     height: 50px;
 
     border-radius: 15px;
@@ -313,7 +326,7 @@ li {
 /* button */
 
 .btn{
-    margin-left: 20px;
+    /*margin-left: 20px;*/
     display: flex;
 }
 
@@ -352,6 +365,10 @@ li {
 }
 
 
+/*/////////////////////////////////////*/
+/*Home Context*/
+
+
 .line1{
     display: flex;
     margin: 50px 0;
@@ -368,55 +385,56 @@ li {
 .line1 .slider1{
     width: 970px;
     height: 390px;
-    background-color: #A1A1A1;
+    background-color: #FFFFFF;
 }
 
 .box
 {
-    /* Rectangle 109 */
-
-
     width: 1300px;
     height: 200px;
-    background-color: #2E2E2E;
-
     display: flex;
-
     margin: 50px 0;
 }
 
 .box img{
-
     width: 100px;
     height: 100px;
     margin: 50px 35px 50px 35px;
-
 }
 
 .box p{
     /* Текст */
-
-
-
-    font-family: "Montserrat", sans-serif;
+    /* Вітаю! Я ваш дружній помічник. */
+    font-family: 'Montserrat', serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 24px;
     line-height: 100%;
-
+    /* or 24px */
+    margin-top: 66px;
 
     color: #FFFFFF;
+}
 
-    margin-top: 82px;
+/*Зараз передивляються*/
 
+.now_watch{
+
+}
+
+.now_watch h1{
+    margin: 0;
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
 }
 
 
 
-
-
-
-
+/*///////////////////////////////////////*/
+/*Categories PAGE*/
 
 .dropdown-container {
 
@@ -439,9 +457,6 @@ li {
 
     /*margin-bottom: 10px;*/
 
-
-
-
     border-top: none;
     border-bottom: none;
     border-right: none;
@@ -449,31 +464,22 @@ li {
 
 
 .Categories{
-
-
     margin: 50px 0;
 }
 
 .Categories h3{
     /* Фільтри */
-
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 100%;
 
-
-    color: #2E2E2E;
     margin: 0;
     padding: 0;
-
 }
 
 .Categories p{
-
-
-
     margin-top: 35px;
     font-family: "Montserrat", sans-serif;
     font-style: normal;
@@ -481,19 +487,13 @@ li {
     font-size: 24px;
     line-height: 100%;
 
-
     color: #2E2E2E;
-
-
-
 }
 
 
 
 .cat-text{
     margin-bottom: 10px;
-
-
 }
 
 .cat_a {
@@ -502,7 +502,6 @@ li {
 }
 
 .cat_a:hover{
-
     color: #A1A1A1;
 }
 
@@ -613,113 +612,6 @@ img {vertical-align: middle;}
     .prev, .next,.text {font-size: 11px}
 }
 
-
-
-
-
-/* footer */
-
-
-
-.footer-first-line{
-    display: flex;
-}
-
-
-/* footer{
-
-} */
-
-.logo-footer{
-    margin-top: 50px;
-}
-
-
-.footer-list{
-
-    display: flex;
-    margin-top: 50px;
-    margin-bottom: 10px;
-}
-
-.footer-list li{
-
-    margin-bottom: 10px;
-}
-
-.footer-list ul{
-    list-style: none;
-    text-decoration: none;
-}
-
-
-
-.footer-list a{
-    text-decoration: none;
-
-    font-family: "Montserrat", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    /* identical to box height */
-    letter-spacing: 0.05em;
-
-}
-
-.title{
-    margin-bottom: 20px;
-}
-
-.title a{
-
-
-    font-family: "Montserrat", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-
-    letter-spacing: 0.05em;
-
-}
-
-.first{
-    margin-left: 75px;
-}
-
-.second{
-    margin-left: 63px;
-}
-
-.third{
-    margin-left: 133px;
-}
-
-.images{
-
-    display: flex;
-
-
-    width: 35px;
-    height: 35px;
-
-    margin-bottom: 450px;
-}
-
-.images img{
-    margin-right: 15px;
-}
-
-.images .icon_youtube{
-
-    width: 35px;
-    height: 24.85px;
-    margin-top: 5px;
-
-
-}
-
 /*///////////////////////////////////////////////////////////*/
 /*Product-cart*/
 
@@ -733,13 +625,39 @@ img {vertical-align: middle;}
     height: 640px;
 }
 
+.Product-content p{
+    /* Стан */
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+
+    color: #2E2E2E;
+
+    margin-top: 0;
+    margin-bottom: 17px;
+}
+
+.Product-content a{
+    /* Нове */
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+
+    color: #2E2E2E;
+}
+
 .product_img img{
     width: 640px;
     height: 640px;
 }
 
 .Product-cart h3{
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 25px;
     padding: 0;
     font-family: "Montserrat", sans-serif;
     font-style: normal;
@@ -761,6 +679,8 @@ img {vertical-align: middle;}
 
     color: #2E2E2E;
 
+    margin-top: 0;
+    margin-bottom: 25px;
 }
 
 .Product-cart h2{
@@ -774,6 +694,8 @@ img {vertical-align: middle;}
 
     color: #2E2E2E;
 
+    margin-top: 0;
+    margin-bottom: 35px;
 }
 
 
@@ -812,21 +734,32 @@ img {vertical-align: middle;}
 }
 
 .img_det{
+    display: flex;
+
     margin: 0;
     padding: 0;
     font-size: 0;
-    width: 640px;
+    width: 660px;
+    height: 165px;
+
+    overflow: hidden;
+
+    overflow-x: scroll;
+    /*scroll-behavior: smooth;*/
+    -webkit-overflow-scrolling: touch;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
 }
 
 .img_det img{
-    width: 145px;
+    min-width: 145px;
     height: 145px;
 
     margin-top: 20px;
     margin-right: 20px;
 
-    margin-bottom: 50px;
 }
 
 .button_buy{
@@ -956,21 +889,581 @@ img {vertical-align: middle;}
 
 .product-rec{
     display: flex;
-
 }
 
 .all-products
 {
+    margin-top: 35px;
     margin-bottom: 50px;
+
+
+
+    overflow-x: auto;
+    /*scroll-behavior: smooth;*/
+    -webkit-overflow-scrolling: touch;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.product-item {
+    position: relative;
+    min-width: 145px;
+    max-width: 145px;
+    height: 250px; /* Match the image height */
+    overflow: hidden; /* Optional: To hide any overflowing content */
+    margin-right: 20px;
+
+}
+
+.product-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fills the container and crops the image if necessary */
+    border-radius: 0 0 15px 15px;
+
+}
+
+.product-item-info {
+    position: absolute;
+    width: 100%; /* Match the width of the container */
+    height: 50px;
+    bottom: 0; /* Position at the bottom of the product item */
+    background: rgba(46, 46, 46, 0.75);
+    border-radius: 0 0 15px 15px;
+
+    /* Футболка “Лице” */
+
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    /* identical to box height, or 14px */
+
+    color: #FFFFFF;
+
+
+
+}
+
+.product-item-info a{
+    display: block;
+    margin-top: 3px;
+    margin-right: 5px;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+.product-item-info {
+    /*background-color: rgb(0,0,0); !* Резервний колір *!*/
+    /*background-color: rgba(0,0,0,0.7); !* Чорний з непрозорістю *!*/
+}
+
+.product-item-zat{
+    position: absolute;
+    width: 100%; /* Match the width of the container */
+    height: 50px;
+    bottom: 0; /* Position at the bottom of the product item */
+
+    /* Rectangle 231 */
+
+    background: linear-gradient(270deg, #2E2E2E 0%, rgba(46, 46, 46, 0) 40.5%, rgba(46, 46, 46, 0) 100%);
+    border-radius: 0 0 15px 15px;
+
+
+}
+
+
+.product-item-info a,
+.product-item-info p{
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 0;
+
+    color: #FFFFFF;
+
+
+}
+
+/*/////////////////////////////////////////*/
+/* VIP */
+.Vip_product {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.Vip_product h1 {
+    margin: 0;
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+}
+
+.Vip_product_items {
+    margin-top: 35px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    margin-bottom: 50px;
+}
+
+.Vip-product-item {
+    position: relative;
+    width: 310px;
+    height: 400px;
+    border-radius: 0 0 15px 15px;
+
+
+}
+
+.Vip-product-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 0 15px 15px;
+
+
+}
+
+.Vip-product-item-info {
+
+    bottom: 0;
+
+    position: absolute;
+    width: 310px;
+    height: 120px;
+
+    background: rgba(46, 46, 46, 0.75);
+    border-radius: 0 0 15px 15px;
+    padding: 15px;
+
+    text-align: left;
+}
+
+.Vip-product-item-info a,
+.Vip-product-item-info p{
+
+    text-decoration: none;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+
+    color: #FFFFFF;
+
+
+}
+
+.Vip-product-item-info a{
+    width: 100%;
+
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.Vip-product-item-info p{
+
+    margin-bottom: 0;
+
+    display: block;
+
+    margin-top: 4px;
+
+    width: 145px;
+
+
+
+
+
+}
+
+/* для обререзание переноса текста*/
+/*display: block;*/
+/*white-space: nowrap;*/
+/*overflow: hidden;*/
+
+/*.active-image {*/
+/*   background: #2E2E2E;*/
+/*}*/
+
+/*//////////////////////////////////////////////////////////*/
+/*Бізнес Для Вас*/
+
+.Bigness_products{
+    text-align: center;
+
+    overflow: hidden;
+
+    /*position: relative;*/
+
+
+}
+
+.Bigness_products h1{
+    margin: 0;
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+}
+
+.bigness_product{
+    margin-top: 35px;
+
+    display: flex;
+
+    gap: 20px;
+
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*position: relative;*/
+
+
+    overflow-x: auto;
+    /*scroll-behavior: smooth;*/
+    -webkit-overflow-scrolling: touch;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    margin-bottom: 50px;
+}
+
+
+/*!* Налаштування першого і останнього продукту для часткового відображення *!*/
+/*.bigness_product_item:first-child,*/
+/*.bigness_product_item:last-child {*/
+/*    margin-left: -300px;*/
+/*    margin-right: -300px;*/
+/*}*/
+
+/*!* Контейнер з інформацією про продукт *!*/
+/*.bigness_product_item div[style] {*/
+/*    margin-left: 50px;*/
+/*    text-align: left;*/
+/*}*/
+
+.bigness_product_item{
+    padding: 75px 30px;
+
+    display: flex;
+
+    /*margin-left: -320px;*/
+    box-sizing: border-box;
+
+    max-width: 640px;
+    min-width: 640px;
+    height: 400px;
+
+    background: #2E2E2E;
+    border-radius: 15px;
 }
 
 
 
 
+.bigness_product_item img{
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+.bigness_product_item a{
+
+    margin-bottom: 0;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+
+    max-width: 275px;
+}
+
+.bigness_product_item p{
+    /* 400 грн */
+
+    margin-top: 96px;
+    margin-bottom: 15px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+}
+
+
+.bigness_product_item .shop_btn{
+
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Rectangle 409 */
+
+    box-sizing: border-box;
+
+
+    width: 193px;
+    height: 50px;
+
+    border-radius: 15px;
+
+
+
+}
+
+.bigness_product_item .shop_btn a{
+    /* Додати в кошик */
+    margin-top: 0;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    /* identical to box height, or 14px */
+}
+
+.bigness_product_item .shop_btn img{
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+}
+
+/*///////////////////////////////////////////////////////////*/
+/*search*/
+
+.search_div{
+
+}
+
+.search_div h1{
+    margin: 0;
+    /* Популярні запити */
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    /* identical to box height, or 32px */
+}
+
+.search_zapit{
+    /* Rectangle 166 */
+
+    box-sizing: border-box;
+
+    width: 200px;
+    height: 50px;
+
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center; /* Горизонтальное выравнивание */
+    align-items: center;     /* Вертикальное выравнивание */
+
+}
+
+.search_zapit p{
+    margin: 0;
+    /* Текст заповнювач */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    /* identical to box height, or 14px */
+}
+
+/*//////////////////////////////////////////////////////////*/
+
+
+/*selected*/
+
+.vip-con-like {
+
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+
+}
+
+.vip-con-like .like {
+
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.vip-con-like .checkmark {
+
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vip-con-like .outline{
+    fill: #FFFFFF;
+
+}
+.vip-con-like .filled {
+
+    fill:#FFE800;
+    position: absolute;
+}
+
+.vip-con-like .filled {
+    animation: kfr-filled 0.5s;
+    display: none;
+}
+
+.vip-con-like .celebrate {
+    position: absolute;
+    animation: kfr-celebrate 0.5s;
+    animation-fill-mode: forwards;
+    display: none;
+}
+
+
+
+.vip-con-like .like:checked ~ .checkmark .filled {
+    display: block
+}
+
+.vip-con-like .like:checked ~ .checkmark .celebrate {
+    display: block
+}
+
+@keyframes kfr-filled {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+
+/*//////////////////////*/
+.Vip_btn{
+    position: absolute;
+
+    width: 80px;
+    height: 40px;
+
+    top: 0;
+
+
+    background: #FFE710;
+    border-radius: 0 0 15px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+}
+
+.Vip_btn p{
+    margin: 0;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    color: #2E2E2E;
+
+}
+
+
+/*Vip ★★★★★  */
+
+.rating-result {
+    width: 120px;
+    height: 21px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+}
+.rating-result span {
+    padding: 0;
+    font-size: 27px;
+    color: #EFEFEF;
+
+}
+.rating-result > span:before {
+    content: '★';
+
+}
+.rating-result > span.active {
+    color: #F7FB58;
+    background: none;
+
+}
+
+
+{
+/* Frame 13 */
+
+/* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 5px;
+
+    position: absolute;
+    width: 120px;
+    height: 21px;
+    left: 325px;
+    top: 1513px;
+
+
+}
+
+/*//////////////////////////////////////*/
+/*Category show PAGE */
 
 .menu {
-
-    width: 310px;
 
 
 }
@@ -983,14 +1476,7 @@ img {vertical-align: middle;}
     width: 310px;
     height: 30px;
 
-
     border-radius: 5px 5px 5px 5px;
-    border-left: 5px solid #2E2E2E;
-
-
-
-
-
 
     display: flex;
 
@@ -1001,43 +1487,34 @@ img {vertical-align: middle;}
 .menu-item p
 {
     /*margin-left: 10px;*/
-
     /* Краса та здоров’я */
-
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 100%;
 
-
-    color: #2E2E2E;
     margin: 0 0 0 10px;
 
 }
 
 .menu-item img
 {
-
     width: 20px;
     height: 20px;
-
 }
 
 .menu-item:hover, .menu-item:focus {
-    background-color: #f0f0f0;
+    background-color: #EFEFEF;
 }
 
 .sort_price{
     cursor: pointer;
     box-sizing: border-box;
-
     /*margin-bottom: 10px;*/
     justify-content: space-between;
 
-
     display: flex;
-
     align-items: center;
 
     width: 140px;
@@ -1055,9 +1532,7 @@ img {vertical-align: middle;}
     font-size: 16px;
     line-height: 100%;
 
-
     color: #A2A2A2;
-
 }
 
 .Categories #input{
@@ -1068,8 +1543,6 @@ img {vertical-align: middle;}
     margin-top: 50px;
     display: flex;
     gap: 25px;
-
-
 }
 
 .type_advertisement h3{
@@ -1080,21 +1553,68 @@ img {vertical-align: middle;}
     font-weight: 500;
     font-size: 24px;
     line-height: 100%;
-
-
-    color: #2E2E2E;
-
-
 }
 
-.type_active{
-    border-bottom: 3px solid #2E2E2E;
+.sort_menu{
+    /* Сортувати за */
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+}
+
+.list_product , .block_product, .currencies, .hryvnia, .dollar, .euro{
+    display: flex;
+    align-items: flex-end;
+}
+
+.list_product{
+    margin-left: 86px;
+}
+
+.block_product {
+    margin-left: 10px;
+}
+
+.currencies, .hryvnia, .euro, .dollar{
+    margin-bottom: 7px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+
+    color: #A1A1A1;
+}
+
+.active_valut{
+    /* ₴ */
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+}
+
+.currencies{
+    margin-left: 39px;
+
+    /* Валюта */
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+}
+
+.hryvnia, .euro, .dollar{
+    margin-left: 25px;
 }
 
 .page_link{
     /* Головна/Одяг та взуття/Чоловічий одяг */
-
-
     width: 660px;
 
     font-family: "Montserrat", sans-serif;
@@ -1106,20 +1626,14 @@ img {vertical-align: middle;}
 
     color: #8D8D8D;
 
-
     display: flex;
 
     align-items: flex-end;
-
 }
 
 .count
 {
-
 /* Ми знайшли понад 2000 оголошень */
-
-
-
     font-family: "Montserrat", sans-serif;
 
     font-style: normal;
@@ -1127,34 +1641,21 @@ img {vertical-align: middle;}
     font-size: 32px;
     line-height: 100%;
 
-
     color: #2E2E2E;
-
-
 }
 
 /*PRODUCT LIST IN CATEGORY*/
 
-
 .product_list{
     /* Rectangle 274 */
-
     display: flex;
-
     box-sizing: border-box;
-
 
     width: 1300px;
     height: 270px;
 
-
-    background: #EFEFEF;
-    border-right: 5px solid #2E2E2E;
     border-radius: 15px;
-
     margin-bottom: 25px;
-
-
 }
 
 .product_list img{
@@ -1164,35 +1665,24 @@ img {vertical-align: middle;}
 
 .product_list a{
     text-decoration: none;
-
     font-family: "Montserrat", sans-serif;
-
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 100%;
-    /* or 24px */
-
-    color: #000000;
-
 }
 
 .product_list p{
     /* 36/M/48 */
-
-
     font-family: "Montserrat", sans-serif;
 
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 100%;
-    /* or 20px */
-
-    color: #000000;
-
-
 }
+
+
 
 .product_right_part{
 
@@ -1213,11 +1703,6 @@ img {vertical-align: middle;}
     line-height: 100%;
 
     width: 340px;
-
-    color: #000000;
-
-
-
 }
 
 .el_flex-end
@@ -1225,35 +1710,7 @@ img {vertical-align: middle;}
     display: flex; align-items: flex-end;
 }
 
-.list_product , .block_product, .currencies, .hryvnia, .dollar, .euro{
-    display: flex;
-    align-items: flex-end;
-}
-
-.list_product{
-    margin-left: 86px;
-}
-
-.block_product {
-    margin-left: 10px;
-}
-
-.currencies, .hryvnia, .euro, .dollar{
-    margin-bottom: 7px;
-}
-
-.currencies{
-    margin-left: 39px;
-
-}
-
-.hryvnia, .euro, .dollar{
-    margin-left: 25px;
-}
-
-
 .new{
-
     width: 87px;
     height: 38px;
 
@@ -1267,7 +1724,6 @@ img {vertical-align: middle;}
 
 .new a{
     /* Нове */
-
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -1276,23 +1732,17 @@ img {vertical-align: middle;}
     /* or 20px */
 
     color: #595959;
-
-
 }
 
 .street{
 
     display: flex;
     align-items: flex-end;
-
     height: 128px;
 }
 
 .street a{
     /* Київ, якась там вулиця. 14 черня 2024 */
-
-
-
     font-family: "Montserrat", sans-serif;
     margin-bottom: 30px;
 
@@ -1303,38 +1753,24 @@ img {vertical-align: middle;}
     /* or 14px */
 
     color: #A1A1A1;
-
-
-
-
-
 }
 
 .shop_btn{
-
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
 
     /* Rectangle 409 */
-
     box-sizing: border-box;
-
 
     width: 274px;
     height: 50px;
-
-    border: 3px solid #2E2E2E;
     border-radius: 15px;
-
-
-
 }
 
 .shop_btn a{
     /* Додати в кошик */
-
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -1343,8 +1779,6 @@ img {vertical-align: middle;}
     /* identical to box height, or 24px */
 
     color: #2E2E2E;
-
-
 }
 
 .shop_btn img{
@@ -1359,7 +1793,37 @@ img {vertical-align: middle;}
     align-items: center;
     justify-content: end;
     margin-top: 156px;
+
+
 }
+
+.deleteLike{
+    position: absolute;
+    bottom: 0;
+    right: 25px;
+}
+
+.deleteLike h3{
+    /* Прибрати з обраного */
+
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    /* or 16px */
+    text-decoration-line: underline;
+
+    color: #2E2E2E;
+
+    cursor: pointer;
+
+}
+
+
 
 
 /*selected*/
@@ -1374,8 +1838,6 @@ img {vertical-align: middle;}
 }
 
 .con-like .like {
-
-
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1385,8 +1847,6 @@ img {vertical-align: middle;}
 }
 
 .con-like .checkmark {
-
-
     width: 100%;
     height: 100%;
     display: flex;
@@ -1399,7 +1859,6 @@ img {vertical-align: middle;}
 
 }
 .con-like .filled {
-
     fill:#FFE800;
     position: absolute;
 }
@@ -1470,19 +1929,12 @@ body.modal-open {
 
 /* Modal Content */
 .modal-content {
-
     /*margin-left: 120px;*/
     /*margin-top: 250px;*/
-    border: 1px solid #FFFFFF;
     /*width: 80%;*/
     /*overflow: hidden ;*/
 
-
     /* Rectangle 345 */
-
-
-
-    background: #FFFFFF;
     border-radius: 35px;
 
     /*pa: 125px;*/
@@ -1492,10 +1944,6 @@ body.modal-open {
     max-height: 440px;
 
     margin: 0 auto;
-
-
-
-
 }
 
 .category-column{
@@ -1512,23 +1960,22 @@ body.modal-open {
     overflow-y: auto;
 }
 
+/*!* The Close Button *!*/
+/*.close {*/
+/*    color: #aaaaaa;*/
+/*    margin-right: 25px;*/
+/*    margin-top: 25px;*/
+/*    float: right;*/
+/*    font-size: 28px;*/
+/*    font-weight: bold;*/
+/*}*/
 
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    margin-right: 25px;
-    margin-top: 25px;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
+/*.close:hover,*/
+/*.close:focus {*/
+/*    color: #000;*/
+/*    text-decoration: none;*/
+/*    cursor: pointer;*/
+/*}*/
 
 /*.modal-content::-webkit-scrollbar {*/
 /*    width: 12px;*/
@@ -1549,17 +1996,11 @@ body.modal-open {
 /*}*/
 
 .subCategory{
-
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 100%;
-    /* identical to box height, or 14px */
-
-    color: #2E2E2E;
-
-
 }
 
 .subSubCategory
@@ -1569,11 +2010,6 @@ body.modal-open {
     font-weight: 500;
     font-size: 12px;
     line-height: 100%;
-
-
-    color: #2E2E2E;
-
-
 }
 
 .menu-item a{
@@ -1645,10 +2081,57 @@ body.modal-open {
 
 
 }
+
+/*////////////////////////*/
+
+.alert {
+
+    background-color: #01B834; /* Зелений фон для успішних повідомлень */
+    padding: 20px;
+    color: white;
+    margin-top: 15px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: none; /* Початково приховане */
+    transition: opacity 1s ease-out;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+/*////////////////////////*/
+
 .cart_text{
 
 }
 
+.cart_empty{
+    margin-top: 200px;
+
+}
+
+.cart_empty img{
+    width: 268px;
+    height: 278px;
+}
+
+.cart_empty a{
+    display: flex;
+    justify-content: center;
+
+    /* У вас нічого немає! */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    /* identical to box height, or 32px */
+
+    text-decoration: none;
+}
 
 .modal-context a {
     /* Кошик */
@@ -1660,8 +2143,6 @@ body.modal-open {
     line-height: 100%;
 
     margin-left: 15px;
-
-    color: #2E2E2E;
 }
 
 .cart_img{
@@ -1670,8 +2151,6 @@ body.modal-open {
 
     margin: 0;
     padding: 0;
-
-
 }
 
 .close_div{
@@ -1681,18 +2160,13 @@ body.modal-open {
     justify-content: end;
 
     margin-top: 2px;
-
 }
 
     /* The Close Button */
 .close {
-
     margin: 0;
-
     width: 30px;
     height: 30px;
-
-
 }
 
 /*.close:hover,*/
@@ -1723,22 +2197,17 @@ body.modal-open {
 }
 
 .cart_product_item{
-
     direction: ltr;
-
     display: flex;
 
     box-sizing: border-box;
 
-    background: #EFEFEF;
-    border-right: 5px solid #2E2E2E;
     border-radius: 15px;
 
     width: 500px;
     height: 150px;
 
     margin-bottom: 15px;
-
 }
 
 .cart_product_item img{
@@ -1764,11 +2233,6 @@ body.modal-open {
     font-weight: 500;
     font-size: 20px;
     line-height: 100%;
-
-
-    color: #2E2E2E;
-
-
 }
 
 .cart_product_price{
@@ -1779,13 +2243,9 @@ body.modal-open {
 
 .cart_product_price img{
     /* Group 270 */
-
-    width: 19.19px;
+    width: 15.19px;
     height: 10.75px;
-
     margin-right: 22.81px;
-
-
 }
 
 .cart_product_menu_btn{
@@ -2030,6 +2490,76 @@ body.modal-open {
 
 }
 
+.form_zamovlennya2 .NovaPost, .SpOplata{
+    /* Rectangle 77 */
+    display: flex;
+    /*justify-content: center; !* Горизонтальное выравнивание *! */
+    align-items: center;     /* Вертикальное выравнивание */
+
+    cursor: pointer;
+
+    margin-top: 15px;
+    box-sizing: border-box;
+
+    padding-left: 15px;
+
+    width: 640px;
+    height: 60px;
+
+    border: 3px solid #2E2E2E;
+    border-radius: 15px;
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: #A1A1A1;
+}
+
+.form_zamovlennya2 .NovaPost a, .SpOplata a {
+    width: 569px;
+}
+
+.form_zamovlennya2 .NovaPost img, .SpOplata img {
+    width: 25px;
+    height: 25px;
+    margin-right: 25px;
+}
+
+.oformlenya_content{
+    display: none;
+    padding: 0 15px 15px;
+
+    height: 80px;
+
+    border-style: solid;
+    border-color: #2E2E2E;
+    border-width: 0 3px 3px 3px;
+    border-radius: 0 0 15px 15px;
+}
+
+.oformlenya_content input{
+    margin: 0;
+    padding: 0;
+    width: 15px;
+    height: 15px;
+}
+
+label.checkbox_item{
+    margin-left: 15px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+
+    color: #2E2E2E;
+}
+
 .checkmark_zamovlennya{
     margin-top: 25px;
 }
@@ -2059,13 +2589,35 @@ body.modal-open {
 /*////////////////////////////////////////////*/
 /*Кошик*/
 
+.countCart{
+    position: absolute;
+    top: 0;
+    left: 45px;
 
+    background-color: #FFE710;
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    justify-content: center; /* Горизонтальное выравнивание */
+    align-items: center;     /* Вертикальное выравнивание */
+
+    border-radius: 20px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #595959;
+
+
+}
 
 /* Modal Content */
 .modal-context2 {
-
-
-
     overflow-y: hidden;
     overflow-x: hidden;
 
@@ -2073,8 +2625,6 @@ body.modal-open {
 
     width: 595px;
     height: 886px;
-
-
 
     /* Rectangle 461 */
 
@@ -2101,8 +2651,6 @@ body.modal-open {
     line-height: 100%;
 
     margin-left: 15px;
-
-    color: #2E2E2E;
 }
 
 
@@ -2183,3 +2731,131 @@ body.modal-open {
 
 
 
+
+
+
+
+
+/* footer */
+
+
+
+.footer-first-line{
+    display: flex;
+}
+
+
+/* footer{
+
+} */
+
+.logo-footer{
+    margin-top: 50px;
+}
+
+
+.footer-list{
+
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.footer-list li{
+
+    margin-bottom: 10px;
+}
+
+.footer-list ul{
+    list-style: none;
+    text-decoration: none;
+}
+
+
+
+.footer-list a{
+    text-decoration: none;
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    letter-spacing: 0.05em;
+
+}
+
+.title{
+    margin-bottom: 20px;
+}
+
+.title a{
+
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+    letter-spacing: 0.05em;
+
+}
+
+.first{
+    margin-left: 75px;
+}
+
+.second{
+    margin-left: 63px;
+}
+
+.third{
+    margin-left: 133px;
+}
+
+.images{
+
+    display: flex;
+
+
+    width: 35px;
+    height: 35px;
+
+    margin-bottom: 450px;
+}
+
+.images img{
+    margin-right: 15px;
+}
+
+
+.images .icon_youtube{
+
+    width: 35px;
+    height: 24.85px;
+    margin-top: 5px;
+
+
+}
+
+
+
+/*!*ORDERS TABLE*!*/
+
+/*table {*/
+/*    font-family: arial, sans-serif;*/
+/*    border-collapse: collapse;*/
+/*    width: 100%;*/
+/*}*/
+
+/*td, th {*/
+/*    border: 1px solid #dddddd;*/
+/*    text-align: left;*/
+/*    padding: 8px;*/
+/*}*/
+
+/*tr:nth-child(even) {*/
+/*    background-color: #dddddd;*/
+/*}*/

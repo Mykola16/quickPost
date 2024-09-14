@@ -37,6 +37,7 @@ button p{
 hr{
 
     border: 5px solid #2E2E2E;
+    width: 100%;
 }
 
 .footer-list a{
@@ -48,3 +49,206 @@ hr{
 
     color: #000000;
 }
+
+
+/*Home Page*/
+
+.box
+{
+    background-color: #2E2E2E;
+}
+
+
+.box p{
+    /* Текст */
+    color: #FFFFFF;
+}
+
+/*cat home model*/
+
+.menu-item {
+    border-left: 5px solid #2E2E2E;
+}
+
+.menu-item p
+{
+    color: #2E2E2E;
+}
+
+/*Зараз передивляються*/
+
+.now_watch h1{
+    color: #2E2E2E;
+}
+
+/*VIP*/
+
+.Vip_product h1 {
+    color: #2E2E2E;
+}
+
+/*Бізнес Для Вас*/
+.Bigness_products h1{
+    color: #2E2E2E;
+}
+
+.bigness_product_item{
+    background: #2E2E2E;
+}
+
+.bigness_product_item a{
+    color: #FFFFFF;
+}
+
+.bigness_product_item p{
+    /* 400 грн */
+    color: #FFFFFF;
+}
+
+.bigness_product_item .shop_btn{
+    border: 3px solid #FFFFFF;
+}
+
+.bigness_product_item .shop_btn a{
+    color: #FFFFFF;
+}
+
+.bigness_product_item .shop_btn img{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+
+/*search*/
+
+.search_div h1{
+    color: #2E2E2E;
+}
+
+.search_zapit{
+    border: 3px solid #2E2E2E;
+}
+
+.search_zapit p{
+    color: #2E2E2E;
+}
+
+/*Modal*/
+
+.modal-content {
+    border: 1px solid #FFFFFF;
+    background: #FFFFFF;
+}
+
+.subCategory{
+    color: #2E2E2E;
+}
+
+.subSubCategory
+{
+    color: #2E2E2E;
+}
+
+
+
+/*////////////////////////////////////////////*/
+/*Кошик*/
+
+.cart_empty a{
+    color: #2E2E2E;
+}
+
+/*cart_product*/
+
+.cart_product_item{
+    background: #EFEFEF;
+    border-right: 5px solid #2E2E2E;
+}
+
+.cart_product_item p{
+    /* Футболка, велика */
+    color: #2E2E2E;
+}
+
+/*///////////////////////////////////////*/
+/*Categories PAGE*/
+
+.Categories h3{
+    /* Фільтри */
+    color: #2E2E2E;
+}
+
+.Categories p{
+    color: #2E2E2E;
+}
+
+.sort_price{
+    border: 3px solid #2E2E2E;
+    color: #A2A2A2;
+}
+
+.type_advertisement h3{
+    color: #2E2E2E;
+}
+
+.type_active{
+    border-bottom: 3px solid #2E2E2E;
+}
+
+.sort_menu{
+    /* Сортувати за */
+    color: #2E2E2E;
+}
+
+.currencies{
+    color: #2E2E2E;
+}
+
+.active_valut{
+    color: #2E2E2E;
+}
+
+
+/*PRODUCT LIST IN CATEGORY*/
+
+.product_list{
+    background: #EFEFEF;
+    border-right: 5px solid #2E2E2E;
+}
+
+.product_list a{
+    color: #2E2E2E;
+}
+
+.product_list p{
+    color: #2E2E2E;
+}
+
+.product_right_part p{
+    color: #2E2E2E;
+}
+
+.new a{
+    /* Нове */
+    color: #595959;
+}
+
+.street a{
+    /* Київ, якась там вулиця. 14 черня 2024 */
+    color: #A1A1A1;
+}
+
+.shop_btn{
+    border: 3px solid #2E2E2E;
+}
+
+.shop_btn a{
+    /* Додати в кошик */
+    color: #2E2E2E;
+}
+
+
+
+
+
+
+

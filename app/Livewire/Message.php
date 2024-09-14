@@ -10,14 +10,15 @@ class Message extends Component
 
     public $selectedConversation;
 
-
-
     public function viewMessage($conversationID)
     {
         return redirect()->route('chat.view', ['conversationID' => $conversationID]);
     }
 
 
+    public function delete(Conversation $conversations){
+        $conversations->delete();
+    }
 
     public function render()
     {

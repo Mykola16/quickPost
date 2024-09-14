@@ -13,6 +13,18 @@ class CartComponent extends Component
     public $total = 0;
 
 
+    protected $listeners = ['cartUpdated' => 'render' , 'itemAdded' => 'showMessage'];
+
+    public function delete(ShoppingCart $cartitems){
+        $cartitems->delete();
+        $this->dispatch('headerUpdated');
+    }
+
+    public function showMessage($message)
+    {
+        $this->message = $message;
+    }
+
     public function render()
     {
         if (auth()->check()) {

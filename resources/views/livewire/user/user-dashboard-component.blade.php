@@ -8,10 +8,6 @@
             <h1 class="profile_page_name" >Ваші оголошення</h1>
         </div>
 
-        <button class="create_btn" >
-            <a href="{{route('Create')}}"><p>Нове оголошення</p></a>
-        </button>
-
     </div>
 
     <div style="display: flex">
@@ -20,12 +16,12 @@
         </div>
 
         <div class="advertisement_menu_item">
-            <a href="#"><p>Очікующі</p></a>
-        </div>
-
-        <div class="advertisement_menu_item">
             <a href="#"><p>Неактивні</p></a>
         </div>
+
+        <button class="create_btn" >
+            <a href="{{route('Create')}}"><p>Нове оголошення</p></a>
+        </button>
     </div>
     <div style="margin-top: 50px">
     @if ($allProducts->isNotEmpty())
@@ -50,7 +46,7 @@
                         <img src="{{Storage::url($image)}}" alt="">
                     </a>
                 </div>
-                <div style=" margin-left:20px; margin-top: 20px; width: 600px" >
+                <div class="my_product_info">
                     <a  href="{{ route('product.show', $product->id) }}">{{ $product->name }}</a>
                     <p>{{ $product->short_description }}</p>
 

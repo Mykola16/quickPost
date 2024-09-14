@@ -23,145 +23,15 @@
 
 <div class="wrapper" >
     <!--header-->
-    <header>
-        <div class="header">
 
-            <div class="logo">
-                <a href="{{ route('Home') }}" class="link-to-home"><img src="{{ asset('assets/images/logo.png')}}" alt="logo"></a>
-            </div>
+    @livewire('header')
 
-            <div class="switch_div">
-                <img class="day" src="{{ asset('assets/images/day.png')}}">
-                <label id="switchMode" class="switch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
-                <img class="night" src="{{ asset('assets/images/night.png')}}">
-            </div>
-            {{--profile.show--}}
-            <ul class="page-menu">
-
-
-                @if(Route::has('login'))
-
-                    @auth()
-                        @if(Auth::user()->utype === 'ADM')
-                            <li class="profile"><a href="{{ route('admin.dashboard') }}"><img src="{{ asset('assets/images/profile.png')}}" alt="profile"></a></li>
-                        @else
-                            <li class="profile"><a href="{{ route('user.dashboard') }}"><img src="{{ asset('assets/images/profile.png')}}" alt="profile"></a></li>
-                        @endif
-
-                    @else()
-                        <li class="profile"><a href="{{ route('login') }}"><img src="{{ asset('assets/images/profile.png')}}" alt="profile"></a></li>
-                    @endauth
-                @endif
-                    @if(Route::has('login'))
-                        @auth()
-                            <li class="selected"><a href="{{ route('Chosen') }}"><img src="{{ asset('assets/images/selected.png')}}" alt="selected"></a></li>
-                        @else()
-                            <li class="selected"><a href="{{ route('login') }}"><img src="{{ asset('assets/images/selected.png')}}" alt="selected"></a></li>
-                        @endif
-                    @endif
-                <li class="cart" id="myBtn2"><a><img src="{{ asset('assets/images/cart.png')}}" alt="cart"></a></li>
-            </ul>
-
-        </div>
-    </header>
-
-    <div class="content">
-        <div class="search">
-            <input type="text" name="text" id="input" placeholder="Що шукаєте?" autocomplete="off" autocorrect="off">
-            <label for="input">
-                <img class="micIcon" src="{{ asset('assets/images/mic_icon.png')}}" alt="mic_icon">
-            </label>
-        </div>
-
-        <div class="search_map">
-            <input type="text" name="text" class="input" id="input" placeholder="Вся Україна" autocomplete="off" autocorrect="off">
-            <label for="input">
-                <img src="{{ asset('assets/images/map.png')}}" alt="search__icon">
-            </label>
-        </div>
-
-        <div class="btn">
-            <button class="button_search" type="submit">
-                <p>Пошук</p>
-                <img src="{{ asset('assets/images/search_icon.png')}}" alt="search_icon">
-            </button>
-        </div>
-    </div>
+    @livewire('search')
 
     <div class="profile_page">
         <div class="profile_menu">
 
-            <div class="info_user">
-                <div class="avatar">
-                    {{--<img src="{{ asset('assets/images/profile_menu_img/avatar2.png')}}" alt="avatar">--}}
-                    <img src="{{Storage::url(Auth::user()->avatar)}}" alt="">
-                    {{--<img src="/laravel/storage/app/public/photos/{{$image}}" alt="">--}}
-                </div>
-                <div class="user_name">
-                    <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                </div>
-            </div>
-
-            <div style="margin-top: 25px">
-                <div class="profile_menu_item">
-                    <img src="{{ asset('assets/images/profile_menu_img/advertisement.png') }}" alt="">
-                    <a href="{{ route('user.dashboard') }}"><p>Ваші оголошення</p></a>
-                </div>
-
-                <div class="profile_menu_item">
-                    <img style="height: 25px" src="{{ asset('assets/images/profile_menu_img/message.png') }}" alt="">
-                    <a href="{{ route('Message') }}"><p>Повідомлення</p></a>
-                </div>
-
-
-                    <div class="profile_menu_item">
-                        <img src="{{ asset('assets/images/profile_menu_img/selected.png') }}" alt="">
-                        <a href="{{ route('Chosen') }}"><p>Обране</p></a>
-                    </div>
-
-
-                <div class="profile_menu_item">
-                    <img src="{{ asset('assets/images/profile_menu_img/history.png') }}" alt="">
-                    <a href="{{ route('History') }}"><p>Історія замовлень</p></a>
-                </div>
-
-                <div class="profile_menu_item">
-                    <img src="{{ asset('assets/images/profile_menu_img/reviews.png') }}" alt="">
-                    <a href="{{ route('Reviews') }}"><p>Мої відгуки</p></a>
-                </div>
-
-                <div class="profile_menu_item">
-                    <img src="{{ asset('assets/images/profile_menu_img/star.png') }}" alt="">
-                    <a href="{{ route('Subscription') }}"><p>Підписка</p></a>
-                </div>
-
-                <div class="profile_menu_item">
-                    <img src="{{ asset('assets/images/profile_menu_img/settings.png') }}" alt="">
-                    <a href="{{ route('Settings') }}"><p>Налаштування</p></a>
-                </div>
-
-                <div class="profile_menu_item">
-                    <img src="{{ asset('assets/images/profile_menu_img/exit.png') }}" alt="">
-
-                    @if (Auth::user())
-
-                        <!-- Authentication -->
-                        <form method="POST" action="{{ route('logout') }}" x-data>
-                            @csrf
-
-                            <a href="{{ route('logout') }}" @click.prevent="$root.submit();">
-                                <p style="margin-bottom: 18px; margin-left: 10px">Вийти</p>
-                            </a>
-                        </form>
-                    @endif
-
-                    {{--                    <a href="{{ route('logout') }}" ><p>Вийти</p></a>--}}
-                </div>
-
-            </div>
+            @livewire('user-profile-panel')
 
         </div>
 
@@ -169,15 +39,7 @@
             {{ $slot }}
         </div>
 
-
     </div>
-
-
-
-
-
-
-
 
 
 

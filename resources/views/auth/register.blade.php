@@ -49,7 +49,7 @@
                 <div class="login-form">
 
                     <label for="registration-type" class="dropdown-label">Реєстрація як</label>
-                    <div class="dropdown-container">
+                    <div style="margin-top: 15px" class="dropdown-container">
                         <select id="registration-type" name="utype" class="dropdown-select" onchange="changeLabels()">
                             <option value="PRV">Приватна особа</option>
                             <option value="BSN">Бізнес</option>
@@ -57,21 +57,21 @@
                     </div>
 
                     <label for="name" id="nameLabel">Iм'я призвіще</label>
-                    <input type="text" id="name" name="name" value="{{ old('name') }}" required>
+                    <input  type="text" id="name" name="name" value="{{ old('name') }}" required>
 
                     <label for="email">Електронна пошта</label>
-                    <input type="email" id="email" name="email" value="{{ old('email') }}" required>
+                    <input  type="email" id="email" name="email" value="{{ old('email') }}" required>
 
                     <div id="socialNetworkGroup" style="display: none;">
                         <label for="social_network">Соц мережі (якщо є)</label>
-                        <input type="text" id="social_network" name="social_network" value="{{ old('social_network') }}">
+                        <input  type="text" id="social_network" name="social_network" value="{{ old('social_network') }}">
                     </div>
 
                     <label for="password">Пароль</label>
-                    <input type="password" id="password" name="password" required>
+                    <input  type="password" id="password" name="password" required>
 
                     <label for="password_confirmation">Повторіть Пароль</label>
-                    <input type="password" id="password_confirmation" name="password_confirmation" required>
+                    <input  type="password" id="password_confirmation" name="password_confirmation" required>
 
                     <div style="text-align: center;">
                         <button type="submit">Зареєструватись</button>

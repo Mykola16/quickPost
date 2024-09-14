@@ -29,10 +29,10 @@ class User extends Authenticatable
         'password',
         'google_id',
         'facebook_id',
+        'phone_number',
         'utype',
         'social_network',
         'avatar',
-
     ];
 
     /**

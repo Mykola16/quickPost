@@ -9,8 +9,15 @@ class Product extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     protected $table = 'products';
 
+
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
+    }
 
     public function images()
     {

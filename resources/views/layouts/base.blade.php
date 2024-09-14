@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="QuickPost" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('assets/styles/home.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/styles/user_profile.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/styles/day.css')}}" id="theme">
     <link rel="icon" href="{{ asset('favicon.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ asset('assets/styles/user_profile.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/styles/media.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/styles/day.css')}}" id="theme">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tsukimi+Rounded&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css"/>
     @livewireStyles
 </head>
 <body>
@@ -22,47 +26,7 @@
 
 <div class="wrapper">
     <!--header-->
-    <header>
-        <div class="header">
-
-            <div class="logo">
-                <a href="{{ route('Home') }}" class="link-to-home"><img src="{{ asset('assets/images/logo.png')}}" alt="logo"></a>
-            </div>
-
-            <div class="switch_div">
-                <img class="day" src="{{ asset('assets/images/day.png')}}">
-                <label id="switchMode" class="switch">
-                    <input type="checkbox">
-                    <span class="slider"></span>
-                </label>
-                <img class="night" src="{{ asset('assets/images/night.png')}}">
-            </div>
-{{--profile.show--}}
-            <ul class="page-menu">
-
-
-                @if(Route::has('login'))
-
-                    @auth()
-                        @if(Auth::user()->utype === 'ADM')
-                            <li class="profile"><a href="{{ route('admin.dashboard') }}"><img src="{{ asset('assets/images/profile.png')}}" alt="profile"></a></li>
-                        @else
-                            <li class="profile"><a href="{{ route('user.dashboard') }}"><img src="{{ asset('assets/images/profile.png')}}" alt="profile"></a></li>
-                        @endif
-
-                @else()
-                        <li class="profile"><a href="{{ route('login') }}"><img src="{{ asset('assets/images/profile.png')}}" alt="profile"></a></li>
-                    @endauth
-                @endif
-
-                        <li class="selected"><a href="{{ route('Chosen') }}"><img src="{{ asset('assets/images/selected.png')}}" alt="selected"></a></li>
-
-                <li class="cart" id="myBtn2"><a><img src="{{ asset('assets/images/cart.png')}}" alt="cart"></a></li>
-            </ul>
-
-        </div>
-    </header>
-
+    @livewire('header')
 
 
 
@@ -130,8 +94,16 @@
 <script src="{{ asset('assets/script2.js')}}"></script>
 <script src="{{ asset('assets/slider.js')}}"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+
+
+
+@stack('scripts')
 
 @livewireScripts
+
+
+
 
 </body>
 </html>

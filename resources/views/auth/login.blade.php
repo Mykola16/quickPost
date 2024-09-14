@@ -60,7 +60,7 @@
 
                     <label for="email">Електронна пошта</label>
                     <input type="email" id="email" name="email">
-                    <label for="password">Пароль</label>
+                    <label style="margin-top: 25px" for="password">Пароль</label>
                     <input type="password" id="password" name="password">
 
                     @if (Route::has('password.request'))

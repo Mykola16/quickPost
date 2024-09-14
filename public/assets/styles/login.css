@@ -7,7 +7,11 @@ body {
 }
 
 
-
+input:focus {
+    outline: none !important;
+    border-color: #2E2E2E !important;
+    box-shadow: none !important;
+}
 
 
 .login-container {
@@ -25,14 +29,18 @@ body {
     margin-bottom: 35px;
 
 
-    font-family: 'Montserrat';
+    /* Увійдіть за допомогою */
+
+    font-family: 'Montserrat', serif;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 100%;
-
+    /* identical to box height, or 24px */
 
     color: #2E2E2E;
+
+
 
 }
 
@@ -64,16 +72,18 @@ body {
 
     margin-top: 35px;
 
+    /* або */
 
-
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 100%;
-
+    /* identical to box height, or 20px */
 
     color: #2E2E2E;
+
+
 
 
 }
@@ -86,9 +96,13 @@ body {
 /* Зареєструватись */
 #nav {
 
-    /* justify-content: center; */
+    display: flex;
+    justify-content: center;
+
     margin-bottom: 35px;
     margin-top: 35px;
+
+
 
 }
 
@@ -97,6 +111,8 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
+
+    gap: 72px;
 }
 
 ul{
@@ -114,9 +130,53 @@ ul{
 
 
     text-decoration: none;
+    /*position: relative;*/
+
+    /* Увійти */
+
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
     font-size: 24px;
-    font-weight: 550;
-    position: relative;
+    line-height: 100%;
+    /* identical to box height, or 24px */
+
+
+
+
+}
+
+.login{
+    /*margin-left: 38px;*/
+    border-bottom: 3px solid black;
+    padding-left: 60px;
+    padding-right: 60px;
+
+    padding-bottom: 4.5px;
+}
+
+
+
+.login a{
+    color: #2E2E2E;
+}
+
+.registr a{
+    color: #A1A1A1;
+
+}
+
+.registr a:hover{
+    color: #2E2E2E;
+}
+
+.registr{
+    /*margin-left: 130px;*/
+}
+
+label {
+    color: #2E2E2E;
 }
 
 
@@ -131,31 +191,67 @@ ul{
 
 .login-form label {
     display: block;
-    font-size: 20px;
-	font-weight: 550;
+
     margin-bottom: 15px;
 	margin-left: 25px;
+
+    /* Електронна пошта */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    /* identical to box height, or 20px */
+
+    color: #2E2E2E;
+
+
 }
 
 
 .login-form input {
-    background-color: #EFEFEF;
+    /* Rectangle 324 */
+
+    box-sizing: border-box;
+
+
     width: 500px;
     height: 40px;
-    margin-bottom: 15px;
-    border: 1px solid black;
-    border-radius: 10px;
-	margin-left: 25px;
+
+    background: #EFEFEF;
+
+    border: 1px solid #2E2E2E;
+    border-radius: 15px;
+
+    margin-left: 25px;
+
 }
 
 .login-form a {
     display: block;
-    font-size: 20px;
-	font-weight: 300;
+
+
     color: #2E2E2E;
     text-decoration: none;
+    margin-top: 15px;
     margin-bottom: 35px;
-	margin-left: 15px;
+	margin-left: 25px;
+
+
+    /* Забули пароль? */
+
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    /* identical to box height, or 20px */
+
+
+
+
 }
 
 .login-form button {
@@ -163,7 +259,7 @@ ul{
     height: 50px;
     background-color: #2E2E2E;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
     color: white;
     font-size: 24px;
 	font-weight: 550;
@@ -175,45 +271,19 @@ ul{
     background-color: #000000;
 }
 
-.login{
-	margin-left: 60px;
-	border-bottom: 3px solid black;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-
-
-.login a{
-    color: #2E2E2E;
-}
-
-.registr a{
-	color: #A1A1A1;
-
-}
-
-.registr a:hover{
-	color: #2E2E2E;
-}
-
-.registr{
-	margin-left: 130px;
-}
-
-label {
-    color: #2E2E2E;
-}
-
-
-
-
 
 
 /* Під час входу ви погоджуєтесь з нашими  */
 .terms {
-	font-size: 20px;
-	font-weight: 300;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    /* or 20px */
+    text-align: center;
+
     color: #2E2E2E;
 }
 
@@ -229,11 +299,21 @@ label {
 }
 
 .private a{
-	color: #2E2E2E;
     text-decoration: none;
-	font-size: 20px;
-	font-weight: 550;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 20px;
+    line-height: 100%;
+
+    color: #2E2E2E;
 }
+
+
+
+
+
 
 
 

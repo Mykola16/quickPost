@@ -11,11 +11,18 @@ class CategoryShow extends Component
     public $category;
     public $products;
 
+    public $allProducts;
+
+    public $view = 'list';
+
     public function mount(Category $category)
     {
+
         $this->category = $category;
         $this->products = $category->products;
     }
+
+
 
     public function addToCart($id){
         $data = [
@@ -24,7 +31,8 @@ class CategoryShow extends Component
         ];
         ShoppingCart::updateOrCreate($data);
 
-
+        $this->dispatch('cartUpdated');
+        $this->dispatch('headerUpdated');
     }
 
     public function render()

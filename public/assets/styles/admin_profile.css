@@ -1,0 +1,598 @@
+h1{
+    margin: 0;
+
+    /* Головна */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    color: #2E2E2E;
+
+
+}
+
+.admin_profile_page{
+    margin: 50px 0 50px 0;
+
+    display: flex;
+}
+
+.admin_profile_content{
+    margin-left: 62px;
+}
+
+
+
+.admin_profile_menu{
+
+    width: 268px;
+    height: 615px;
+
+
+    box-sizing: border-box;
+
+    border-width: 5px 0;
+    border-style: solid;
+    border-color: #2E2E2E;
+    border-radius: 5px;
+}
+
+.info_admin{
+    display: flex;
+    margin-top: 41px;
+    word-break: break-all;
+}
+
+.admin_name{
+
+    display: flex;
+    align-items: center;
+
+    height: 80px;
+
+    /* Привіт, admin */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #2E2E2E;
+
+    width: 183px;
+
+    margin-left: 15px;
+
+}
+
+
+.admin_avatar{
+    display: flex;
+    align-items: center;
+}
+
+.admin_avatar img{
+
+    width: 125px;
+    height: 125px;
+
+    border-radius: 75px;
+
+}
+
+.admin_profile_menu_item {
+
+    /*margin-top: 25px;*/
+    margin-top: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    /*margin-bottom: 10px;*/
+
+    width: 268px;
+    height: 50px;
+
+
+    border-radius: 5px 5px 5px 5px;
+
+
+    border-left: 5px solid #A1A1A1;
+    border-right: 5px solid #A1A1A1;
+
+    /*border-left: 5px solid #2E2E2E;*/
+    /*border-right: 5px solid #2E2E2E;*/
+
+
+
+
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+.admin_profile_menu_item.active1{
+    border-left: 5px solid #2E2E2E;
+    border-right: 5px solid #2E2E2E;
+
+}
+
+
+.admin_profile_menu_item img
+{
+
+    margin-left: 15px;
+    width: 30px;
+    height: 30px;
+
+}
+
+.admin_profile_menu_item a{
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+
+
+
+.admin_profile_menu_item p
+{
+
+
+    /* Краса та здоров’я */
+
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+
+
+    color: #2E2E2E;
+    margin: 0 0 0 0;
+
+}
+
+.admin_profile_menu_item:hover, .admin_profile_menu_item:focus {
+    background-color: #f0f0f0;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////*/
+/*HomePage in Admin*/
+
+.home_admin{
+
+}
+
+.home_admin h3{
+    /* Нові */
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+
+    color: #2E2E2E;
+
+    margin-top: 35px;
+    margin-bottom: 21px;
+
+}
+
+.new_static{
+    width: 267px;
+    height: 169px;
+
+    border-width: 3px 0;
+    border-style: solid;
+    border-color: #A1A1A1;
+    border-radius: 5px;
+
+    padding-top: 22px;
+
+    position: relative;
+}
+
+.new_static img{
+    width: 25px;
+    height: 25px;
+}
+
+.new_static p, .new_static a{
+    /* Нові оголошення */
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+
+    color: #2E2E2E;
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    margin-left: 10px;
+
+}
+
+.new_static a{
+    position: absolute;
+    margin: 0;
+    right: 7px;
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*Users_page*/
+
+.users_admin_page{
+
+}
+
+.search_user_icon{
+   margin-top: 30px;
+    font-size: 0;
+    position: relative;
+}
+
+
+.users_admin_page input{
+
+    box-sizing: border-box;
+
+
+    width: 640px;
+    height: 50px;
+
+    border: 3px solid #2E2E2E;
+    border-radius: 15px;
+}
+
+.users_admin_page img{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 15px;
+    top: 9px;
+}
+
+.users_admin_page input{
+    padding-left: 57px;
+
+    /* Знайти користувача */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+
+    color: #A1A1A1;
+}
+
+.users_admin_page button{
+
+    margin-left: 20px;
+
+    width: 150px;
+    height: 50px;
+
+    background: #2E2E2E;
+    border-radius: 15px;
+
+    /* Пошук */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+.users_div{
+    box-sizing: border-box;
+    width: 970px;
+    height: 640px;
+
+    background: #EFEFEF;
+    border-right: 5px solid #2E2E2E;
+    border-radius: 15px;
+
+    margin: 20px 0;  /***********************/
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.name_table{
+    margin-top: 50px;
+    margin-left: 67px;
+}
+
+.name_table th{
+    /* Ім’я та прізвище */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    text-align: center;
+
+    color: #A1A1A1;
+}
+
+.cont_table{
+    padding-top: 7px;
+}
+
+.cont_table tr{
+    height: 15px;
+    align-items: center;
+
+}
+
+.cont_table td{
+    /* Ім’я користувача */
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    /* identical to box height, or 16px */
+
+    color: #2E2E2E;
+    padding: 0;
+}
+
+.cont_table p{
+    margin: 0 0;
+}
+
+.cont_table input{
+    width: 20px;
+    height: 20px;
+
+
+    background-color: #EFEFEF;
+
+    margin: 30px 27px 30px 20px;
+}
+
+.cont_table th{
+    padding: 0;
+}
+
+.points{
+
+}
+
+.point_btn{
+    cursor: pointer;
+    display: flex;
+    gap: 3px;
+}
+
+.point{
+    background-color: #2E2E2E;
+    width: 7px;
+    height: 7px;
+    border-radius: 15px;
+}
+
+button.all_select, button.del_user{
+    width: 143px;
+    height: 40px;
+
+    background: #2E2E2E;
+    border-radius: 15px;
+}
+
+button.del_user{
+    width: 138px;
+    margin-left: 12px;
+}
+
+button.all_select{
+    margin-left: 0;
+}
+
+button.all_select p, button.del_user p{
+    /* Обрати все */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    /* identical to box height, or 24px */
+
+    color: #FFFFFF;
+
+    margin: 0;
+}
+
+.add_user{
+    width: 150px;
+    height: 50px;
+
+    background: #2E2E2E;
+    border-radius: 15px;
+
+    position: absolute;
+
+    right: 0;
+
+    cursor: pointer;
+}
+
+.add_user p{
+    /* Додати */
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    /* identical to box height, or 29px */
+
+    color: #FFFFFF;
+
+    margin: 0;
+}
+
+
+.menu {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 228px;
+    height: 216px;
+
+    background: #EFEFEF;
+    border: 3px solid #2E2E2E;
+    border-radius: 15px;
+
+    z-index:20;
+    top: 0; left: 0;
+    overflow: visible;
+}
+
+.menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu li {
+    padding: 50px;
+    border-bottom: 1px solid #2E2E2E;
+    cursor: pointer;
+
+    border-bottom: 1px solid #2E2E2E;
+
+    display: flex;
+    justify-content: center;
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu li:hover {
+    font-weight: 700;
+    color: #2E2E2E;
+}
+
+
+/*//////////////////////////////////////////////////////*/
+/*Modal*/
+
+.add_modal{
+    display: none; /* Приховано за умовчанням */
+    position: fixed; /* Залишайтеся на місці */
+    z-index: 1; /* Сісти зверху */
+    padding-top: 250px; /* Розташування коробки */
+    left: 0;
+    top: 0;
+    width: 100%; /* Повна ширина */
+    height: 100%; /* Повний зріст */
+
+    /*overflow: auto; !* Увімкнути прокручування, якщо потрібно *!*/
+    background-color: rgb(0,0,0); /* Резервний колір */
+    background-color: rgba(0,0,0,0.7); /* Чорний з непрозорістю */
+    margin-right: 100px;
+}
+
+.add_cont{
+    margin: 0 auto;
+
+    /* Rectangle 555 */
+
+    box-sizing: border-box;
+
+    width: 499px;
+    height: 671px;
+
+    background: #EFEFEF;
+    border: 3px solid #2E2E2E;
+    border-radius: 15px;
+
+    padding: 20px 29px 25px 29px;
+
+    position: relative;
+}
+
+.add_cont label{
+    /* Ім’я користувача */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    /* identical to box height, or 16px */
+
+    color: #2E2E2E;
+}
+
+.add_cont input{
+    box-sizing: border-box;
+
+    width: 441px;
+    height: 50px;
+
+    border: 3px solid #2E2E2E;
+    border-radius: 15px;
+
+    padding-left: 15px ;
+
+    background: #EFEFEF;
+
+    margin-top: 11px;
+    margin-bottom: 15px;
+}
+
+.add_cont button{
+
+    position: absolute;
+    bottom: 25px;
+
+    width: 150px;
+    height: 50px;
+
+    background: #2E2E2E;
+    border-radius: 15px;
+
+    /* Зберегти */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    /* identical to box height, or 29px */
+
+    color: #FFFFFF;
+}
+
+.drop_container{
+    /*box-sizing: border-box;*/
+
+    /*width: 182px;*/
+    /*height: 158px;*/
+
+    /*background: #FFFFFF;*/
+    /*border: 3px solid #2E2E2E;*/
+    /*border-radius: 15px;*/
+
+
+}
+
+.drop_select{
+
+}

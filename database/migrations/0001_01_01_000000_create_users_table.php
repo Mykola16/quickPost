@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('facebook_id')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('social_network')->nullable();
+            $table->string('phone_number')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();

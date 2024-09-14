@@ -1,5 +1,5 @@
 body{
-	background-color: #2A2A2A;
+	background-color: #2E2E2E;
 }
 
 .logo{
@@ -105,3 +105,268 @@ p{
     color: #FFFFFF;
 }
 /*  */
+
+
+/*Home Page*/
+.box
+{
+    background-color: #FFFFFF;
+}
+
+.box p{
+    /* Текст */
+    color: #2E2E2E;
+}
+
+/*slider*/
+
+.line1 .slider1{
+    background-color: #2E2E2E;
+}
+
+.prev, .next {
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+/*cat home model*/
+
+
+.menu-item:hover {
+    background-color: #FFFFFF; /* Изменяет цвет фона блока */
+    color: #2E2E2E; /* Изменяет цвет текста */
+}
+
+.menu-item:hover * {
+    color: #2E2E2E;
+}
+
+.menu-item {
+    border-left: 5px solid #FFFFFF;
+}
+
+.menu-item p
+{
+    color: #FFFFFF;
+}
+
+.menu-item img
+{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+/*Зараз передивляються*/
+
+.now_watch h1{
+    color: #FFFFFF;
+}
+
+/*VIP*/
+
+.Vip_product h1 {
+    color: #FFFFFF;
+}
+
+/*Бізнес Для Вас*/
+.Bigness_products h1{
+    color: #FFFFFF;
+}
+
+.bigness_product_item{
+    background: #FFFFFF;
+}
+
+.bigness_product_item a{
+    color: #2E2E2E;
+}
+
+.bigness_product_item p{
+    /* 400 грн */
+    color: #2E2E2E;
+}
+
+.bigness_product_item .shop_btn{
+    border: 3px solid #2E2E2E;
+}
+
+.bigness_product_item .shop_btn a{
+    color: #2E2E2E;
+}
+
+/*search*/
+
+.search_div h1{
+    color: #2E2E2E;
+}
+
+.search_zapit{
+    border: 3px solid #FFFFFF;
+}
+
+.search_zapit p{
+    color: #FFFFFF;
+}
+
+/*Modal*/
+
+.modal-content {
+    border: 5px solid #FFFFFF;
+    background: #2E2E2E;
+}
+
+.subCategory{
+    color: #FFFFFF;
+}
+
+.subSubCategory
+{
+    color: #FFFFFF;
+}
+
+/*Cart*/
+
+.cart_empty a{
+    color: #FFFFFF;
+}
+
+.modal-context a {
+    /* Кошик */
+    color: #FFFFFF;
+}
+
+.cart_img{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+/* The Close Button */
+.close {
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+/* Modal Content */
+.modal-context {
+    background: #2E2E2E;
+    border-bottom: 5px solid #FFFFFF;
+}
+
+.modal-context a {
+    /* Кошик */
+    color: #FFFFFF;
+}
+
+/*cart_product*/
+
+.cart_product_item{
+    background: #474747;
+    border-right: 5px solid #FFFFFF;
+}
+
+.cart_product_item p{
+    /* Футболка, велика */
+    color: #FFFFFF;
+}
+
+.cart_product_price img{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+/*///////////////////////////////////////*/
+/*Categories PAGE*/
+
+.Categories h3{
+    /* Фільтри */
+    color: #FFFFFF;
+}
+
+.Categories p{
+    color: #FFFFFF;
+}
+
+.sort_price{
+    border: 3px solid #FFFFFF;
+    color: #A2A2A2;
+    background-color: #2E2E2E;
+}
+
+.type_advertisement h3{
+    color: #FFFFFF;
+}
+
+.type_active{
+    border-bottom: 3px solid #FFFFFF;
+}
+
+.sort_menu{
+    /* Сортувати за */
+    color: #FFFFFF;
+}
+
+.list_product{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.block_product{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.currencies{
+    color: #FFFFFF;
+}
+
+.active_valut{
+    color: #FFFFFF;
+}
+
+
+/*PRODUCT LIST IN CATEGORY*/
+
+.product_list{
+    background: #474747;
+    border-right: 5px solid #FFFFFF;
+}
+
+.product_list a{
+    color: #FFFFFF;
+}
+
+.product_list p{
+    color: #FFFFFF;
+}
+
+.product_right_part p{
+    color: #FFFFFF;
+}
+
+.new a{
+    /* Нове */
+    color: #595959;
+}
+
+.street a{
+    /* Київ, якась там вулиця. 14 черня 2024 */
+    color: #A1A1A1;
+}
+
+.shop_btn{
+    border: 3px solid #FFFFFF;
+}
+
+.shop_btn a{
+    /* Додати в кошик */
+    color: #FFFFFF;
+}
+
+.shop_btn img{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.con-like .outline{
+    fill: #FFFFFF;
+
+}
+
+
+
+
+
+
+

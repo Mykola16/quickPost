@@ -7,7 +7,7 @@ use App\Models\ShoppingCart;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Product;
-
+use function Termwind\style;
 
 
 class ProductShow extends Component
@@ -16,8 +16,7 @@ class ProductShow extends Component
 
     public $product;
     public $allProducts;
-
-
+    public $message = null;
 
     public function mount($id)
     {
@@ -36,8 +35,15 @@ class ProductShow extends Component
 
         ShoppingCart::updateOrCreate($data);
 
+//        session()->flash('message', 'Товар добавлен в корзину!');
+
+        $this->dispatch('cartUpdated');
+        $this->dispatch('itemAdded', 'Товар добавлен в корзину!');
+        $this->dispatch('headerUpdated');
+
 
     }
+
 
     public function startConversation($user_id){
 

@@ -65,6 +65,11 @@ input[type="number"] {
 
 
 
+.avatar{
+    display: flex;
+    align-items: center;
+}
+
 .avatar img{
 
     width: 125px;
@@ -230,8 +235,23 @@ form p{
 
 }
 
-.product_right_part_user{
+.my_product_info{
+    position: relative;
 
+    margin-left:20px;
+    margin-top: 20px;
+    width: 40%;
+}
+
+.my_product_info p, .my_product_info a{
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+.product_right_part_user{
+    position: relative;
 }
 
 .product_right_part_user p{
@@ -257,17 +277,15 @@ form p{
 }
 
 .street_create{
-    display: flex;
-    align-items: flex-end;
-
-    height: 165px;
+    position: absolute;
+    bottom: 0;
 }
 
 .street_create a{
     /* Київ, якась там вулиця. 14 черня 2024 */
 
     font-family: "Montserrat", sans-serif;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 
     font-style: normal;
     font-weight: 500;
@@ -303,12 +321,16 @@ form p{
 }
 
 .create_btn{
+
     width: 310px;
     height: 50px;
-    margin-left: 351px;
+
     background: #2E2E2E;
     border-radius: 15px;
+    border-top: 5px solid #2E2E2E;
 
+    margin-top: 17px;
+    margin-right: 20px;
 
 }
 
@@ -437,6 +459,28 @@ form p{
 
 }
 
+.cont_region{
+    display: none;
+    position: absolute;
+    background: #FFFFFF;
+    width: 310px;
+    height: 400px;
+    padding: 0 15px 15px 15px;
+    color: #2E2E2E;
+
+    overflow-y: auto;
+    border-left: 5px solid #2E2E2E;
+    border-right: 5px solid #2E2E2E;
+}
+
+.cont_region a{
+    cursor: pointer;
+}
+
+.cont_region a:hover{
+    font-weight: 700;
+}
+
 .create_content{
     margin-top: 35px;
 }
@@ -516,7 +560,7 @@ form p{
 
        /*20px між бокс фото*/
 
-    margin-right: 20px;
+
     box-sizing: border-box;
 
     width: 145px;
@@ -946,6 +990,18 @@ label.QuickPlus_create_item{
     display: flex;
 }
 
+.cont a{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FF0303;
+
+
+}
+
 .cont label{
     /* Ім’я */
 
@@ -973,8 +1029,43 @@ label.QuickPlus_create_item{
 
     margin-top: 15px;
     margin-right: 25px;
+
+    padding-left: 10px;
 }
 
+.btn_setting{
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: end; /* Горизонтальное выравнивание */ ___________
+}
+
+.btn_setting button{
+    width: 178px;
+    height: 68px;
+
+    background: #2E2E2E;
+    border-radius: 15px;
+
+    /* Зберегти */
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    /* or 38px */
+
+    color: #FFFFFF;
+
+
+}
+
+.error{
+    display: block;
+    margin-top: 10px;
+    color: #FF0303;
+}
 
 /*/////////////////////////////////////////////////////*/
 /*Message-list*/
@@ -990,6 +1081,8 @@ label.QuickPlus_create_item{
     background: #EFEFEF;
     border-right: 5px solid #2E2E2E;
     border-radius: 15px;
+
+    cursor: pointer;
 
 }
 
@@ -1011,7 +1104,31 @@ label.QuickPlus_create_item{
 
     /* Доброго дня! Я б хотів купити футболку */
 
+    /* Людинка */
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    /* identical to box height, or 20px */
+
+    color: #2E2E2E;
+
+    margin-top: 23px;
     margin-left: 40px;
+
+
+    display: flex;
+    align-items: center;
+}
+
+.message_list p{
+    /* Доброго дня! Я б хотів купити футболку */
+
+    margin-top: 19px;
+    margin-left: 40px;
+    margin-bottom: 0;
 
     font-family: 'Montserrat';
     font-style: normal;
@@ -1023,9 +1140,60 @@ label.QuickPlus_create_item{
     color: #2E2E2E;
 
 
-    display: flex;
-    align-items: center;
 }
+
+.menu_and_data{
+    width: 10%;
+    height: 100%;
+}
+
+.menu_and_data img{
+    width: 25px;
+    height: 14px;
+
+    border-radius: 0;
+
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.menu_and_data a{
+    text-decoration: none;
+    margin: 0;
+
+    /* 17.08.24 */
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    /* identical to box height, or 12px */
+
+    color: #A1A1A1;
+
+    margin-bottom: 10px;
+
+}
+
+.menu_message{
+    display: flex;
+    justify-content: end;
+    margin-top: 15px;
+    margin-right: 25px;
+}
+
+.data_messages{
+    display: flex;
+    justify-content: end; /* Горизонтальное выравнивание */
+
+    align-items: end;
+    height: 80%;
+    margin-right: 25px;
+
+}
+
+
 
 /*/////////////////////////////////////////////*/
 /*Chat*/
@@ -1048,6 +1216,7 @@ label.QuickPlus_create_item{
 
     /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
 
+    position: relative;
 }
 
 .chat_info{
@@ -1078,6 +1247,19 @@ label.QuickPlus_create_item{
 
     margin: 0;
 
+}
+
+.menu_chat{
+
+}
+
+.menu_chat img{
+    position: absolute;
+    right: 25px;
+
+    width: 25px;
+    height: 14px;
+    border-radius: 0;
 }
 
 .chat_messages{
@@ -1111,7 +1293,7 @@ label.QuickPlus_create_item{
 /* Стилі для повідомлень */
 .message-box {
 
-    padding: 15px 15px 45px 15px;
+    padding: 15px 15px 5px 15px;
 
     box-sizing: border-box;
     word-wrap: break-word;
@@ -1137,6 +1319,22 @@ label.QuickPlus_create_item{
 
 }
 
+.message-box p{
+    /* 20:05 */
+    margin: 0;
+
+    height: 36px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    color: #A1A1A1;
+}
+
 .message-sender {
     align-self: flex-end;
     border-radius: 25px 25px 0 25px;
@@ -1158,11 +1356,13 @@ label.QuickPlus_create_item{
     width: 32px;
     height: 32px;
 
-
+    cursor: pointer;
 
 }
 
-
+.input_container{
+    position: relative;
+}
 
 .input_container input{
     /* Rectangle 323 */
@@ -1171,8 +1371,9 @@ label.QuickPlus_create_item{
 
     box-sizing: border-box;
 
-    width: 700px;
+    width: 846px;
     height: 50px;
+    background: #EFEFEF;
 
     border: 3px solid #2E2E2E;
     border-radius: 15px;
@@ -1181,9 +1382,67 @@ label.QuickPlus_create_item{
 
 }
 
-input.btn_message{
-    width: 130px;
+.micIcon2{
+    position: absolute;
+    right: 130px;
+    top: 9px;
+
+    cursor: pointer;
+
+    width: 32px;
+    height: 32px;
+
+}
+
+button.btn_message {
+    position: absolute;
+    right: 12px;
+
+    width: 100px;
     height: 50px;
+    cursor: pointer;
+
+    /* Rectangle 404 */
+    color: #FFFFFF;
+
+    background: #2E2E2E;
+    border-radius: 15px;
+
+}
+
+.button.btn_message img{
+    /* message2 */
+    width: 32px;
+    height: 32px;
+}
+
+.emoji-container {
+    position: absolute; /* Панель поверх других элементов */
+    display: block;
+
+    width: 255px;
+    height: 500px;
+
+    bottom: 70px; /* Примерное расстояние от нижней части контейнера */
+    left: 0; /* Разместим панель в нужном месте */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1000; /* Убедитесь, что панель находится поверх других элементов */
+
+    overflow-y: auto; /* Вертикальный скролл при необходимости */
+    overflow-x: hidden; /* Скрываем горизонтальный скролл */
+}
+
+.emoji-container button{
+    background: none;
+    border: 0;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+
+    margin: 10px;
 }
 
 /*////////////////////////////////////////////*/
