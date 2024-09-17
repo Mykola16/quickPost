@@ -250,15 +250,21 @@ label {
 
 .login-form input {
     background-color: #EFEFEF;
+    box-sizing: border-box;
+
     width: 500px;
     height: 40px;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 15px;
 	margin-left: 25px;
 
     display: block;
     margin-top: 15px;
+
+    padding: 15px;
 }
+
+
 
 .login-form a {
     display: block;

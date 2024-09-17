@@ -229,7 +229,7 @@
                             <p>{{ $product->regular_price }} грн</p>
                         </div>
 
-                        <div class="btn_and_like">
+                        <div class="btn_and_like" wire:ignore>
                             <div id="showMessageButton" style=" height: 65px" wire:click="addToCart({{ $product->id }})">
                                 <div class="shop_btn">
                                     <a>Додати в кошик</a>
@@ -261,14 +261,14 @@
                                     </a>
 
                                     <div class="Vip-product-item-info">
-                                        <div class="df">
+                                        <div class="df"  wire:ignore>
                                             <div style="width: 240px; height: 60px;" >
                                                 <a href="{{ route('product.show', $item->id) }}">
                                                     {{ $item->name }}
                                                 </a>
                                             </div>
 
-                                            @livewire('product-like-vip', ['productId' => $product->id])
+                                            @livewire('product-like-vip', ['productId' => $item->id])
                                         </div>
 
                                         <div class="df">

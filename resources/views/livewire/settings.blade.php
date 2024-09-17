@@ -24,20 +24,28 @@
 
                 <div class="accordion-content">
                     <div class="cont">
+                        @if(Auth::user()->utype === 'BSN')
                         <div>
                             <label>Ім'я</label><a>*</a><br>
-                            <input wire:model.defer="state.first_name" type="text" name="first_name"><br>
-                            @error('state.first_name') <span class="error">Помилка</span> @enderror
+                            <input wire:model.defer="state.name" type="text" name="name"><br>
+                            @error('state.name') <span class="error">Помилка</span> @enderror
                         </div>
-                        <div>
-                            <label>Прізвище</label><a>*</a><br>
-                            <input wire:model.defer="state.last_name" type="text" name="last_name"><br>
-                            @error('state.last_name') <span class="error">Помилка</span> @enderror
-                        </div>
-                        <div>
-                            <label>По Батькові</label><br>
-                            <input type="text" name="middle_name"><br>
-                        </div>
+                        @else
+                            <div>
+                                <label>Ім'я</label><a>*</a><br>
+                                <input wire:model.defer="state.first_name" type="text" name="first_name"><br>
+                                @error('state.first_name') <span class="error">Помилка</span> @enderror
+                            </div>
+                            <div>
+                                <label>Прізвище</label><a>*</a><br>
+                                <input wire:model.defer="state.last_name" type="text" name="last_name"><br>
+                                @error('state.last_name') <span class="error">Помилка</span> @enderror
+                            </div>
+{{--                            <div>--}}
+{{--                                <label>По Батькові</label><br>--}}
+{{--                                <input type="text" name="middle_name"><br>--}}
+{{--                            </div>--}}
+                        @endif
                     </div>
                 </div>
             </div>

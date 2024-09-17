@@ -633,8 +633,6 @@ img {vertical-align: middle;}
     font-size: 24px;
     line-height: 120%;
 
-    color: #2E2E2E;
-
     margin-top: 0;
     margin-bottom: 17px;
 }
@@ -646,8 +644,6 @@ img {vertical-align: middle;}
     font-weight: 400;
     font-size: 16px;
     line-height: 100%;
-
-    color: #2E2E2E;
 }
 
 .product_img img{
@@ -664,10 +660,7 @@ img {vertical-align: middle;}
     font-weight: 700;
     font-size: 32px;
     line-height: 100%;
-    color: #2E2E2E;
 }
-
-
 
 
 .product_price{
@@ -691,18 +684,13 @@ img {vertical-align: middle;}
     font-size: 16px;
     line-height: 100%;
 
-
-    color: #2E2E2E;
-
     margin-top: 0;
     margin-bottom: 35px;
 }
 
 
 .Product-cart p{
-
-    font-family: "Tsukimi Rounded", sans-serif;
-
+    font-family: "Montserrat", sans-serif;
 
     font-style: normal;
     font-weight: 700;
@@ -710,11 +698,9 @@ img {vertical-align: middle;}
     line-height: 120%;
     /* identical to box height, or 29px */
 
-    color: #2E2E2E;
-
     margin-top: 35px;
-
 }
+
 .div_color_img
 {
     font-size: 0;
@@ -767,11 +753,8 @@ img {vertical-align: middle;}
     border-color: #01B834;
     border-radius: 15px;
 
-
     width: 310px;
     height: 78px;
-
-
 
     font-family: "Montserrat", sans-serif;
     font-style: normal;
@@ -781,15 +764,9 @@ img {vertical-align: middle;}
 
 
     color: #FFFFFF;
-
-
-
-
 }
 
 .button_chat{
-
-
     width: 310px;
     height: 78px;
 
@@ -802,9 +779,6 @@ img {vertical-align: middle;}
     font-weight: 700;
     font-size: 24px;
     line-height: 100%;
-
-
-    color: #FFFFFF;
 }
 
 
@@ -816,24 +790,16 @@ img {vertical-align: middle;}
 
 .prod_desc{
     /* Опис */
-
-    border-bottom: 3px solid black;
     padding-left: 58px;
     padding-right: 77px;
     padding-bottom: 13px;
     margin-left: 53px;
-
 
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 100%;
-
-
-    color: #2E2E2E;
-
-
 }
 
 .prod_reviews{
@@ -853,18 +819,13 @@ img {vertical-align: middle;}
 }
 
 .product_description{
-
-
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 100%;
 
-
-    color: #2E2E2E;
     margin-bottom: 50px;
-
 }
 
 .recommendations{
@@ -874,17 +835,13 @@ img {vertical-align: middle;}
 .recommendations p{
     /* Може зацікавити */
 
-
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 100%;
 
-
-    color: #2E2E2E;
     margin-bottom: 35px;
-
 }
 
 .product-rec{
@@ -934,18 +891,11 @@ img {vertical-align: middle;}
 
     /* Футболка “Лице” */
 
-
     font-family: 'Montserrat', serif;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 100%;
-    /* identical to box height, or 14px */
-
-    color: #FFFFFF;
-
-
-
 }
 
 .product-item-info a{
@@ -985,10 +935,6 @@ img {vertical-align: middle;}
     margin-left: 5px;
     margin-top: 5px;
     margin-bottom: 0;
-
-    color: #FFFFFF;
-
-
 }
 
 /*/////////////////////////////////////////*/
@@ -1633,7 +1579,7 @@ img {vertical-align: middle;}
 
 .count
 {
-/* Ми знайшли понад 2000 оголошень */
+    /* Ми знайшли понад 2000 оголошень */
     font-family: "Montserrat", sans-serif;
 
     font-style: normal;
@@ -2037,7 +1983,7 @@ body.modal-open {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-     /* Location of the box */
+    /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -2162,7 +2108,7 @@ body.modal-open {
     margin-top: 2px;
 }
 
-    /* The Close Button */
+/* The Close Button */
 .close {
     margin: 0;
     width: 30px;

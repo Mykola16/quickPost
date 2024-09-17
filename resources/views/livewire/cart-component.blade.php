@@ -41,7 +41,7 @@
 
             <div class="cart_btn">
                 <div class="razom">
-                    <a>Разом: {{$total}}.00 грн</a>
+                    <a>Разом: {{$total}} грн</a>
                 </div>
 
                 <button onclick="location.href='{{route('Oformlennya')}}';" class="button_submit">

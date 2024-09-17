@@ -43,12 +43,14 @@ Route::get('categories/{category}', CategoryShow::class)->name('categories.show'
 Route::get('/search', SimpleSearch::class)->name('search');
 
 Route::get('product/{id}', \App\Livewire\ProductShow::class)->name('product.show');
+Route::get('/product/edit/{id}', \App\Livewire\EditAdvertisement::class)->name('product.edit');
 
 Route::post('/product/{product}/decrement-views', [ProductController::class, 'decrementViews'])->name('decrement.views');
 
 
 
 Route::get('create', \App\Livewire\CreateAdvertisementPRV::class)->name('Create');
+Route::get('creation', \App\Livewire\CreateAdvertisementBinsns::class)->name('Creation');
 
 
 

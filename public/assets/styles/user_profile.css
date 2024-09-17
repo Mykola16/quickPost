@@ -25,16 +25,13 @@ input[type="number"] {
 
 
 .profile_menu{
-
     width: 310px;
     height: 690px;
-
 
     box-sizing: border-box;
 
     border-width: 5px 0;
     border-style: solid;
-    border-color: #2E2E2E;
     border-radius: 5px;
 }
 
@@ -45,7 +42,6 @@ input[type="number"] {
 }
 
 .user_name{
-
     display: flex;
     align-items: center;
 
@@ -57,10 +53,7 @@ input[type="number"] {
     font-size: 20px;
     line-height: 24px;
 
-    color: #2E2E2E;
-
     margin-left: 15px;
-
 }
 
 
@@ -80,7 +73,6 @@ input[type="number"] {
 }
 
 .profile_menu_item {
-
     /*margin-top: 25px;*/
     margin-top: 10px;
     cursor: pointer;
@@ -91,9 +83,7 @@ input[type="number"] {
     width: 310px;
     height: 50px;
 
-
     border-radius: 5px 5px 5px 5px;
-
 
     border-left: 5px solid #A1A1A1;
     border-right: 5px solid #A1A1A1;
@@ -101,30 +91,17 @@ input[type="number"] {
     /*border-left: 5px solid #2E2E2E;*/
     /*border-right: 5px solid #2E2E2E;*/
 
-
-
-
-
     display: flex;
 
     align-items: center;
-
-}
-
-.profile_menu_item.active1{
-    border-left: 5px solid #2E2E2E;
-    border-right: 5px solid #2E2E2E;
-
 }
 
 
 .profile_menu_item img
 {
-
     margin-left: 15px;
     width: 30px;
     height: 30px;
-
 }
 
 .profile_menu_item a{
@@ -137,8 +114,6 @@ input[type="number"] {
 
 .profile_menu_item p
 {
-
-
     /* Краса та здоров’я */
 
     font-family: "Montserrat", sans-serif;
@@ -147,10 +122,7 @@ input[type="number"] {
     font-size: 14px;
     line-height: 100%;
 
-
-    color: #2E2E2E;
     margin: 0 0 0 0;
-
 }
 
 form p{
@@ -184,18 +156,14 @@ form p{
 
     box-sizing: border-box;
 
-
     width: 970px;
     height: 270px;
-
 
     background: #EFEFEF;
     border-right: 5px solid #2E2E2E;
     border-radius: 15px;
 
     margin-bottom: 25px;
-
-
 }
 
 .product_list_user img{
@@ -302,36 +270,24 @@ form p{
 /*//////////////////////////////////////////////*/
 
 .profile_page_name{
-
     margin: 0;
-
     /* Ваші оголошення */
-
     font-family: "Montserrat", sans-serif;
 
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 100%;
-
-
-    color: #2E2E2E;
-
-
 }
 
 .create_btn{
-
     width: 310px;
     height: 50px;
 
-    background: #2E2E2E;
     border-radius: 15px;
-    border-top: 5px solid #2E2E2E;
 
     margin-top: 17px;
     margin-right: 20px;
-
 }
 
 .create_btn a{
@@ -339,7 +295,6 @@ form p{
 }
 
 .create_btn p{
-
     margin: 0;
     padding: 0;
     font-family: 'Montserrat';
@@ -347,8 +302,6 @@ form p{
     font-weight: 700;
     font-size: 23.9px;
     line-height: 100%;
-
-    color: #FFFFFF;
 }
 
 .advertisement_menu_item{
@@ -362,9 +315,9 @@ form p{
     height: 50px;
 
     /*border-top: 5px solid #2E2E2E;*/
-    border-top: 5px solid #A1A1A1;
     border-radius: 5px;
 
+    cursor: pointer;
 }
 
 .advertisement_menu_item a{
@@ -558,7 +511,7 @@ form p{
 
 .img_box{
 
-       /*20px між бокс фото*/
+    /*20px між бокс фото*/
 
 
     box-sizing: border-box;
@@ -932,7 +885,7 @@ label.QuickPlus_create_item{
 
     align-items: center;
 
-       /* Центрирование по вертикали */
+    /* Центрирование по вертикали */
 
     height: 74px;
 
@@ -1473,12 +1426,158 @@ button.btn_message {
 }
 
 
+/*//////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////*/
+/*Zamovlennya*/
+
+.search_user_icon2{
+    margin-top: 22px;
+
+    font-size: 0;
+    position: relative;
+    margin-bottom: 25px;
+}
 
 
+.search_user_icon2 input{
+
+    box-sizing: border-box;
 
 
+    width: 310px;
+    height: 50px;
+
+    border: 3px solid #2E2E2E;
+    border-radius: 15px;
+}
+
+.search_user_icon2 img{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 15px;
+    top: 9px;
+}
+
+.search_user_icon2 input{
+    padding-left: 57px;
+
+    /* Знайти користувача */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+
+    color: #A1A1A1;
+}
+
+.search_user_icon2 button{
+
+    margin-left: 20px;
+
+    width: 150px;
+    height: 50px;
+
+    background: #2E2E2E;
+    border-radius: 15px;
+
+    /* Пошук */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+.product_zamovlennya{
+    box-sizing: border-box;
+    width: 970px;
+    height: 125px;
+
+    background: #EFEFEF;
+    border-right: 5px solid #2E2E2E;
+    border-radius: 15px;
+
+    position: relative;
+
+    margin-bottom: 25px;
+}
+
+.product_zamovlennya img{
+    width: 125px;
+    height: 125px;
+}
+
+.product_zamovlennya h3{
+    /* Футболка, велика */
+
+    position: absolute;
+    left: 140px;
+    top: 10px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    color: #2E2E2E;
+
+    margin: 0;
+}
+
+.product_zamovlennya a{
+    /* Від 6 грудня 2022 */
+    position: absolute;
+    bottom: 10px;
 
 
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #2E2E2E;
 
+    margin: 0;
+}
 
+.product_zamovlennya h4{
+    /* ID: 59876650 */
 
+    position: absolute;
+    right: 127px;
+    top: 10px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #2E2E2E;
+
+    margin: 0;
+}
+
+.product_zamovlennya p{
+    /* Виконано */
+
+    position: absolute;
+    right: 25px;
+    top: 10px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    /* identical to box height, or 16px */
+
+    color: #01B834;
+
+    margin: 0;
+}

@@ -38,15 +38,34 @@
         <div class="Product-content">
 
             <h3>{{ $product->name }}</h3>
+            <div class="df" style="margin-bottom: 20px">
+                <img src="{{ asset('assets/images/stars.png')}}" alt="" style="width: 120px; height: 21px; margin-top: 4px;">
+
+                <h5 style="margin: 0 25px;  display: flex;justify-content: center;align-items: center; height: 30px;
+                font-family: 'Montserrat',serif; font-style: normal; font-weight: 700; font-size: 16px; line-height: 100%; color: #A1A1A1;">
+                    4.8(68)
+                </h5>
+
+
+
+
+
+
+                <div>
+                    @livewire('product-like', ['productId' => $product->id])
+                </div>
+            </div>
+
             <h4 class="product_price">{{ $product->regular_price }} грн</h4>
             <h2>{{ $product->short_description }}</h2>
 
             <p>Стан</p>
             <a>{{ $product->state }}</a>
 
-            <p style="margin-bottom:15px">Відео огляд</p>
 
             @if ($product->video)
+            <p style="margin-bottom:15px">Відео огляд</p>
+
                 <div class="youtube-video">
                     <iframe width="220" height="120" src="{{ Str::replace('watch?v=', 'embed/', $product->video) }}" frameborder="0" allowfullscreen></iframe>
                 </div>

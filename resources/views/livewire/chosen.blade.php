@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="product_right_part_user">
-                    <div >
+                    <div>
                         <p>{{ $product->regular_price }} грн</p>
                     </div>
 

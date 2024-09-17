@@ -31,9 +31,16 @@
 
                 @foreach($selectedConversation->messages as $message)
                     <div class="message-box {{ $message->user_id === auth()->id() ?  'message-sender' : 'message-receiver' }}"> {{--приймач--}}
+
+                        @if($message->photo_path)
+                            <img src="{{ Storage::url($message->photo_path) }}" alt="Uploaded Photo" style="max-width: 300px;margin-bottom: 20px"><br>
+                        @endif
+
                         <a>{{$message->body}}</a>
                         <p>{{$message->created_at->format('H:i')}}</p>
                     </div>
+
+
                 @endforeach
 
 
@@ -53,9 +60,12 @@
 
             <div class=" df">
 
-                <img class="icons" src="{{ asset('assets/images/load_file.png') }}" alt="">
+                <label for="photo" class="icons">
+                    <img src="{{ asset('assets/images/load_file.png') }}" alt="load_file">
+                </label>
                 <img  class="icons" src="{{ asset('assets/images/smile.png') }}" alt="" id="emojiButton">
 
+                <input type="file" id="photo" wire:model="photo" style="display: none;" accept="image/*">
 
                     <div class="input_container">
                         <input id="messageInput" wire:model.defer="body" type="text" maxlength="102">
@@ -192,6 +202,31 @@
                    input.dispatchEvent(new Event('input'));
                });
            });
+       });
+
+       micClick2.addEventListener('click', function () {
+           var speech = true;
+           window.SpeechRecognition = window.webkitSpeechRecognition;
+           const recognition = new SpeechRecognition();
+           recognition.interimResults = true;
+
+           recognition.addEventListener('result', e => {
+               const transcript = Array.from(e.results)
+                   .map(result => result[0])
+                   .map(result => result.transcript)
+                   .join('');
+
+               // Вставляем распознанный текст в поле ввода сообщения
+               const messageInput = document.getElementById('messageInput');
+               messageInput.value = transcript;
+
+               // Создаем событие input для синхронизации с Livewire
+               messageInput.dispatchEvent(new Event('input'));
+           });
+
+           if (speech === true) {
+               recognition.start();
+           }
        });
    </script>
 </div>

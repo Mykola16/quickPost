@@ -365,8 +365,110 @@ p{
 }
 
 
+/*////////////////////////////////////////////////////*/
+/*Product_Cart*/
 
+.Product-content p{
+    color: #FFFFFF;
+}
 
+.Product-content a{
+    color: #FFFFFF;
+}
 
+.Product-cart h3{
+    color: #FFFFFF;
+}
+
+.product_price{
+    color: #FFFFFF;
+}
+
+.Product-cart h2{
+    color: #FFFFFF;
+}
+
+.Product-cart p{
+    color: #FFFFFF;
+}
+
+.button_chat{
+    filter: invert(1) grayscale(1) brightness(2);
+
+    color: #FFFFFF;
+}
+
+.prod_desc{
+    border-bottom: 3px solid #FFFFFF;
+
+    color: #FFFFFF;
+}
+
+.product_description{
+    color: #FFFFFF;
+}
+
+.recommendations p{
+    /* Може зацікавити */
+    color: #FFFFFF;
+}
+
+.product-item-info {
+    color: #FFFFFF;
+}
+
+.product-item-info a,
+.product-item-info p{
+    color: #FFFFFF;
+}
+
+/*////////////////////////////////////////////////*/
+/*User profile*/
+/*menu*/
+
+.profile_menu{
+    border-color: #FFFFFF;
+}
+
+.user_name{
+    color: #FFFFFF;
+}
+
+.profile_menu_item.active1{
+    border-left: 5px solid #FFFFFF;
+    border-right: 5px solid #FFFFFF;
+}
+
+.profile_menu_item img
+{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.profile_menu_item p
+{
+    /* Краса та здоров’я */
+    color: #FFFFFF;
+}
+
+.profile_menu_item:hover, .profile_menu_item:focus {
+    background-color: #474747;
+}
+
+/*//////////////////////////////////////////////*/
+/*User profile*/
+/*Ваші оголошення*/
+
+.profile_page_name{
+    color: #FFFFFF;
+}
+
+.create_btn{
+    background: #FFFFFF;
+    border-top: 5px solid #FFFFFF;
+}
+
+.create_btn p{
+    color: #2E2E2E;
+}
 
 

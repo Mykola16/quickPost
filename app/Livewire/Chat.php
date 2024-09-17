@@ -5,10 +5,15 @@ namespace App\Livewire;
 use App\Models\Conversation;
 use Livewire\Component;
 use App\Models\Message;
+use Livewire\WithFileUploads;
 
 class Chat extends Component
 {
+    use WithFileUploads;
+
     public $body;
+
+    public $photo;
     public $selectedConversation;
 
     public $conversationID;
@@ -36,20 +41,35 @@ class Chat extends Component
 
     public function sendMessage()
     {
-        if (empty(trim($this->body))) {
-            return;
-        }
+        $this->validate([
+            'body' => 'required|string|max:102',
+        ]);
 
-       Message::create([
+
+        $message = Message::create([
            'conversation_id' => $this->selectedConversation->id,
            'user_id' => auth()->id(),
            'body' => $this->body,
        ]);
 
+        if ($this->photo) {
+            $this->validate([
+                'photo' => 'image|max:1024',
+            ]);
+
+            $path = $this->photo->store('photos', 'public');
+            $message->update([
+                'photo_path' => $path,
+            ]);
+
+            $this->reset('photo');
+        }
+
        $this->reset('body');
 
 //       $this->viewMessage($this->selectedConversation->id);
     }
+
 
     public function render()
     {

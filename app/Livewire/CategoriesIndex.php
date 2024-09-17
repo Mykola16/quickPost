@@ -17,6 +17,7 @@ class CategoriesIndex extends Component
 
     public $search = '';
 
+
     protected $listeners = ['searchProducts' => 'searchProducts'];
 
     public function mount(Category $category, Request $request)
@@ -25,8 +26,6 @@ class CategoriesIndex extends Component
 
         $this->category = $category;
         $this->products = $category->products;
-
-//       dd($this->search);
 
         if ($this->search) {
             $this->searchProducts();

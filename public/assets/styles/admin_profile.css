@@ -225,6 +225,428 @@ h1{
     right: 7px;
 }
 
+.zamov_static{
+    box-sizing: border-box;
+    width: 232px;
+    height: 145px;
+
+    border-width: 3px 0;
+    border-style: solid;
+    border-color: #A1A1A1;
+    border-radius: 5px;
+
+    position: relative;
+}
+
+.zamov_static p, .zamov_static a{
+    margin: 0;
+
+    /* Активні */
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+
+    color: #2E2E2E;
+}
+
+.zamov_static a{
+    position: absolute;
+    left: 113px;
+}
+
+/*Newly_add list product*/
+
+.Newly_add{
+    width: 640px;
+    height: 588px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.product_list_admin{
+    box-sizing: border-box;
+    width: 598px;
+    height: 139px;
+
+    background: #EFEFEF;
+    border-right: 5px solid #2E2E2E;
+    border-radius: 15px;
+
+    display: flex;
+    position: relative;
+}
+
+.product_list_admin img{
+    /* Rectangle 133 */
+    width: 160px;
+    height: 139px;
+}
+
+.my_product_info{
+    /*margin-left: 58px;*/
+
+}
+
+.my_product_info a{
+    /* Футболка, велика */
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+
+    color: #2E2E2E;
+
+    text-decoration: none;
+
+    position: absolute;
+    top: 13px;
+    left: 218px;
+
+    margin: 0;
+}
+
+.my_product_info p{
+    /* 36/M/48 */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 100%;
+    /* or 15px */
+
+    color: #000000;
+
+    position: absolute;
+    top: 43px;
+    left: 218px;
+
+    margin: 0;
+}
+
+.product_right_part_user p{
+    /* 4000 грн */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+
+    color: #2E2E2E;
+
+    position: absolute;
+    top: 13px;
+    right: 21px;
+
+    margin: 0;
+}
+
+.street_create h3{
+    /* Київ, якась там вулиця. 14 черня 2024 */
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: #A1A1A1;
+
+    position: absolute;
+    bottom: 13px;
+    left: 218px;
+
+    margin: 0;
+
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*Category_page*/
+
+.category_admin_div{
+
+    margin-top: 30px;
+
+    box-sizing: border-box;
+
+    width: 970px;
+    max-height: 1780px;
+
+    background: #EFEFEF;
+    border-right: 5px solid #2E2E2E;
+    border-radius: 15px;
+
+    padding: 20px 80px 26px 74px;
+}
+
+.search_user_icon2{
+    font-size: 0;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+
+.category_admin_div input{
+
+    box-sizing: border-box;
+
+
+    width: 640px;
+    height: 50px;
+
+    border: 3px solid #2E2E2E;
+    border-radius: 15px;
+}
+
+.category_admin_div img{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 15px;
+    top: 9px;
+}
+
+.category_admin_div input{
+    padding-left: 57px;
+
+    /* Знайти користувача */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+
+    color: #A1A1A1;
+    background: #EFEFEF;
+}
+
+.category_admin_div button{
+
+    margin-left: 20px;
+
+    width: 150px;
+    height: 50px;
+
+    background: #2E2E2E;
+    border-radius: 15px;
+
+    /* Пошук */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+
+
+/*cat-list*/
+
+.cat_admin{
+    width: 100%;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+}
+
+.cat_admin input{
+    width: 20px;
+    height: 20px;
+
+    margin: 0;
+    font-size: 0;
+}
+
+.cat_name_admin{
+    /* Rectangle 325 */
+    margin-left: 24px;
+
+    box-sizing: border-box;
+
+    width: 360px;
+    height: 35px;
+
+    border: 2px solid #A1A1A1;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.cat_name_admin p{
+    margin-left: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    /* Краса та здоров’я */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+
+    color: #2E2E2E;
+
+    cursor: pointer;
+}
+
+/*btn_cat*/
+
+.edit_cat{
+    margin-left: 57px;
+    margin-right: 21px;
+
+    box-sizing: border-box;
+
+    width: 164px;
+    height: 30px;
+
+    background: #EFEFEF;
+    border: 2px solid #2E2E2E;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.edit_cat p, .delete_cat p{
+    /* Видалити */
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+
+    color: #2E2E2E;
+
+    margin: 0;
+
+    cursor: pointer;
+}
+
+.delete_cat{
+    box-sizing: border-box;
+
+    width: 164px;
+    height: 30px;
+
+    background: #FFFFFF;
+    border: 2px solid #2E2E2E;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+.category_admin_div button{
+    width: 147px;
+    height: 40px;
+
+    margin-left: 12px;
+    cursor: pointer;
+
+    background: #2E2E2E;
+    border-radius: 10px;
+
+    /* Додати */
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+
+    color: #FFFFFF;
+}
+
+.add_cont_cat{
+    margin: 0 auto;
+
+    /* Rectangle 555 */
+
+    box-sizing: border-box;
+
+    width: 419px;
+    height: 269px;
+
+
+    background: #EFEFEF;
+    border: 3px solid #2E2E2E;
+    border-radius: 15px;
+
+    padding: 20px;
+
+    position: relative;
+}
+
+.add_cont_cat label{
+    /* Вкажіть назву */
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    /* identical to box height, or 24px */
+
+    color: #2E2E2E;
+}
+
+.add_cont_cat input{
+    box-sizing: border-box;
+
+    width: 360px;
+    height: 35px;
+
+    border: 2px solid #A1A1A1;
+    border-radius: 10px;
+
+    padding: 15px;
+
+    margin-top: 15px;
+}
+
+.add_cont_cat button{
+    position: absolute;
+    width: 150px;
+    height: 50px;
+
+    bottom: 20px;
+    right: 20px;
+
+    background: #2E2E2E;
+    border-radius: 15px;
+
+    /* Зберегти */
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+
+    color: #FFFFFF;
+}
+
 /*////////////////////////////////////////////////////////////////////////////*/
 /*Users_page*/
 
@@ -458,7 +880,7 @@ button.all_select p, button.del_user p{
     border-radius: 15px;
 
     z-index:20;
-    top: 0; left: 0;
+    top: 0; right: 0;
     overflow: visible;
 }
 
@@ -496,7 +918,7 @@ button.all_select p, button.del_user p{
     display: none; /* Приховано за умовчанням */
     position: fixed; /* Залишайтеся на місці */
     z-index: 1; /* Сісти зверху */
-    padding-top: 250px; /* Розташування коробки */
+    padding-top: 200px; /* Розташування коробки */
     left: 0;
     top: 0;
     width: 100%; /* Повна ширина */
@@ -595,4 +1017,97 @@ button.all_select p, button.del_user p{
 
 .drop_select{
 
+}
+
+
+
+/*///////////////////////////////////////////////*/
+/*Zamovlennya*/
+
+.product_zamovlennya{
+    box-sizing: border-box;
+    width: 970px;
+    height: 125px;
+
+    background: #EFEFEF;
+    border-right: 5px solid #2E2E2E;
+    border-radius: 15px;
+
+    position: relative;
+
+    margin-bottom: 25px;
+}
+
+.product_zamovlennya img{
+    width: 125px;
+    height: 125px;
+}
+
+.product_zamovlennya h3{
+    /* Футболка, велика */
+
+    position: absolute;
+    left: 140px;
+    top: 10px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    color: #2E2E2E;
+
+    margin: 0;
+}
+
+.product_zamovlennya a{
+    /* Від 6 грудня 2022 */
+    position: absolute;
+    bottom: 10px;
+
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #2E2E2E;
+
+    margin: 0;
+}
+
+.product_zamovlennya h4{
+    /* ID: 59876650 */
+
+    position: absolute;
+    right: 127px;
+    top: 10px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #2E2E2E;
+
+    margin: 0;
+}
+
+.product_zamovlennya p{
+    /* Виконано */
+
+    position: absolute;
+    right: 25px;
+    top: 10px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    /* identical to box height, or 16px */
+
+    color: #01B834;
+
+    margin: 0;
 }

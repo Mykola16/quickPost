@@ -25,43 +25,43 @@
 
                             </div>
 
-                                <div id="myModal" class="modal" style="padding-top: 375px;">
-                                    <div class="modal-content" style="display: flex">
-                                        <div class="category-column">
-                                            @foreach ($categories as $category)
+                            <div id="myModal" class="modal" style="padding-top: 375px;">
+                                <div class="modal-content" style="display: flex">
+                                    <div class="category-column">
+                                        @foreach ($categories as $category)
 
-                                                <div class="menu-item" data-category-id="{{ $category->id }}" onclick="showSubCategories({{ $category->id }})">
-                                                    <a href="#{{$category->id}}" data-category-id="{{ $category->id }}" wire:click="selectCategory('{{ $category->id  }}')" onclick="closeModal()">
-                                                        <p style="font-family: 'Montserrat',serif; font-style: normal; font-weight: 700; font-size: 14px; color: #2E2E2E;">{{ $category->name }}</p></a>
-                                                    <img src="{{ asset('assets/images/button_cat.png') }}" alt="">
-                                                </div>
-                                            @endforeach
-                                        </div>
+                                            <div class="menu-item" data-category-id="{{ $category->id }}" onclick="showSubCategories({{ $category->id }})">
+                                                <a href="#{{$category->id}}" data-category-id="{{ $category->id }}" wire:click="selectCategory('{{ $category->id  }}')" onclick="closeModal()">
+                                                    <p style="font-family: 'Montserrat',serif; font-style: normal; font-weight: 700; font-size: 14px; color: #2E2E2E;">{{ $category->name }}</p></a>
+                                                <img src="{{ asset('assets/images/button_cat.png') }}" alt="">
+                                            </div>
+                                        @endforeach
+                                    </div>
 
 
 
-                                        <div class="submenu-column">
-                                            @foreach ($categories as $category)
-                                                <ul id="subcategories-{{ $category->id }}" class="subcategories" style="display: none;">
-                                                    @foreach ($category->subCategories as $subCategory)
-                                                        <a href="#" wire:click="selectCategory('{{ $subCategory->id  }}')"  onclick="closeModal()">
-                                                            <li style="margin-bottom: 10px" class="subCategory">{{ $subCategory->name }}</li>
-                                                        </a>
-                                                        @if ($subCategory->subCategories->isNotEmpty())
-                                                            <ul>
-                                                                @foreach ($subCategory->subCategories as $subSubCategory)
-                                                                    <a href="#" wire:click="selectCategory('{{ $subSubCategory->id  }}')"  onclick="closeModal()">
-                                                                        <li style="margin-bottom: 17px" class="subSubCategory">{{ $subSubCategory->name }}</li>
-                                                                    </a>
-                                                                @endforeach
-                                                            </ul>
-                                                        @endif
-                                                    @endforeach
-                                                </ul>
-                                            @endforeach
-                                        </div>
+                                    <div class="submenu-column">
+                                        @foreach ($categories as $category)
+                                            <ul id="subcategories-{{ $category->id }}" class="subcategories" style="display: none;">
+                                                @foreach ($category->subCategories as $subCategory)
+                                                    <a href="#" wire:click="selectCategory('{{ $subCategory->id  }}')"  onclick="closeModal()">
+                                                        <li style="margin-bottom: 10px" class="subCategory">{{ $subCategory->name }}</li>
+                                                    </a>
+                                                    @if ($subCategory->subCategories->isNotEmpty())
+                                                        <ul>
+                                                            @foreach ($subCategory->subCategories as $subSubCategory)
+                                                                <a href="#" wire:click="selectCategory('{{ $subSubCategory->id  }}')"  onclick="closeModal()">
+                                                                    <li style="margin-bottom: 17px" class="subSubCategory">{{ $subSubCategory->name }}</li>
+                                                                </a>
+                                                            @endforeach
+                                                        </ul>
+                                                    @endif
+                                                @endforeach
+                                            </ul>
+                                        @endforeach
                                     </div>
                                 </div>
+                            </div>
 
                         </div>
 
@@ -133,13 +133,33 @@
                         </div>
 
                         <div style="display: flex;">
-                            <div class="price_create">
+                            <div class="price_create" style="width: 310px">
                                 <label>Ціна</label><br>
                                 <input type="number" wire:model="regular_price" required><br>
 
-                                <div style="margin-top: 35px" wire:ignore>
-                                    <label>Вкажіть стан товару</label><br>
-                                    <div onclick="selectedRegion(this)" class="menu-item" style="height: 40px; margin-top: 15px;margin-bottom: 0;border-right: 5px solid #2E2E2E;">
+                                <div class="info_create" style="margin-left: 0">
+                                    <div style="margin-top:35px">
+                                        <label>Посилання на відеоогляд (якщо є)</label><br>
+                                        <input type="text" wire:model="video" id="youtube_review_link" class="form-control" placeholder="youtube посилання">
+                                        @error('video') <span class="text-danger">{{ $message }}</span> @enderror
+                                    </div>
+
+                                    <div style="margin-top:35px">
+                                        <label>Контактні данні</label><br>
+                                        <input wire:model="phone_number" type="number" placeholder="Номер телефону"><br>
+                                        @error('phone_number') <span class="text-danger">{{ $message }}</span> @enderror
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div style="display: block;margin-left: 20px">
+
+                                <label>Вкажіть стан товару</label><br>
+
+                                <div  wire:ignore>   {{--style="margin-top: 35px"--}}
+                                    <div onclick="selectedRegion(this)" class="menu-item" style="height: 50px; margin-top: 15px;margin-bottom: 0;border-right: 5px solid #2E2E2E;">
                                         <p id="selected-stane-text" style="font-size:20px; color: #A1A1A1;">стан</p>
                                         <img style="margin-right: 15px" src="{{ asset('assets/images/seting_menu_btn.png') }}" alt="">
                                     </div>
@@ -153,11 +173,9 @@
                                     </div>
                                 </div>
 
-
-
                                 <div class="vip_create">
-                                    @if(Auth::user()->utype === 'VIP')
-                                        <input type="checkbox" wire:model="type">
+                                    @if(Auth::user()->utype === 'VIP' || Auth::user()->utype === 'BSN')
+                                        <input type="checkbox" wire:model="vipSelected" wire:click="toggleVip">
                                         <label class="vip_create_item">Помітити як “VIP”</label><br>
                                     @else
                                         <input type="checkbox" disabled>
@@ -166,20 +184,22 @@
                                     @endif
 
                                 </div>
-                            </div>
 
-                            <div class="info_create">
-                                <label>Контактні данні</label><br>
-                                <input wire:model="phone_number" type="number" placeholder="Номер телефону"><br>
-                                @error('phone_number') <span class="text-danger">{{ $message }}</span> @enderror
+                                <div class="vip_create">
+                                    @if(Auth::user()->utype === 'BSN')
+                                        <input type="checkbox" wire:model="bsnSelected" wire:click="toggleBsn">
+                                        <label class="vip_create_item">“Елітне” оголошення</label><br>
+                                    @else
+                                        <input type="checkbox" disabled>
+                                        <label class="vip_create_item">“Елітне” оголошення</label><br>
+                                        <label class="QuickPlus_create_item">Тільки з підпискою QuickPro</label>
+                                    @endif
 
-                                <div style="margin-top:35px">
-                                    <label>Посилання на відеоогляд (якщо є)</label><br>
-                                    <input type="text" wire:model="video" id="youtube_review_link" class="form-control" placeholder="youtube посилання">
-                                    @error('video') <span class="text-danger">{{ $message }}</span> @enderror
                                 </div>
                             </div>
+
                         </div>
+
 
 
 

@@ -3,27 +3,50 @@
 @endsection
 
 <div>
+
+    <div>
+        <!-- Modal for delete confirmation -->
+        @if($showModal)
+            <div class="modal" style="display: flex;">
+                <div class="modal-content">
+                    <span class="close-button" wire:click="$set('showModal', false)">&times;</span>
+                    <h2>Підтвердження видалення</h2>
+                    <p>Ви дійсно хочете видалити це оголошення?</p>
+                    <button wire:click="deleteAdvertisement">Так, видалити</button>
+                    <button wire:click="$set('showModal', false)">Скасувати</button>
+                </div>
+            </div>
+        @endif
+    </div>
+
+
     <div style="display: flex">
         <div>
-            <h1 class="profile_page_name" >Ваші оголошення</h1>
+            <h1 class="profile_page_name">Ваші оголошення</h1>
         </div>
 
     </div>
 
     <div style="display: flex">
-        <div class="advertisement_menu_item">
-            <a href="#"><p>Активні</p></a>
+        <div class="advertisement_menu_item" style="border-top: 5px solid {{ $view === 'list' ? '#2E2E2E' : '#A1A1A1' }};" wire:click="$set('view', 'list')">
+            <a><p>Активні</p></a>
         </div>
 
-        <div class="advertisement_menu_item">
-            <a href="#"><p>Неактивні</p></a>
+        <div class="advertisement_menu_item"  style="border-top: 5px solid {{ $view != 'list' ? '#2E2E2E' : '#A1A1A1' }};" wire:click="$set('view', 'grid')">
+            <a><p>Неактивні</p></a>
         </div>
 
         <button class="create_btn" >
-            <a href="{{route('Create')}}"><p>Нове оголошення</p></a>
+            @if(Auth::user()->utype === 'BSN' || Auth::user()->utype === 'ADM')
+                <a href="{{route('Creation')}}"><p>Нове оголошення</p></a>
+            @else
+                <a href="{{route('Create')}}"><p>Нове оголошення</p></a>
+            @endif
         </button>
     </div>
     <div style="margin-top: 50px">
+
+    @if($view === 'list')
     @if ($allProducts->isNotEmpty())
 
         @foreach ($allProducts as $product)
@@ -55,32 +78,33 @@
 {{--                    </div>--}}
 
                     <div class="street_create">
-                        <a>Київ, якась там вулиця. 14 черня 2024 </a>
+                        <a style="margin-bottom: 30px">{{ $product->region }}</a>
                     </div>
                 </div>
-                <div class="product_right_part_user">
-                    <div >
+
+                <div>
+                    <a href="{{ route('product.edit', $product->id) }}">
+                        <div class="pen_edit">
+                            <img src="{{ asset('assets/images/note_pencil 1.png') }}" alt="">
+                        </div>
+                    </a>
+
+                    <div class="ban_delete">
+                        <img src="{{ asset('assets/images/ban red 1.png') }}" alt="" wire:click="openDeleteConfirmation({{ $product->id }})">
+                    </div>
+
+                    <div class="price_my_prod">
                         <p>{{ $product->regular_price }} грн</p>
                     </div>
 
-                    <div class="btn_and_like">
+                    <div class="count_like"> {{ \App\Models\Like::where('product_id', $product->id)->count() }}</div>
 
+
+                    <div class="like">
                         <div class="con-like">
-                            <input class="like" type="checkbox" title="like">
                             <div class="checkmark">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="outline" viewBox="0 0 24 24">
                                     <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z"></path>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="filled" viewBox="0 0 24 24">
-                                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z"></path>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="100" width="100" class="celebrate">
-                                    <polygon class="poly" points="10,10 20,20"></polygon>
-                                    <polygon class="poly" points="10,50 20,50"></polygon>
-                                    <polygon class="poly" points="20,80 30,70"></polygon>
-                                    <polygon class="poly" points="90,10 80,20"></polygon>
-                                    <polygon class="poly" points="90,50 80,50"></polygon>
-                                    <polygon class="poly" points="80,80 70,70"></polygon>
                                 </svg>
                             </div>
                         </div>
@@ -95,8 +119,118 @@
 
         @endforeach
     @endif
+    @endif
+    @if($view != 'list')
+
+    @endif
 
     </div>
+
+    <style>
+        .product_list_user{
+            position: relative;
+        }
+
+        .pen_edit img, .ban_delete img{
+            width: 30px;
+            height: 30px;
+
+            cursor: pointer;
+        }
+
+        .pen_edit{
+            position: absolute;
+            right: 80px;
+            top: 20px;
+        }
+
+        .ban_delete{
+            position: absolute;
+            right: 25px;
+            top: 20px;
+        }
+
+        .price_my_prod{
+            position: absolute;
+            left: 330px;
+            bottom: 67px;
+        }
+
+        .price_my_prod p{
+            /* 4000 грн */
+
+            font-family: 'Montserrat', serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 100%;
+
+            color: #2E2E2E;
+
+            margin: 0;
+        }
+
+        .like{
+            width: 45px;
+            height: 30px;
+
+            position: absolute;
+
+            right: 25px;
+            bottom: 25px;
+        }
+
+        .count_like{
+            position: absolute;
+
+            width: 30px;
+            height: 30px;
+
+            right: 60px;
+            bottom: 25px;
+
+            /* 6 */
+
+            font-family: 'Montserrat', serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 100%;
+            /* identical to box height, or 24px */
+
+            color: #2E2E2E;
+
+            display: flex;
+            justify-content: center; /* Горизонтальное выравнивание */
+             align-items: center;     /* Вертикальное выравнивание */
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 300px;
+            position: relative;
+        }
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+    </style>
 </div>
 
 

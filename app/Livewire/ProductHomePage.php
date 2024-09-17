@@ -39,12 +39,12 @@ class ProductHomePage extends Component
             ->take(8)
             ->get();
 
-        $productsVip = Product::where('type', '=', 'vip')
+        $productsVip = Product::where('type', '=', 'VIP')
             ->orderBy('created_at')
             ->take(8)
             ->get();
 
-        $productsBisns = Product::where('type', '=', 'Bisns')
+        $productsBisns = Product::where('type', '=', 'BSN')
             ->orderBy('created_at')
             ->take(8)
             ->get();

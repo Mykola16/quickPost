@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use Illuminate\Support\Facades\Auth;
 use Laravel\Fortify\Contracts\UpdatesUserPasswords;
 use Laravel\Fortify\Contracts\UpdatesUserProfileInformation;
 use Livewire\Component;
@@ -41,10 +42,20 @@ class Settings extends Component
 
     public function mount(){
         $fullName = explode(' ', auth()->user()->name);
-        $this->state['first_name'] = $fullName[0];
-        $this->state['last_name'] = isset($fullName[1]) ? $fullName[1] : '';
-        $this->state['email'] = auth()->user()->email;
-        $this->state['phone_number'] = auth()->user()->phone_number;
+        if (Auth::user()->utype === 'BSN')
+        {
+            $this->state['name'] = auth()->user()->name;
+            $this->state['email'] = auth()->user()->email;
+            $this->state['phone_number'] = auth()->user()->phone_number;
+        }
+        else
+        {
+            $this->state['first_name'] = $fullName[0];
+            $this->state['last_name'] = isset($fullName[1]) ? $fullName[1] : '';
+            $this->state['email'] = auth()->user()->email;
+            $this->state['phone_number'] = auth()->user()->phone_number;
+        }
+
     }
 
     public function updateProfile(UpdatesUserProfileInformation $updater, UpdatesUserPasswords $updater_password){

@@ -2,8 +2,7 @@
 
 namespace App\Livewire;
 
-use App\Models\order_items;
-use App\Models\orders;
+use App\Models\Order;
 use App\Models\ShoppingCart;
 use Illuminate\Support\Str;
 use Livewire\Component;
@@ -31,29 +30,34 @@ class OformlennyaComponent extends Component
             'email' => 'nullable|email',
         ]);
 
-        $order = orders::create([
-            'user_id' => auth()->user()->id,
-            'tracking_no' => 'quick-post-' . Str::random(10),
-            'fullname' => $this->first_name . ' ' . $this->last_name,
-            'phone' => $this->phone,
-            'Method_of_delivery' => $this->Method_of_delivery,
-            'Oblast' => $this->Oblast,
-            'number_viddilennya' => $this->number_viddilennya,
-            'Method_of_payment' => $this->Method_of_payment,
-            'status' => 'У процесі',
-            'messagePost' => $this->messagePost ? 1 : 0,
-            'email' => $this->email
-        ]);
+        // Проходимо по кожному товару в кошику
+        foreach ($this->cartitems as $item) {
 
-        foreach ($this->cartitems as $item){
 
-            order_items::create([
-                'order_id' => $order->id,
-                'product_id' => $item->product_id,
-                'price' => $item->product->regular_price
+
+            // Створюємо окреме замовлення для кожного товару
+            Order::create([
+                'user_id' => auth()->user()->id,
+                'tracking_no' => 'quick-post-' . Str::random(10),
+                'fullname' => $this->first_name . ' ' . $this->last_name,
+                'phone' => $this->phone,
+                'price' => $item->product->regular_price, // Ціна окремого товару
+                'Method_of_delivery' => $this->Method_of_delivery,
+                'Oblast' => $this->Oblast,
+                'number_viddilennya' => $this->number_viddilennya,
+                'Method_of_payment' => $this->Method_of_payment,
+                'product_id' => $item->product_id, // Зберігаємо ідентифікатор товару
+                'status' => 'У процесі',
+                'messagePost' => $this->messagePost ? 1 : 0,
+                'email' => $this->email
             ]);
         }
-        session()->flash('message', 'Ваше замовлення успішно оформлено!');
+
+
+
+        // Очищаємо кошик після створення замовлень
+        ShoppingCart::where('user_id', auth()->user()->id)->delete();
+
         return redirect()->route('History');
 
     }

@@ -64,7 +64,9 @@
                     <input type="password" id="password" name="password">
 
                     @if (Route::has('password.request'))
-                    <a href="{{ route('password.request') }}">Забули пароль?</a>
+                    <a href="{{ route('password.request') }}">
+                        Забули пароль?
+                    </a>
                     @endif
 
                     <div style="text-align: center;">

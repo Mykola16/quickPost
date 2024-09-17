@@ -1,11 +1,11 @@
 @section('title')
-    Create
+    Edit
 @endsection
 
 <div>
     <div class="create_page">
         <form wire:submit.prevent="savedata">
-            <h1>Створити Оголошення</h1>
+            <h1 style="width: 50%">Редагувати Оголошення</h1>
 
             <div style="display: flex">
 
@@ -25,43 +25,43 @@
 
                             </div>
 
-                                <div id="myModal" class="modal" style="padding-top: 375px;">
-                                    <div class="modal-content" style="display: flex">
-                                        <div class="category-column">
-                                            @foreach ($categories as $category)
+                            <div id="myModal" class="modal" style="padding-top: 375px;">
+                                <div class="modal-content" style="display: flex">
+                                    <div class="category-column">
+                                        @foreach ($categories as $category)
 
-                                                <div class="menu-item" data-category-id="{{ $category->id }}" onclick="showSubCategories({{ $category->id }})">
-                                                    <a href="#{{$category->id}}" data-category-id="{{ $category->id }}" wire:click="selectCategory('{{ $category->id  }}')" onclick="closeModal()">
-                                                        <p style="font-family: 'Montserrat',serif; font-style: normal; font-weight: 700; font-size: 14px; color: #2E2E2E;">{{ $category->name }}</p></a>
-                                                    <img src="{{ asset('assets/images/button_cat.png') }}" alt="">
-                                                </div>
-                                            @endforeach
-                                        </div>
+                                            <div class="menu-item" data-category-id="{{ $category->id }}" onclick="showSubCategories({{ $category->id }})">
+                                                <a href="#{{$category->id}}" data-category-id="{{ $category->id }}" wire:click="selectCategory('{{ $category->id  }}')" onclick="closeModal()">
+                                                    <p style="font-family: 'Montserrat',serif; font-style: normal; font-weight: 700; font-size: 14px; color: #2E2E2E;">{{ $category->name }}</p></a>
+                                                <img src="{{ asset('assets/images/button_cat.png') }}" alt="">
+                                            </div>
+                                        @endforeach
+                                    </div>
 
 
 
-                                        <div class="submenu-column">
-                                            @foreach ($categories as $category)
-                                                <ul id="subcategories-{{ $category->id }}" class="subcategories" style="display: none;">
-                                                    @foreach ($category->subCategories as $subCategory)
-                                                        <a href="#" wire:click="selectCategory('{{ $subCategory->id  }}')"  onclick="closeModal()">
-                                                            <li style="margin-bottom: 10px" class="subCategory">{{ $subCategory->name }}</li>
-                                                        </a>
-                                                        @if ($subCategory->subCategories->isNotEmpty())
-                                                            <ul>
-                                                                @foreach ($subCategory->subCategories as $subSubCategory)
-                                                                    <a href="#" wire:click="selectCategory('{{ $subSubCategory->id  }}')"  onclick="closeModal()">
-                                                                        <li style="margin-bottom: 17px" class="subSubCategory">{{ $subSubCategory->name }}</li>
-                                                                    </a>
-                                                                @endforeach
-                                                            </ul>
-                                                        @endif
-                                                    @endforeach
-                                                </ul>
-                                            @endforeach
-                                        </div>
+                                    <div class="submenu-column">
+                                        @foreach ($categories as $category)
+                                            <ul id="subcategories-{{ $category->id }}" class="subcategories" style="display: none;">
+                                                @foreach ($category->subCategories as $subCategory)
+                                                    <a href="#" wire:click="selectCategory('{{ $subCategory->id  }}')"  onclick="closeModal()">
+                                                        <li style="margin-bottom: 10px" class="subCategory">{{ $subCategory->name }}</li>
+                                                    </a>
+                                                    @if ($subCategory->subCategories->isNotEmpty())
+                                                        <ul>
+                                                            @foreach ($subCategory->subCategories as $subSubCategory)
+                                                                <a href="#" wire:click="selectCategory('{{ $subSubCategory->id  }}')"  onclick="closeModal()">
+                                                                    <li style="margin-bottom: 17px" class="subSubCategory">{{ $subSubCategory->name }}</li>
+                                                                </a>
+                                                            @endforeach
+                                                        </ul>
+                                                    @endif
+                                                @endforeach
+                                            </ul>
+                                        @endforeach
                                     </div>
                                 </div>
+                            </div>
 
                         </div>
 
@@ -69,7 +69,13 @@
                         <div style="margin-left: 20px; position: relative;" wire:ignore>
                             <label>Місцезнаходження</label><br>
                             <div onclick="selectedRegion(this)" class="menu-item" style="height: 40px; margin-top: 15px;margin-bottom: 0;border-right: 5px solid #2E2E2E;">
-                                <p id="selected-region-text">Оберіть область</p>
+                                <p id="selected-region-text" style="color: {{ $selectedRegion ? '#2E2E2E' : '#A1A1A1' }};">
+                                    @if ($selectedRegion)
+                                        {{ $selectedRegion }}
+                                    @else
+                                        Оберіть область
+                                    @endif
+                                </p>
                                 <img style="margin-right: 15px" src="{{ asset('assets/images/seting_menu_btn.png') }}" alt="">
                             </div>
 
@@ -115,17 +121,36 @@
                                 @foreach(range(0, 7) as $i)
                                     <div class="img_box" style="background-color: #EFEFEF;" wire:key="img_box_{{ $i }}">
                                         @if(isset($img[$i]))
-                                            <!-- Если изображение загружено, показываем его -->
-                                            <img class="file_img" src="{{ $img[$i]->temporaryUrl() }}" alt="Фото {{ $i+1 }}">
+                                            <!-- Якщо зображення завантажене через Livewire -->
+                                            @if(is_object($img[$i]))
+                                                <div style="position: relative;">
+                                                    <img class="file_img" src="{{ $img[$i]->temporaryUrl() }}" alt="Фото {{ $i+1 }}">
+                                                    <!-- Кнопка видалення -->
+                                                    <button type="button" wire:click="deleteImage({{ $i }})"
+                                                            style="position: absolute; top: 5px; right: 5px; background: red; color: white; border: none; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; padding: 0;">
+                                                        X
+                                                    </button>
+                                                </div>
+                                            @else
+                                                <!-- Якщо це рядок (існуючий шлях до зображення в базі даних) -->
+                                                <div style="position: relative;">
+                                                    <img class="file_img" src="{{ asset('storage/' . $img[$i]) }}" alt="Фото {{ $i+1 }}">
+                                                    <!-- Кнопка видалення -->
+                                                    <button type="button" wire:click="deleteImage({{ $i }})"
+                                                            style="position: absolute; top: 5px; right: 5px; background: red; color: white; border: none; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; padding: 0;">
+                                                        X
+                                                    </button>
+                                                </div>
+                                            @endif
                                         @elseif($i == count($img))
-                                            <!-- Если это следующий квадрат после последнего загруженного фото, показываем кнопку для добавления нового фото -->
+                                            <!-- Якщо це наступний квадрат після останнього завантаженого фото, показуємо кнопку для завантаження -->
                                             <input type="file" wire:model="img.{{ $i }}" id="fileInput{{ $i }}" style="display: none;">
                                             <label for="fileInput{{ $i }}" class="file-upload-button">
                                                 <p>Додати фото</p>
                                             </label>
                                         @else
-                                            <!-- Если изображение не загружено, показываем значок камеры -->
-                                            <img src="{{ asset('assets/images/кам.png') }}" alt="Значок камеры">
+                                            <!-- Якщо зображення не завантажене, показуємо іконку камери -->
+                                            <img src="{{ asset('assets/images/кам.png') }}" alt="Значок камери">
                                         @endif
                                     </div>
                                 @endforeach
@@ -140,7 +165,13 @@
                                 <div style="margin-top: 35px" wire:ignore>
                                     <label>Вкажіть стан товару</label><br>
                                     <div onclick="selectedRegion(this)" class="menu-item" style="height: 40px; margin-top: 15px;margin-bottom: 0;border-right: 5px solid #2E2E2E;">
-                                        <p id="selected-stane-text" style="font-size:20px; color: #A1A1A1;">стан</p>
+                                        <p id="selected-stane-text" style="font-size:20px; color: {{ $selectedStane ? '#2E2E2E' : '#A1A1A1' }};">
+                                            @if ($selectedStane)
+                                                {{ $selectedStane }}
+                                            @else
+                                                стан
+                                            @endif
+                                        </p>
                                         <img style="margin-right: 15px" src="{{ asset('assets/images/seting_menu_btn.png') }}" alt="">
                                     </div>
 
@@ -152,6 +183,7 @@
                                         @endforeach
                                     </div>
                                 </div>
+
 
 
 
@@ -184,7 +216,7 @@
 
 
                         <button type="submit" class="button_create">
-                            <p>Опублікувати</p>
+                            <p>Оновити</p>
                         </button>
                     </div>
                 </div>
@@ -215,7 +247,7 @@
 
 
                 if (icon) {
-                    icon.src = "assets/images/seting_menu_btn.png";
+                    icon.src = "/assets/images/seting_menu_btn.png";
                 }
 
             } else {
@@ -225,7 +257,7 @@
 
 
                 if (icon) {
-                    icon.src = "assets/images/btn_v_setting.png";
+                    icon.src = "/assets/images/btn_v_setting.png";
                 }
             }
         }
