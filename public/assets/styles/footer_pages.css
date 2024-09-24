@@ -1,0 +1,497 @@
+/*////////////////////////////////*/
+/* Про QuickPost */
+
+.about_quickPost{
+    margin-top: 50px;
+}
+
+.about_quickPost h1{
+    /* Про QuickPost */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+
+    margin: 0;
+}
+
+.what_quickPost{
+
+
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.what_quickPost h2{
+    /* QuickPost — це сучасна платформа*/
+
+    width: 640px;
+    height: 56px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+
+
+
+    margin: 0;
+}
+
+.what_quickPost p{
+    /*!* В основі нашої концепції лежить принцип де користувачі */
+
+    width: 640px;
+    height: 72px;
+
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+
+
+    margin: 0;
+}
+
+.what_quickPost .about_footer_img1{
+    margin-left: 20px;
+}
+
+.what_quickPost .about_footer_img1 img{
+    font-size: 0;
+    box-sizing: border-box;
+
+
+    width: 640px;
+    height: 367px;
+}
+
+
+
+.about_footer_img2 .about_footer_img2 img{
+    box-sizing: border-box;
+
+    width: 640px;
+    height: 341px;
+    font-size: 0;
+}
+
+.QuickPostMission{
+    margin-bottom: 50px;
+}
+
+.QuickPostMission h1{
+    /* Місія QuickPost */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+
+
+    margin: 0;
+}
+
+.QuickPostMission h2{
+    /* Наша місія — дати можливість кожному легко реалізувати свій товар,  */
+
+    width: 640px;
+    height: 56px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+
+
+
+
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+
+.QuickPostMission p{
+    /*!* Ми прагнемо зробити торгівлю доступною та комфортною для всіх. QuickPost розроблений так, */
+
+    width: 640px;
+    height: 72px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+
+
+    margin: 0;
+}
+
+.HowQuickPostWorks h1{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.how_quick_post_works_item{
+    margin: 35px 0;
+}
+
+.about_footer_img3 img{
+    /* image 150 */
+    box-sizing: border-box;
+
+    width: 640px;
+    height: 342px;
+}
+
+.how_quick_post_works_item h2{
+    /* Основний акцент QuickPost — на простоті використання. */
+
+    width: 310px;
+    height: 40px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+
+
+    margin: 0;
+}
+
+.how_quick_post_works_item p{
+    /*!* Процес купівлі чи продажу починається з декількох простих кроків. Користувачі*/
+
+    width: 310px;
+    height: 170px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+
+
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+
+.WhyChooseQuickPost{
+    margin-bottom: 50px;
+}
+
+.WhyChooseQuickPost h1{
+    /* QuickPost — швидкість, зручність та надійність у світі торгівлі! */
+
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.why_chose_quick_post{
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.why_chose_quick_post h2{
+    /* QuickPost — це не просто майданчик для купівлі-продажу, це місце,
+    де користувачі можуть відчувати себе впевнено і захищено. */
+
+    width: 310px;
+    height: 93px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+
+
+
+    margin-top: 0;
+    margin-bottom: 25px;
+
+}
+
+.why_chose_quick_post p{
+    /* Наша платформа забезпечує прозорі умови для всіх учасників торгівлі. */
+
+    position: absolute;
+    width: 310px;
+    height: 267px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+
+
+    margin: 0;
+}
+
+.why_chose_quick_post img{
+    margin: 0 20px;
+
+    /* image 152 */
+
+    box-sizing: border-box;
+
+    width: 310px;
+    height: 434px;
+}
+
+/*////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////*/
+
+
+.ContentProtectionQuickPost{
+    margin-top: 50px;
+    margin-bottom: 180px;
+}
+
+.ContentProtectionQuickPost h1{
+    /* Захист легального контенту на QuickPost */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+
+
+    margin-top: 0;
+    margin-bottom: 35px;
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.ContentProtectionQuickPost p{
+    margin: 0;
+
+    width: 970px;
+    height: 344px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+
+}
+
+.ContentProtectionQuickPost img{
+    /* image 154 */
+    box-sizing: border-box;
+
+    width: 310px;
+    height: 424px;
+
+    margin-left: 20px;
+    border-radius: 15px;
+
+}
+
+
+/*///////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////*/
+
+.terms_of_service{
+    margin: 50px 0;
+}
+
+.terms_of_service h1{
+    /* Умови користування QuickPost */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+
+
+
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.terms_of_service h2{
+    /* Вітаємо на платформі QuickPost! */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+
+
+
+    margin-top: 0;
+    margin-bottom: 19px;
+}
+
+.terms_of_service a{
+
+    display: block;
+
+    width: 969px;
+    height: 102px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+
+
+}
+
+.terms_img
+{
+    width: 330px;
+    display: flex;
+    justify-content: end;
+}
+
+.terms_img img{
+    width: 197px;
+    height: 203px;
+
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.terms_of_service_img1 img{
+    box-sizing: border-box;
+
+    width: 309px;
+    height: 530px;
+
+    border-radius: 15px;
+}
+
+.terms_of_service h3{
+    /* Загальні положення */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+
+
+
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.terms_of_service p{
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+
+
+
+    margin: 0;
+
+    width: 310px;
+}
+
+.terms_of_service_img2{
+    margin-left: 20px;
+}
+
+.terms_of_service_img2 img{
+
+    box-sizing: border-box;
+    width: 310px;
+    height: 471px;
+
+    border-radius: 15px;
+}
+
+.terms_of_service_img3{
+    margin-left: 20px;
+}
+
+.terms_of_service_img3 img{
+    box-sizing: border-box;
+
+    border-radius: 15px;
+}
+
+.terms_of_service_img4{
+    margin-left: 20px;
+}
+
+.terms_of_service_img4 img{
+    box-sizing: border-box;
+
+    width: 310px;
+    height: 449px;
+
+    border-radius: 15px;
+}
+
+.terms_of_service_img5{
+    margin-left: 20px;
+}
+
+.terms_of_service_img5 img{
+    box-sizing: border-box;
+
+    width: 638px;
+    height: 361px;
+
+    border-radius: 15px;
+}
+
+.terms-title{
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.terms-title h3{
+
+    width: 719px;
+    height: 56px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+
+    text-align: center;
+
+    margin: 0;
+
+}

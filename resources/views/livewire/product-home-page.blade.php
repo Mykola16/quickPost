@@ -1,4 +1,4 @@
-<div wire:poll.1000ms>
+<div > {{--wire:poll.1000ms--}}
     <div class="now_watch">
         @if($productsBeingViewed->isNotEmpty())
             <h1>Зараз передивляються</h1>
@@ -43,7 +43,7 @@
                                 <a href="{{ route('product.show', $item->id) }}">
                                     {{ $item->name }}
                                 </a>
-                                <p style="font-size: 14px;">{{ $item->regular_price }} грн</p>
+                                <p>{{ $item->regular_price }} грн</p>
                             </div>
                             <div class="product-item-zat">
 
@@ -68,30 +68,28 @@
                                 <p>Vip</p>
                             </div>
 
-                            <a href="{{ route('product.show', $product->id) }}">
+                            <a  href="{{ route('product.show', $product->id) }}">
                                 <img src="{{ Storage::url($product->images->first()->img ?? 'no_image.png') }}" alt="">
                             </a>
 
                             <div class="Vip-product-item-info">
                                 <div class="df">
-                                    <div style="width: 240px; height: 60px;" >
-                                        <a href="{{ route('product.show', $product->id) }}">
+                                    <div class="vip_wh">
+                                        <a class="name" href="{{ route('product.show', $product->id) }}">
                                             {{ $product->name }}
                                         </a>
                                     </div>
 
-                                    @livewire('product-like-vip', ['productId' => $product->id])
+                                    <div class="like_home">
+                                        @livewire('product-like-vip', ['productId' => $product->id])
+                                    </div>
                                 </div>
 
-                                <div class="df">
+                                <div class="df price_home">
                                     <p>{{ $product->regular_price }} грн</p>
 
-                                    <div class="rating-result">
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span class="active"></span>
-                                        <span class="active"></span>
+                                    <div class="stars" style="margin-left: 15px">
+                                        <img  src="{{ asset('assets/images/stars.png')}}" alt="" style="width: 120px; height: 21px; margin-top: 4px;">
                                     </div>
                                 </div>
                             </div>
@@ -112,23 +110,19 @@
             <div class="bigness_product">
                 @foreach($productsBisns as $item)
                     <div class="bigness_product_item df">
-                        <div class="df">
+                        <div class="view_bsn df">
                             <div>
                                 <a href="{{ route('product.show', $item->id) }}">
                                     <img src="{{ Storage::url($item->images->first()->img ?? 'no_image.png') }}" alt="">
                                 </a>
                             </div>
-                            <div style="margin-left: 50px; text-align: left;">
+                            <div class="name_bsn" style="margin-left: 50px; text-align: left;">
                                 <a href="{{ route('product.show', $item->id) }}" style="text-decoration: none">
                                     {{ $item->name }}
                                 </a>
 
-                                <div class="rating-result" style="margin-top: 15px">
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
-                                    <span class="active"></span>
+                                <div class="stars2" style="margin-top: 15px">
+                                    <img  src="{{ asset('assets/images/stars.png')}}" alt="" style="width: 120px; height: 21px; margin-top: 4px;">
                                 </div>
 
                                 <p>{{ $item->regular_price }} грн</p>
@@ -141,7 +135,27 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="bsn_mobile">
+                            <a href="{{ route('product.show', $item->id) }}">
+                                <img src="{{ Storage::url($item->images->first()->img ?? 'no_image.png') }}" alt="">
+                            </a>
+
+                            <a class="nameBSN" href="{{ route('product.show', $item->id) }}" style="text-decoration: none">
+                                {{ $item->name }}
+                            </a>
+                            <p>{{ $item->regular_price }} грн</p>
+
+                            <div wire:click="addToCart({{ $item->id }})">
+                                <div class="shop_btn">
+                                    <a>Додати в кошик</a>
+                                    <img src="{{ asset('assets/images/shop_icon.png') }}" alt="">
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+
                 @endforeach
 
             </div>
@@ -153,14 +167,39 @@
     <div class="search_div">
         <h1>Популярні запити</h1>
 
-        @for ($y = 1; $y <= 3; $y++)
-            <div class="df" style="margin-top: 35px; gap: 20px;">
-                @for ($x = 0; $x <= 5; $x++)
+            <div class="pop_zap">
+                @foreach($popularQueries as $query)
                     <div class="search_zapit">
-                        <p>Текст заповнювач</p>
+                        <p>{{ $query->query }}</p>
                     </div>
-                @endfor
+                @endforeach
             </div>
-        @endfor
     </div>
+
+    <style>
+        .vip_wh{
+            width: 240px;
+            height: 60px;
+        }
+
+
+    </style>
+
+    <script>
+        const scrollContainer = document.querySelector('.bigness_product');
+        const scrollContainer2 = document.querySelector('.all-products');
+
+        scrollContainer.addEventListener('wheel', (evt) => {
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaY;
+        });
+
+        scrollContainer2.addEventListener('wheel', (evt) => {
+            evt.preventDefault();
+            scrollContainer2.scrollLeft += evt.deltaY;
+        });
+
+
+    </script>
 </div>
+

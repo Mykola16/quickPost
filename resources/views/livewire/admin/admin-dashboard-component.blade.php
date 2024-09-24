@@ -32,7 +32,7 @@
                 <div class="zamov_static">
                     <div class="df" style="margin-top:28px">
                         <p>Активні</p>
-                        <a>0</a>
+                        <a>{{ \App\Models\Order::all()->count() }}</a>
                     </div>
 
                     <div class="df" style="margin-top:20px">

@@ -2,6 +2,41 @@ body{
 	background-color: #2E2E2E;
 }
 
+/* Стиль для скролбару */
+body::-webkit-scrollbar {
+    width: 15px; /* Ширина скролбару */
+}
+
+/* Стиль для бігунка (повзунка) */
+body::-webkit-scrollbar-thumb {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+
+/* Стиль для доріжки */
+body::-webkit-scrollbar-track {
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+}
+
+/* Стиль для скролбару */
+::-webkit-scrollbar {
+    width: 10px; /* Ширина скролбару */
+}
+
+/* Стиль для бігунка (повзунка) */
+::-webkit-scrollbar-thumb {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+
+/* Стиль для доріжки */
+::-webkit-scrollbar-track {
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+}
+
+
 .logo{
 
 	filter: invert(1) grayscale(1) brightness(2);
@@ -57,6 +92,17 @@ body{
     filter: invert(1) grayscale(1) brightness(2);
 }
 
+.cont_region2{
+    background: #2E2E2E;
+    color: #FFFFFF;
+
+    border-width: 0 3px 3px 3px;
+    border-style: solid;
+    border-color: #FFFFFF;
+
+
+}
+
 button  {
     background-color: #FFFFFF;
     border: 3px solid #FFFFFF;
@@ -101,9 +147,9 @@ h1{
     color: #FFFFFF;
 }
 
-p{
-    color: #FFFFFF;
-}
+/*p{*/
+/*    color: #FFFFFF;*/
+/*}*/
 /*  */
 
 
@@ -211,6 +257,10 @@ p{
 .modal-content {
     border: 5px solid #FFFFFF;
     background: #2E2E2E;
+}
+
+.cat_name_modal{
+    color: #FFFFFF;
 }
 
 .subCategory{
@@ -462,6 +512,19 @@ p{
     color: #FFFFFF;
 }
 
+.advertisement_menu_item{
+    border-top: 5px solid #FFFFFF;
+}
+
+.advertisement_menu_item.Active {
+    border-top-color: #FFFFFF;
+}
+
+.advertisement_menu_item.inactive {
+    border-top-color: #A1A1A1;
+}
+
+
 .create_btn{
     background: #FFFFFF;
     border-top: 5px solid #FFFFFF;
@@ -471,4 +534,459 @@ p{
     color: #2E2E2E;
 }
 
+.product_list_user{
+    background: #474747;
+    border-right: 5px solid #FFFFFF;
+}
 
+.product_list_user a{
+    color: #FFFFFF;
+
+}
+
+.product_list_user p{
+    color: #FFFFFF;
+
+
+}
+
+.product_right_part_user p{
+    color: #FFFFFF;
+}
+
+.street_create a{
+    color: #A1A1A1;
+
+}
+
+.price_my_prod p {
+    color: #FFFFFF;
+}
+
+.count_like{
+    color: #FFFFFF;
+}
+
+.pen_edit{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.modal-content5 h2{
+    color: #FFFFFF;
+}
+
+.modal-content5 {
+    background: #2E2E2E;
+}
+.close-button5 {
+    color: #FFFFFF;
+}
+
+.modal-content5 button{
+    color: #2E2E2E;
+    background: #FFFFFF;
+}
+
+
+/*/////////////////////////////////////////////*/
+/*create_page*/
+
+.create_page h1{
+    color: #FFFFFF;
+}
+
+.create_content label{
+    color: #FFFFFF;
+}
+
+.create_content input{
+    border: 3px solid #FFFFFF;
+}
+
+.create_content textarea{
+    border: 3px solid #FFFFFF;
+}
+
+.img_box{
+    border: 3px solid #FFFFFF;
+    background-color: #474747;
+}
+
+
+.img_box img.kamera{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.img_box p{
+    /*    text*/
+    /* Додати фото */
+    border-bottom: 1px solid #FFFFFF;
+    color: #FFFFFF;
+}
+
+
+.price_create label{
+    color: #FFFFFF;
+}
+
+label.vip_create_item{
+    color: #FFFFFF;
+}
+
+label.QuickPlus_create_item{
+    color: #A1A1A1;
+}
+
+.button_create{
+    background: #FFFFFF;
+}
+
+.button_create p{
+    color: #2E2E2E;
+}
+
+.create_content input{
+    background: #2E2E2E;
+    color: #FFFFFF;
+}
+
+.info_create input{
+    background: #2E2E2E;
+    color: #FFFFFF;
+}
+
+
+.create_content textarea{
+    background: #2E2E2E;
+    color: #FFFFFF;
+}
+
+.create_content.selected2{
+    color: #FFFFFF;
+}
+
+.create_content.unselected2{
+    color: #A1A1A1;
+}
+
+.cont_region{
+    color: #FFFFFF;
+    border-left: 5px solid #FFFFFF;
+    border-right: 5px solid #FFFFFF;
+    background-color: #2E2E2E;
+}
+
+
+/*//////////////////////////////////////////////*/
+/*Chats*/
+
+.message_list{
+    background: #474747;
+    border-right: 5px solid #FFFFFF;
+}
+
+.message_list a{
+    color: #FFFFFF;
+}
+
+.message_list p{
+    /* Доброго дня! Я б хотів купити футболку */
+    color: #FFFFFF;
+}
+
+.modal-content5 {
+    background-color: #2A2A2A;
+}
+.close-button5 {
+
+}
+
+.modal-content5 button{
+    color: #2A2A2A;
+}
+
+.modal-content5 h2{
+    color: #FFFFFF;
+}
+
+.modal-content5 p{
+    color: #FFFFFF;
+}
+
+/*//////////////////////////////////////////////////////*/
+/*Chat*/
+
+.chat_div{
+    background: #474747;
+    border-right: 5px solid #FFFFFF;
+}
+
+.chat_info p{
+    color: #FFFFFF;
+}
+
+/* Стилі для повідомлень */
+.message-box {
+    /*background: #2A2A2A;*/
+    background: #474747;
+    border: 2px solid #FFFFFF;
+
+    /* Доброго дня! Я б хотів купити футболку */
+    color: #2E2E2E;
+}
+
+.message-box p{
+    color: #FFFFFF;
+}
+
+.message-box a{
+    color: #FFFFFF;
+}
+
+.input_container input{
+    background: #474747;
+    border: 3px solid #FFFFFF;
+    color: #FFFFFF;
+}
+
+button.btn_message {
+    color: #2A2A2A;
+    background: #FFFFFF;
+}
+
+.emoji-container {
+    background: #2E2E2E;
+    border: 2px solid #FFFFFF;
+}
+
+.emoji_scroll{
+    background: #2E2E2E;
+}
+
+
+.micIcon2{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.icons{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.menu_chat img{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+
+
+/*//////////////////////////////////////////////////////////////*/
+/*history_zamovlennya*/
+
+.search_user_icon2 img{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.search_user_icon2 input{
+    border: 3px solid #FFFFFF;
+    background: #2E2E2E;
+}
+
+.search_user_icon2 input{
+    color: #A1A1A1;
+}
+
+.search_user_icon2 button{
+    background: #FFFFFF;
+    color: #2E2E2E;
+}
+
+.product_zamovlennya{
+    background: #474747;
+    border-right: 5px solid #FFFFFF;
+}
+
+.product_zamovlennya h3{
+    /* Футболка, велика */
+    color: #FFFFFF;
+}
+
+.product_zamovlennya a{
+    /* Від 6 грудня 2022 */
+    color: #FFFFFF;
+}
+
+.product_zamovlennya h4{
+    color: #FFFFFF;
+}
+
+.product_zamovlennya p{
+    color: #01B834;
+}
+
+
+/*////////////////////////////////*/
+/*Subscription*/
+
+
+.Regular_subscription,
+.QuickPlus_subscription,
+.QuickPro_subscription
+{
+    border-color: #FFFFFF;
+}
+
+.Regular_subscription h4{
+    /* Звичайна */
+    color: #FFFFFF;
+}
+
+.QuickPlus_subscription h4{
+    /* QuickPlus */
+    color: #FFFFFF;
+}
+
+.QuickPro_subscription h4{
+    /* QuickPro */
+    color: #FFFFFF;
+}
+
+.QuickPro_subscription a{
+    /* Тільки для “Бізнес” */
+    color: #A1A1A1;
+}
+
+.checkmark0,
+.checkmark1{
+    border: 1px solid #FFFFFF;
+}
+
+.checkmark1{
+    background: #FFFFFF;
+}
+
+.price_subscription.active2{
+    background-color: #2E2E2E;
+    color: #FFFFFF;
+}
+
+.price_subscription{
+    border: 3px solid #FFFFFF;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.preimushchestva p{
+    color: #FFFFFF;
+}
+
+/*/////////////////////////////////////////////*/
+/*Setting*/
+
+.setting_menu{
+    background: #474747;
+    border-color: #FFFFFF;
+}
+
+.setting_menu a{
+    color: #FFFFFF;
+}
+
+.setting_menu img{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.accordion-content{
+    background-color: #474747;
+    border-color: #FFFFFF;
+}
+
+.cont label{
+    /* Ім’я */
+    color: #FFFFFF;
+}
+
+.cont input{
+    border: 1px solid #FFFFFF;
+    background: #474747;
+    color: #FFFFFF;
+}
+
+.btn_setting button{
+    background: #FFFFFF;
+    color: #2E2E2E;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer*/
+
+.about_quickPost h1,
+.about_quickPost h2,
+.about_quickPost p
+{
+    color: #FFFFFF;
+}
+
+/*.about_quickPost img{*/
+/*    filter: invert(1) grayscale(1) brightness(2);*/
+/*}*/
+
+.ContentProtectionQuickPost h1,
+.ContentProtectionQuickPost p
+{
+    color: #FFFFFF;
+}
+
+.ContentProtectionQuickPost img{
+    border-right: 10px solid #FFFFFF;
+    filter: drop-shadow(5px 0px 5px rgba(255, 255, 255, 0.25));
+}
+
+/*///////////////////////////////*/
+
+.terms_of_service h1,
+.terms_of_service h2,
+.terms_of_service h3,
+.terms_of_service p,
+.terms_of_service a
+{
+    color: #FFFFFF;
+}
+
+.terms_of_service_img1 img,
+.terms_of_service_img2 img
+{
+    border-left: 10px solid #FFFFFF;
+    filter: drop-shadow(-5px 0px 5px rgba(255, 255, 255, 0.25));
+}
+
+.terms_of_service_img3 img,
+.terms_of_service_img4 img,
+.terms_of_service_img5 img
+{
+    border-right: 10px solid #FFFFFF;
+    filter: drop-shadow(5px 0px 5px rgba(255, 255, 255, 0.25));
+}

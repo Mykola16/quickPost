@@ -21,6 +21,13 @@
 
             @endphp
 
+            @php
+                $image = 'no_image.png';
+                if ($item->product && $item->product->images && $item->product->images->count() > 0) {
+                    $image = $item->product->images[0]->img;
+                }
+            @endphp
+
             <div class="product_zamovlennya">
                 <img src="{{Storage::url($image)}}" alt="">
                 <h3>{{$item->product->name}}</h3>

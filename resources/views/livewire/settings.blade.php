@@ -60,14 +60,14 @@
 
                 <div class="accordion-content" style="height: 180px">
                     <div class="cont df">
-                        <div class="img_box" style="background-color: #EFEFEF;" >
+                        <div class="img_box">
                             <input type="file" id="fileInput" wire:model="img" style="display: none;">
                             <label for="fileInput" class="file-upload-button">
                                 <p style="font-size: 14px;">Редагувати фото</p>
                             </label>
                         </div>
 
-                        <div class="img_box" style="background-color: #EFEFEF; margin-left: 35px; padding: 10px;">
+                        <div class="img_box" style="margin-left: 35px; padding: 10px;">
                             @if ($img)
                                 <!-- Если новое изображение загружено, отображаем его -->
                                 <img class="file_img" src="{{ $img->temporaryUrl() }}" alt="Фото профиля" style="width: 100%; height: auto;">

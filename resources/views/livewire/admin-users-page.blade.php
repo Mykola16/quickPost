@@ -6,12 +6,28 @@
     <div class="users_admin_page">
     <h1>Користувачі</h1>
 
+
+
     <div class="search_user_icon">
-        <input type="search" placeholder="Знайти користувача">
-        <button>Пошук</button>
+        <input type="search" placeholder="Знайти користувача" wire:model.debounce.300ms="searchTerm">
+        <button wire:click="$refresh">Пошук</button>
         <img src="{{ asset('assets/images/search_black.png')}}" alt="search_icon">
     </div>
 
+        <div>
+            <!-- Modal for delete confirmation -->
+            @if($showModal)
+                <div class="modal5" style="display: flex;">
+                    <div class="modal-content5">
+                        <span class="close-button5" wire:click="$set('showModal', false)">&times;</span>
+                        <h2>Підтвердження видалення</h2>
+                        <p>Ви дійсно хочете видалити користувача?</p>
+                        <button wire:click="deleteUser">Так, видалити</button>
+                        <button wire:click="$set('showModal', false)">Скасувати</button>
+                    </div>
+                </div>
+            @endif
+        </div>
 
 
     <table class="name_table">
@@ -28,122 +44,206 @@
         </tr>
     </table>
 
-    <div class="users_div">
-        <table class="cont_table">
-            @foreach($users as $user)
-                <tr>
-                    <th><input type="checkbox"></th>
-                    <td>
-                       <p style="width: 319px">
-                           {{ $user->name }}
-                       </p>
-                    </td>
-
-                    <td>
-                        <p style="width: 308px">
-                            {{ $user->email }}
-                        </p>
-                    </td>
-
-                    @if($user->utype === 'ADM')
-                        <td>
-                            <p style="width: 190px">
-                                Адміністратор
-                            </p>
-                        </td>
-                    @elseif($user->utype === 'PRV')
-                        <td>
-                            <p style="width: 190px">
-                                Приватна особа
-                            </p>
-                        </td>
-                    @elseif($user->utype === 'BSN')
-                        <td>
-                            <p style="width: 190px">
-                                Бізнес
-                            </p>
-                        </td>
-                    @endif
 
 
-                    <td class="points">
-                        <div class="df" style="position: relative;">
-                            <div class="point_btn" wire:click="selectUser({{ $user->id }})" >
-                                @for($i = 1; $i <= 3; $i++)
-                                    <div class="point"></div>
-                                @endfor
-                            </div>
 
-                            @if($selectedUserId == $user->id)
-                                <div class="menu">
-                                    <ul>
-                                        <li style="padding-top: 20px; padding-bottom: 17px;">Редагувати</li>
-                                        <li style="padding: 17px 0;">Заблокувати</li>
-                                        <li style="padding: 17px 0;">Надіслати сповіщення</li>
-                                        <li style="padding-top: 17px; padding-bottom: 20px;">Видалити</li>
-                                    </ul>
+
+        <div class="users_div">
+            @if($users->isEmpty())
+                <p>Результатів не знайдено</p>
+            @else
+                <table class="cont_table">
+                    @php
+                        // Визначаємо список користувачів, залежно від наявності пошукового терміну
+                        $displayedUsers = $searchTerm ? $this->getFilteredCategories() : $users;
+                    @endphp
+
+                    @foreach ($displayedUsers as $user)
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <td>
+                                <p style="width: 319px">
+                                    {{ $user->name }}
+                                </p>
+                            </td>
+
+                            <td>
+                                <p style="width: 308px">
+                                    {{ $user->email }}
+                                </p>
+                            </td>
+
+                            <td>
+                                <p style="width: 190px">
+                                    @switch($user->utype)
+                                        @case('ADM')
+                                            Адміністратор
+                                            @break
+                                        @case('PRV')
+                                            Приватна особа
+                                            @break
+                                        @case('BSN')
+                                            Бізнес
+                                            @break
+                                    @endswitch
+                                </p>
+                            </td>
+
+                            <td class="points">
+                                <div class="df" style="position: relative;">
+                                    <div class="point_btn" wire:click="selectUser({{ $user->id }})">
+                                        @for($i = 1; $i <= 3; $i++)
+                                            <div class="point"></div>
+                                        @endfor
+                                    </div>
+
+                                    @if($selectedUserId == $user->id)
+                                        <div class="menu">
+                                            <ul>
+                                                <li style="padding-top: 20px; padding-bottom: 17px;" >Редагувати</li> {{--wire:click="editUser({{ $user->id }})"--}}
+                                                <li style="padding: 17px 0;">Заблокувати</li>
+                                                <li style="padding: 17px 0;" wire:click="sms({{ $user->id }})">Надіслати сповіщення</li>
+                                                <li style="padding-top: 17px; padding-bottom: 20px;" wire:click="openDeleteConfirmation({{ $user->id }})">Видалити</li>
+                                            </ul>
+                                        </div>
+                                    @endif
                                 </div>
-                            @endif
-                        </div>
-
-
-                    </td>
-                </tr>
-            @endforeach
-        </table>
-    </div>
+                            </td>
+                        </tr>
+                    @endforeach
+                </table>
+            @endif
+        </div>
 
 </div>
 
-    <div class="df" style="position: relative">
-        <button class="all_select">
-            <p>Обрати все</p>
-        </button>
-        <button class="del_user">
-            <p>Видалити</p>
-        </button>
-        <button class="add_user" id="add_btn" >
+    <div class="df" style="position: relative; margin-bottom: 35px">
+{{--        <button class="all_select">--}}
+{{--            <p>Обрати все</p>--}}
+{{--        </button>--}}
+{{--        <button class="del_user">--}}
+{{--            <p>Видалити</p>--}}
+{{--        </button>--}}
+        <button class="add_user" wire:click="add_user">
             <p>Додати</p>
         </button>
     </div>
 
-    <div class="add_modal" id="add_modal" wire:ignore>
+    <div>
+        @error('name') <span class="error">{{ $message }}</span> @enderror<br>
+        @error('email') <span class="error">{{ $message }}</span> @enderror<br>
+        @error('password') <span class="error">{{ $message }}</span> @enderror<br>
+        @error('password_confirmation') <span class="error">{{ $message }}</span> @enderror<br>
+        @error('selectedRole') <span class="error">{{ $message }}</span> @enderror<br>
+    </div>
+
+    @if($isEditModalOpen)
+    <div class="add_modal" > {{--wire:ignore--}}
         <div class="add_cont">
-            <form wire:submit.prevent="saveUser">
+            <form wire:submit.prevent="{{ $selectedUserId ? 'updateUser' : 'saveUser' }}">
+                <a style="position: absolute; top: 10px; right: 10px;cursor: pointer;font-size: 25px;font-weight: 500"
+                   wire:click="closeModal">x
+                </a>
                 <label>Ім’я користувача</label><br>
                 <input type="text" wire:model="name">
-                @error('name') <span class="error">{{ $message }}</span> @enderror
 
                 <label>Електронна адреса</label><br>
                 <input type="email" wire:model="email">
-                @error('email') <span class="error">{{ $message }}</span> @enderror
 
                 <label>Пароль</label><br>
                 <input type="password" wire:model="password">
-                @error('password') <span class="error">{{ $message }}</span> @enderror
 
                 <label>Підтвердити пароль</label><br>
                 <input type="password" wire:model="password_confirmation">
-                @error('password_confirmation') <span class="error">{{ $message }}</span> @enderror
 
                 <div style="display: flex;justify-content: center;">
-                    <div style="margin-top: 19px" class="drop_container">
-                        <select wire:model="utype" class="drop_select">
-                            <option>Роль</option>
-                            <option value="PRV">Приватна особа</option>
-                            <option value="BSN">Бізнес</option>
-                            <option value="ADM">Адміністратор</option>
-                        </select>
+                    <div>
+                        <div class="rol_user df" onclick="selectedRole(this)">
+                            <a>
+                                {{ $selectedRole ?? 'Роль' }}
+                            </a>
+                            <img src="{{asset('assets/images/seting_menu_btn.png')}}" alt="">
+                        </div>
+
+                        <div class="cont_role" id="cont_role">
+                            @foreach ($roles as $role)
+                                <div wire:click="selectRole('{{ $role }}')">
+                                    <p>{{ $role }}</p>
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
-                @error('utype') <span class="error">{{ $message }}</span> @enderror
 
                 <div style="display: flex;justify-content: center;">
-                    <button type="submit">Зберегти</button>
+                    <button type="submit">{{ $selectedUserId ? 'Оновити' : 'Зберегти' }}</button>
                 </div>
+
             </form>
         </div>
+    </div>
+    @endif
 
+    <style>
+        .modal5 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content5 {
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 500px;
+            position: relative;
+        }
+        .close-button5 {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        .modal-content5 button{
+            width: 180px;
+            height: 40px;
+
+            border-radius: 15px;
+
+            font-family: 'Montserrat', serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 100%;
+
+            color: #FFFFFF;
+        }
+
+        .modal-content5 h2{
+            font-family: 'Montserrat', serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 100%;
+
+            color: #000000;
+        }
+
+        .modal-content5 p{
+            font-family: 'Montserrat', serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+
+            color: #000000;
+        }
+    </style>
 
     <script>
         document.addEventListener('click', function(event) {
@@ -152,6 +252,38 @@
                 @this.call('deselectUser');
             }
         });
+
+        function selectedRole(element) {
+            const content = element.nextElementSibling;
+
+            const icon = element.querySelector('img');
+
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                element.style.borderWidth = "3px 3px  3px 3px"
+                element.style.borderRadius = "15px 15px 15px 15px";
+
+
+                if (icon) {
+                    icon.src = "/assets/images/seting_menu_btn.png";
+                }
+
+            } else {
+                content.style.display = "block";
+                element.style.borderRadius = "15px 15px 0 0";
+                element.style.borderWidth = "3px 3px  0 3px"
+                // content.style.borderRadius = "0 0 5px 5px";
+
+
+                if (icon) {
+                    icon.src = "/assets/images/btn_v_setting.png";
+                }
+            }
+        }
+
+        // function selectedRol(role) {
+        //     // Зміна тексту вибраної області
+        //     document.getElementById('selected-role-text').textContent = role;
+        // }
     </script>
-</div>
 </div>

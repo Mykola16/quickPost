@@ -24,6 +24,10 @@ class ProductShow extends Component
 
         $this->allProducts = Product::where('id', '!=', $this->product->id)
             ->get();
+
+        if ($this->product->type === 'blocked') {
+            throw new \App\Exceptions\BlockedProductException;
+        }
     }
 
 

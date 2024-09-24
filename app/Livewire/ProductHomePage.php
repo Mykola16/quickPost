@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\SearchQuery;
 use App\Models\ShoppingCart;
 use Livewire\Component;
 
@@ -12,11 +13,15 @@ class ProductHomePage extends Component
     public $products;
     public $product;
     public $allProducts;
+    public $popularQueries;
 
     public function mount(Category $category)
     {
-        $this->allProducts = Product::all();
-
+        $this->allProducts = Product::where('type', '!=', 'blocked')
+            ->orWhereNull('type')
+            ->orderBy('created_at', 'desc')
+            ->get();
+        $this->popularQueries = SearchQuery::orderBy('count', 'desc')->take(15)->get();
     }
 
     public function addToCart($id){
@@ -30,6 +35,8 @@ class ProductHomePage extends Component
         $this->dispatch('cartUpdated');
         $this->dispatch('headerUpdated');
     }
+
+
 
     public function render()
     {
@@ -51,6 +58,6 @@ class ProductHomePage extends Component
 
         return view('livewire.product-home-page',
             compact( 'productsBeingViewed' , 'productsVip', 'productsBisns')
-            ,['allProducts' => $this->allProducts]);
+            ,['allProducts' => $this->allProducts, 'popularQueries' => $this->popularQueries]);
     }
 }

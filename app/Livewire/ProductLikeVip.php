@@ -11,6 +11,7 @@ class ProductLikeVip extends Component
     public $liked = false;
     public $likeCount = 0;
 
+    protected $listeners = ['likeVipUpdated' => 'render'];
 
     public function mount($productId)
     {
@@ -59,6 +60,7 @@ class ProductLikeVip extends Component
 
         $this->liked = !$this->liked;
         $this->updateLikeCount();
+        $this->dispatch('headerUpdated');
     }
 
     public function render()

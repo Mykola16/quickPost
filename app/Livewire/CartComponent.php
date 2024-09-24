@@ -28,6 +28,8 @@ class CartComponent extends Component
     public function render()
     {
         if (auth()->check()) {
+            $availableProducts = Product::where('type', '!=', 'blocked')->pluck('id');
+
             $this->cartitems=ShoppingCart::with('product.images')
                 ->where(['user_id'=>auth()->user()->id])
                 ->get();

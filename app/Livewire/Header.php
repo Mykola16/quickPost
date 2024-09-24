@@ -9,6 +9,8 @@ class Header extends Component
 {
     public $cartitems;
 
+
+
     protected $listeners = ['headerUpdated' => 'render'];
 
     public function render()

@@ -9,11 +9,12 @@
 
 
 
-
+    <button class="btn_catH"><p>Обрати категорію</p></button>
 
     <div class="line1">
 
         <div class="category" style="overflow: hidden">
+
 
                 <div class="menu"  id="myBtn">
                     @foreach ($categories as $category)
@@ -143,31 +144,14 @@
     @livewire('product-home-page')
 
 
-    <div class="box">
-        <a href="https://t.me/Mashavaskul"><img src="{{ asset('favicon.png')}}" alt=""></a>
 
-        <p>
-            Вітаю! Я ваш дружній помічник. Якщо у вас виникли питання або потрібна допомога, просто натисніть на мене.
-            Ми завжди раді допомогти вам і відповісти на всі ваші запитання. Давайте разом зробимо ваш досвід ще приємнішим!
-        </p>
-    </div>
+        <div class="box">
+            <a href="https://t.me/Mashavaskul"><img src="{{ asset('favicon.png')}}" alt=""></a>
 
-
-    <script>
-        const scrollContainer = document.querySelector('.bigness_product');
-        const scrollContainer2 = document.querySelector('.all-products');
-
-        scrollContainer.addEventListener('wheel', (evt) => {
-            evt.preventDefault();
-            scrollContainer.scrollLeft += evt.deltaY;
-        });
-
-        scrollContainer2.addEventListener('wheel', (evt) => {
-            evt.preventDefault();
-            scrollContainer2.scrollLeft += evt.deltaY;
-        });
-
-
-    </script>
+            <p>
+                Вітаю! Я ваш дружній помічник. Якщо у вас виникли питання або потрібна допомога, просто натисніть на мене.
+                Ми завжди раді допомогти вам і відповісти на всі ваші запитання. Давайте разом зробимо ваш досвід ще приємнішим!
+            </p>
+        </div>
 
 </div>

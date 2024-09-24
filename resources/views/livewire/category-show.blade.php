@@ -111,9 +111,9 @@
             </div>
 
             <div class="type_advertisement">
-                <h3 class="type_active" style="padding-bottom: 5px;">Всі оголошення</h3>
-                <h3>Приватні</h3>
-                <h3>Бізнес</h3>
+                <h3  wire:click="$set('view1', 'all_prod')" class="type_active" style="padding-bottom: 5px;">Всі оголошення</h3>
+                <h3 wire:click="$set('view1', 'private')">Приватні</h3>
+                <h3 wire:click="$set('view1', 'bisns')">Бізнес</h3>
             </div>
 
             <div class="" style="display: flex; margin-top: 15px">
@@ -171,6 +171,8 @@
                 </div>
             </div>
 
+{{--        @if($view1 === 'all_prod')--}}
+
             <div style="margin-top: 50px;">
                 @if(count($products) < 4 && count($products) > 0  )
                     <h3 class="count">Ми знайшли {{count($products)}} оголошеня</h3>
@@ -185,6 +187,7 @@
 {{--        Ми знайшли понад 2000 оголошень--}}
 
         </div>
+
 
 
     @if ($products->isNotEmpty())
@@ -216,13 +219,18 @@
                         <a  href="{{ route('product.show', $product->id) }}">{{ $product->name }}</a>
                         <p>{{ $product->short_description }}</p>
 
-                        <div class="new">
-                            <a>Нове</a>
-                        </div>
+                        @if ($product->created_at->gt(now()->subDay()))
+                            <div class="new">
+                                <a>Нове</a>
+                            </div>
+                        @endif
+
+
 
                         <div class="street">
-                            <a>Київ, якась там вулиця. 14 черня 2024 </a>
+                            <a>{{ $product->region }}</a>
                         </div>
+
                     </div>
                     <div class="product_right_part">
                         <div >
@@ -274,12 +282,8 @@
                                         <div class="df">
                                             <p>{{ $item->regular_price }} грн</p>
 
-                                            <div class="rating-result">
-                                                <span class="active"></span>
-                                                <span class="active"></span>
-                                                <span class="active"></span>
-                                                <span class="active"></span>
-                                                <span class="active"></span>
+                                            <div style="margin-left: 15px">
+                                                <img  src="{{ asset('assets/images/stars.png')}}" alt="" style="width: 120px; height: 21px; margin-top: 4px;">
                                             </div>
                                         </div>
                                     </div>
@@ -293,6 +297,44 @@
 
 
     @endif
+
+{{--    @elseif($view1 === 'private')--}}
+
+
+{{--    @else--}}
+{{--        @foreach($productsVip as $product)--}}
+{{--            <div class="Vip-product-item" wire:ignore>--}}
+
+{{--                <div class="Vip_btn">--}}
+{{--                    <p>Vip</p>--}}
+{{--                </div>--}}
+
+{{--                <a href="{{ route('product.show', $product->id) }}">--}}
+{{--                    <img src="{{ Storage::url($product->images->first()->img ?? 'no_image.png') }}" alt="">--}}
+{{--                </a>--}}
+
+{{--                <div class="Vip-product-item-info">--}}
+{{--                    <div class="df">--}}
+{{--                        <div style="width: 240px; height: 60px;" >--}}
+{{--                            <a href="{{ route('product.show', $product->id) }}">--}}
+{{--                                {{ $product->name }}--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
+
+{{--                        @livewire('product-like-vip', ['productId' => $product->id])--}}
+{{--                    </div>--}}
+
+{{--                    <div class="df">--}}
+{{--                        <p>{{ $product->regular_price }} грн</p>--}}
+
+{{--                        <div style="margin-left: 15px">--}}
+{{--                            <img  src="{{ asset('assets/images/stars.png')}}" alt="" style="width: 120px; height: 21px; margin-top: 4px;">--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        @endforeach--}}
+{{--    @endif--}}
 
 </div>
 

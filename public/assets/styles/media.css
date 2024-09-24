@@ -1,0 +1,663 @@
+@media (max-width: 768px) {
+
+    .wrapper{
+        width: calc(320px - 20px);
+    }
+
+    .logo{
+        margin-top: 0;
+        width: auto;
+        height: auto;
+    }
+
+    header .logo img {
+        width: 64.29px;
+        height: 25px;
+        margin-top: 5px;
+    }
+
+    .profile{
+
+        background-image: url('/assets/images/mobile/mobile_profile.png');
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    .profile img,
+    .selected img,
+    .cart img
+    {
+        display: none;
+    }
+
+
+    li.profile{
+        width: 15px;
+        height: 15px;
+
+        margin: 0;
+    }
+
+    .selected{
+        background-image: url('/assets/images/mobile/mobile_like.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    li.selected{
+        width: 15px;
+        height: 15px;
+    }
+
+    li.selected,
+    li.cart
+    {
+        margin-left: 25px;
+    }
+
+    .countSelected,
+    .countCart
+    {
+        display: none;
+    }
+
+    li.cart{
+        width: 15px;
+        height: 15px;
+    }
+
+    .cart{
+        background-image: url('/assets/images/mobile/mobile_cart.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .page-menu {
+        margin-top: 10px; /* Уменьшаем отступы на мобильных */
+    }
+
+    .switch_div {
+        display: none;
+    }
+
+
+    /*///////////////////////////////////////////////////*/
+
+    /*Пошук*/
+
+    .content{
+        margin-top: 15px;
+    }
+
+    div.search{
+        border: none;
+        width: 30px;
+        height: 25px;
+        padding: 0;
+    }
+
+    .search img{
+        display: none;
+    }
+
+    .search input{
+        width: 300px;
+        height: 25px;
+
+        border: 1px solid #2E2E2E;
+        border-radius: 10px;
+        padding-left: 15px;
+
+        /* Що шукаєте? */
+
+        font-family: 'Montserrat', serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 100%;
+
+        color: #A1A1A1;
+
+        position: relative;
+
+    }
+
+    .search_map{
+        display: none;
+    }
+
+
+
+    div.box,
+    footer,
+    .category
+    {
+        display: none;
+    }
+
+    button.button_search{
+        background: #2E2E2E;
+        border: 1px solid #2E2E2E;
+        border-radius: 10px;
+
+
+        width: 45px;
+        height: 25px;
+
+        z-index: 1;
+        margin-left: 185px;
+
+    }
+
+    button.button_search img{
+        width: 15px;
+        height: 15px;
+    }
+
+    button.button_search p{
+        display: none;
+    }
+
+/*///////////////////////////////////////////*/
+
+
+
+    .btn_catH{
+        margin-top: 15px;
+
+        display: block;
+
+        margin-left: 80px;
+
+        width: 151px;
+        height: 19px;
+
+        background: #2E2E2E;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+    }
+
+    .btn_catH p{
+        /* Обрати категорію */
+        font-family: 'Montserrat', serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 100%;
+        height: 100%;
+
+        color: #FFFFFF;
+
+        margin: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+/*///////////////////////////////////////////*/
+/*slider*/
+
+    .slider1{
+        width: 300px;
+        height: 121px;
+    }
+
+    div#blockSlider.slider1{
+        width: 300px;
+        height: 121px;
+    }
+
+    .line1{
+        margin-top: 18px;
+        margin-bottom: 35px;
+        height: 121px;
+    }
+
+    .prev img,
+    .next img
+    {
+        width: 20px;
+        height: 20px;
+    }
+
+    .prev,
+    .next{
+        padding: 5px;
+    }
+
+    .dot{
+        display: none;
+    }
+
+    /*///////////////////////////////////////////*/
+    /*Зараз передивляються and all*/
+
+    .now_watch h1{
+        /* Зараз передивляються */
+
+        font-family: 'Montserrat', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 100%;
+
+        color: #2E2E2E;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .all-products{
+        margin-top: 15px;
+        margin-bottom: 35px;
+    }
+
+
+/*product*/
+
+    .product-item{
+        min-width: 60px;
+        max-width: 60px;
+        height: 111px;
+
+        margin-right: 20px;
+    }
+
+    .product-item img{
+        width: 100%;
+        height: 100%;
+
+        border-radius: 0 0 10px 10px;
+    }
+
+    .product-item-zat,
+    .product-item-info
+    {
+        width: 60px;
+        height: 37px;
+
+
+        border-radius: 0 0 10px 10px;
+
+    }
+
+    .product-item-info{
+        /* Футболка “Л */
+        font-family: 'Montserrat', serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 8px;
+        line-height: 100%;
+
+        color: #FFFFFF;
+
+
+        border-radius: 0 0 10px 10px;
+
+
+    }
+
+    .product-item-info p{
+        /* 400 грн */
+        font-family: 'Montserrat', serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 8px;
+        line-height: 100%;
+
+        color: #FFFFFF;
+    }
+
+/*////////////////////////////////////*/
+/*VIP*/
+    .Vip_product h1 {
+        margin: 0;
+        /* VIP оголошення */
+
+
+        font-family: 'Montserrat', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 100%;
+        color: #2E2E2E;
+    }
+
+    .Vip_product_items {
+        margin-top: 15px;
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        margin-bottom: 35px;
+    }
+
+    .Vip-product-item {
+        width: 140px;
+        height: 180px;
+    }
+    .Vip-product-item-info {
+        width: 140px;
+        height: 50px;
+        padding: 5px;
+    }
+
+    .Vip-product-item-info a{
+        /* Футболка */
+        font-family: 'Montserrat', serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+
+        color: #FFFFFF;
+    }
+    .Vip-product-item-info p{
+        /* 4000 грн */
+        font-family: 'Montserrat', serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 100%;
+
+        color: #FFFFFF;
+    }
+
+    .Vip-product-item-info .df div
+    {
+        width: 120px; height: 30px;
+    }
+
+    .Vip-product-item-info input.like,
+    .outline
+    {
+        width: 30px;
+        height: 30px;
+    }
+
+    .Vip_btn{
+        width: 50px;
+        height: 25px;
+    }
+
+    .Vip_btn p{
+        /* VIP */
+
+        font-family: 'Montserrat', serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        /* identical to box height, or 16px */
+
+        color: #2E2E2E;
+    }
+
+    .Vip-product-item-info .df{
+        height: 14px;
+    }
+
+    .Vip-product-item-info .df div img{
+        display: none;
+    }
+
+    .vip-con-like div{
+        width: 15px;
+        height: 15px;
+    }
+
+    .vip-con-like div.checkmark{
+        width: 15px;
+        height: 15px;
+    }
+
+    .checkmark svg{
+        width: 15px;
+        height: 15px;
+    }
+
+    .vip_wh{
+        width: 3400px;
+        height: 600px;
+    }
+
+    .like_home div svg.outline{
+        position: absolute;
+        right: -1px;
+    }
+
+/*    BISNS*/
+
+    .bigness_product{
+        height: 197px;
+    }
+
+    .bigness_product_item{
+
+        padding: 15px;
+
+        max-width: 126px;
+        min-width: 126px;
+
+        width: 126px;
+        height: 197px;
+
+        position: relative;
+    }
+
+    .bigness_product_item img{
+        /* Rectangle 515 */
+
+        margin-left: 5px;
+        width: 85px;
+        height: 85px;
+    }
+
+    .stars2{
+        display: none;
+    }
+
+    .view_bsn{
+        display: none;
+    }
+
+    div.bsn_mobile{
+        display: block;
+        width: 85px;
+        margin-left: 5px;
+    }
+
+    .bsn_mobile img{
+        width: 85px;
+        height: 85px;
+
+        position: absolute;
+        left: 20px;
+    }
+
+    a.nameBSN{
+        /* Кросівки */
+        width: 85px;
+
+        font-family: 'Montserrat', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 100%;
+
+        color: #FFFFFF;
+        position: absolute;
+        top: 105px;
+
+        display: flex;
+        justify-content: center;
+        margin-left: 5px;
+
+    }
+
+    .bsn_mobile p{
+        /* 400 грн */
+
+        font-family: 'Montserrat', serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 100%;
+
+        color: #FFFFFF;
+
+        margin-top: 0;
+        margin-bottom: 0;
+
+        margin-left: 5px;
+
+        display: flex;
+        justify-content: center;
+
+        width: 67%;
+
+        position: absolute;
+        bottom: 40px;
+    }
+
+    .bigness_product_item div.shop_btn{
+        /* Rectangle 231 */
+
+        box-sizing: border-box;
+
+        position: absolute;
+        bottom: 15px;
+
+        width: 95px;
+        height: 20px;
+
+        border: 1px solid #FFFFFF;
+        border-radius: 5px;
+
+        display: flex;
+        justify-content: start;
+
+
+    }
+
+    .bigness_product_item div.shop_btn img{
+        width: 10px;
+        height: 10px;
+
+        margin-left: 60px;
+    }
+
+    .bigness_product_item div.shop_btn a{
+        /* Додати в кошик */
+
+        font-family: 'Montserrat', serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 8px;
+        line-height: 100%;
+
+        color: #FFFFFF;
+
+        margin-left: 5px;
+    }
+
+/*    ////////////////////////////*/
+/*    search_div*/
+
+    .search_div h1{
+        /* Популярні запити */
+        font-family: 'Montserrat', serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 100%;
+
+        color: #2E2E2E;
+
+        display: flex;
+        justify-content: center;
+
+        width: 100%;
+
+    }
+
+    .search_zapit{
+        /* Rectangle 166 */
+
+        box-sizing: border-box;
+
+
+        height: 20px;
+
+        border: 1px solid #2E2E2E;
+        border-radius: 5px;
+
+    }
+
+    .pop_zap{
+        margin-top: 15px;
+        gap: 10px;
+    }
+
+    .box2{
+
+        display: block;
+
+        margin-top: 25px;
+
+        width: 100%;
+        height: 210px;
+
+        background: #2E2E2E;
+
+        position: relative;
+    }
+
+    .box2 img{
+        /* ДИПЛОМ МАСКОТ 2 */
+
+        width: 75px;
+        height: 75px;
+
+        position: absolute;
+        top: 25px;
+
+    }
+
+    .box2 p
+    {
+
+        font-family: 'Montserrat', serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 100%;
+        /* or 12px */
+        text-align: center;
+
+        color: #FFFFFF;
+
+        margin: 0;
+
+
+        position: absolute;
+        bottom: 25px;
+
+        padding: 20px;
+    }
+
+    .icono{
+        display: flex;
+        justify-content: center;
+
+        margin-right: 68px;
+    }
+}
+
+

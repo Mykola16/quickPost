@@ -34,7 +34,7 @@
                     {{--                    </div>--}}
 
                     <div class="street_create">
-                        <a>Київ, якась там вулиця. 14 черня 2024 </a>
+                        <a>{{ $product->region }}</a>
                     </div>
                 </div>
                 <div class="product_right_part_user">

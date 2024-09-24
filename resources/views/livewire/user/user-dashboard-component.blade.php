@@ -4,20 +4,7 @@
 
 <div>
 
-    <div>
-        <!-- Modal for delete confirmation -->
-        @if($showModal)
-            <div class="modal" style="display: flex;">
-                <div class="modal-content">
-                    <span class="close-button" wire:click="$set('showModal', false)">&times;</span>
-                    <h2>Підтвердження видалення</h2>
-                    <p>Ви дійсно хочете видалити це оголошення?</p>
-                    <button wire:click="deleteAdvertisement">Так, видалити</button>
-                    <button wire:click="$set('showModal', false)">Скасувати</button>
-                </div>
-            </div>
-        @endif
-    </div>
+
 
 
     <div style="display: flex">
@@ -28,11 +15,11 @@
     </div>
 
     <div style="display: flex">
-        <div class="advertisement_menu_item" style="border-top: 5px solid {{ $view === 'list' ? '#2E2E2E' : '#A1A1A1' }};" wire:click="$set('view', 'list')">
+        <div class="advertisement_menu_item {{ $view === 'list' ? 'Active' : 'inactive' }}" wire:click="$set('view', 'list')">
             <a><p>Активні</p></a>
         </div>
 
-        <div class="advertisement_menu_item"  style="border-top: 5px solid {{ $view != 'list' ? '#2E2E2E' : '#A1A1A1' }};" wire:click="$set('view', 'grid')">
+        <div class="advertisement_menu_item {{ $view !== 'list' ? 'Active' : 'inactive' }}" wire:click="$set('view', 'grid')">
             <a><p>Неактивні</p></a>
         </div>
 
@@ -124,6 +111,21 @@
 
     @endif
 
+        <div>
+            <!-- Modal for delete confirmation -->
+            @if($showModal)
+                <div class="modal5" style="display: flex;">
+                    <div class="modal-content5">
+                        <span class="close-button5" wire:click="$set('showModal', false)">&times;</span>
+                        <h2>Підтвердження видалення</h2>
+                        <p>Ви дійсно хочете видалити це оголошення?</p>
+                        <button wire:click="deleteAdvertisement">Так, видалити</button>
+                        <button wire:click="$set('showModal', false)">Скасувати</button>
+                    </div>
+                </div>
+            @endif
+        </div>
+
     </div>
 
     <style>
@@ -164,9 +166,6 @@
             font-weight: 700;
             font-size: 24px;
             line-height: 100%;
-
-            color: #2E2E2E;
-
             margin: 0;
         }
 
@@ -198,14 +197,12 @@
             line-height: 100%;
             /* identical to box height, or 24px */
 
-            color: #2E2E2E;
-
             display: flex;
             justify-content: center; /* Горизонтальное выравнивание */
              align-items: center;     /* Вертикальное выравнивание */
         }
 
-        .modal {
+        .modal5 {
             position: fixed;
             top: 0;
             left: 0;
@@ -215,19 +212,53 @@
             align-items: center;
             justify-content: center;
         }
-        .modal-content {
-            background: #fff;
+        .modal-content5 {
             padding: 20px;
             border-radius: 8px;
             text-align: center;
-            width: 300px;
+            width: 500px;
             position: relative;
         }
-        .close-button {
+        .close-button5 {
             position: absolute;
             top: 10px;
             right: 10px;
             cursor: pointer;
+        }
+
+        .modal-content5 button{
+            width: 180px;
+            height: 40px;
+
+            border-radius: 15px;
+
+            font-family: 'Montserrat', serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 100%;
+
+            color: #FFFFFF;
+        }
+
+        .modal-content5 h2{
+            font-family: 'Montserrat', serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 100%;
+
+            color: #000000;
+        }
+
+        .modal-content5 p{
+            font-family: 'Montserrat', serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+
+            color: #000000;
         }
 
     </style>

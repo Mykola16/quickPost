@@ -1,3 +1,7 @@
+@section('title')
+    Повідомлення
+@endsection
+
 <div wire:poll>
     <h1 class="profile_page_name" >Повідомлення</h1>
 
@@ -77,6 +81,7 @@
             </div>
 
             <div id="emojiPanel" class="emoji-container" style="display: none;" wire:ignore>
+                <div class="emoji_scroll">
                 <button type="button" class="emoji-btn">👋</button>
                 <button type="button" class="emoji-btn">👍</button>
                 <button type="button" class="emoji-btn">👎</button>
@@ -166,11 +171,19 @@
                 <button type="button" class="emoji-btn">📤</button>
                 <button type="button" class="emoji-btn">📬</button>
                 <button type="button" class="emoji-btn">📧</button>
+                </div>
             </div>
         </form>
     </div>
 
    <script>
+       window.onload = function() {
+           var lastMessage = document.querySelector('.chat_messages_2 .message-box:last-child');
+           if (lastMessage) {
+               lastMessage.scrollIntoView({ behavior: "instant" });
+           }
+       };
+
        document.addEventListener('DOMContentLoaded', () => {
            const emojiButton = document.getElementById('emojiButton');
            const emojiPanel = document.getElementById('emojiPanel');

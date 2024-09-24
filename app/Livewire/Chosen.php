@@ -35,6 +35,7 @@ class Chosen extends Component
         if ($like) {
             $like->delete();
             $this->loadSavedProducts(); // Обновить список избранного
+            $this->dispatch('headerUpdated');
         }
     }
 

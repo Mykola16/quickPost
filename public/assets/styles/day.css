@@ -2,6 +2,42 @@
 	background-color: #FFFFFF;
 }
 
+/* Стиль для скролбару */
+body::-webkit-scrollbar {
+    width: 15px; /* Ширина скролбару */
+}
+
+/* Стиль для бігунка (повзунка) */
+body::-webkit-scrollbar-thumb {
+    background-color: #2A2A2A;
+    border-radius: 5px;
+}
+
+/* Стиль для доріжки */
+body::-webkit-scrollbar-track {
+    border: 1px solid #2A2A2A;
+    border-radius: 5px;
+}
+
+/* Стиль для скролбару */
+::-webkit-scrollbar {
+    width: 10px; /* Ширина скролбару */
+}
+
+/* Стиль для бігунка (повзунка) */
+::-webkit-scrollbar-thumb {
+    background-color: #2E2E2E;
+    border-radius: 5px;
+}
+
+/* Стиль для доріжки */
+::-webkit-scrollbar-track {
+    border: 1px solid #2E2E2E;
+    border-radius: 5px;
+}
+
+
+
 .slider {
 
     border: 2px solid #2A2A2A;
@@ -14,6 +50,17 @@
 
 .search, .search_map  {
     border: 3px solid #2E2E2E;
+}
+
+.cont_region2{
+    background: #FFFFFF;
+    color: #2E2E2E;
+
+    border-width: 0 3px 3px 3px;
+    border-style: solid;
+    border-color: #2E2E2E;
+
+
 }
 
 
@@ -330,8 +377,21 @@ hr{
 /*User profile*/
 /*Ваші оголошення*/
 
+
 .profile_page_name{
     color: #2E2E2E;
+}
+
+.advertisement_menu_item{
+    border-top: 5px solid #2E2E2E;
+}
+
+.advertisement_menu_item.Active {
+    border-top-color: #2E2E2E;
+}
+
+.advertisement_menu_item.inactive {
+    border-top-color: #A1A1A1;
 }
 
 .create_btn{
@@ -343,4 +403,383 @@ hr{
     color: #FFFFFF;
 }
 
+.price_my_prod p{
+    color: #2E2E2E;
+}
 
+.count_like{
+    color: #2E2E2E;
+}
+
+
+.modal-content5 {
+    background: #FFFFFF;
+}
+.close-button5 {
+
+}
+
+.modal-content5 button{
+    color: #FFFFFF;
+    background: #2E2E2E;
+}
+
+
+
+/*/////////////////////////////////////////////*/
+/*create_page*/
+
+.create_page h1{
+    color: #2E2E2E;
+}
+
+.create_content label{
+    color: #2E2E2E;
+}
+
+.create_content input{
+    border: 3px solid #2E2E2E;
+}
+
+.create_content textarea{
+    border: 3px solid #2E2E2E;
+}
+
+.img_box{
+    border: 3px solid #2E2E2E;
+    background-color: #EFEFEF;
+}
+
+
+.img_box p{
+    /*    text*/
+    /* Додати фото */
+    border-bottom: 1px solid #000000;
+    color: #2E2E2E;
+}
+
+.price_create label{
+    color: #2E2E2E;
+}
+
+label.vip_create_item{
+    color: #2E2E2E;
+}
+
+label.QuickPlus_create_item{
+    color: #A1A1A1;
+}
+
+.button_create{
+    background: #2E2E2E;
+}
+
+.button_create p{
+    color: #FFFFFF;
+}
+
+.cat_name_modal{
+    color: #2E2E2E;
+}
+
+
+.create_content.selected2{
+    color: #2E2E2E;
+}
+
+.create_content.unselected2{
+    color: #A1A1A1;
+}
+
+.cont_region{
+    color: #2E2E2E;
+    border-left: 5px solid #2E2E2E;
+    border-right: 5px solid #2E2E2E;
+    background-color: #FFFFFF;
+}
+
+/*//////////////////////////////////////////////*/
+/*Chats*/
+
+.message_list{
+    background: #EFEFEF;
+    border-right: 5px solid #2E2E2E;
+}
+
+.message_list a{
+    color: #2E2E2E;
+}
+
+.message_list p{
+    /* Доброго дня! Я б хотів купити футболку */
+    color: #2E2E2E;
+}
+
+
+/*Modal Del*/
+
+.modal5 {
+
+}
+.modal-content5 {
+   background-color: #FFFFFF;
+}
+.close-button5 {
+
+}
+
+.modal-content5 button{
+    color: #FFFFFF;
+}
+
+.modal-content5 h2{
+    color: #2E2E2E;
+}
+
+.modal-content5 p{
+    color: #2E2E2E;
+}
+
+
+/*//////////////////////////////////////////////////////*/
+/*Chat*/
+
+.chat_div{
+    background: #EFEFEF;
+    border-right: 5px solid #2E2E2E;
+}
+
+.chat_info p{
+    color: #2E2E2E;
+}
+
+/* Стилі для повідомлень */
+.message-box {
+    background: #FFFFFF;
+    border: 2px solid #2E2E2E;
+
+    /* Доброго дня! Я б хотів купити футболку */
+    color: #2E2E2E;
+}
+
+.message-box p{
+    color: #A1A1A1;
+}
+
+.input_container input{
+    background: #EFEFEF;
+    border: 3px solid #2E2E2E;
+}
+
+button.btn_message {
+    color: #FFFFFF;
+    background: #2E2E2E;
+}
+
+.emoji-container {
+    background: #FFFFFF;
+    border: 2px solid #2E2E2E;
+}
+
+.emoji_scroll{
+    background: #FFFFFF;
+}
+
+
+
+/*//////////////////////////////////////////////////////////////*/
+/*history_zamovlennya*/
+
+.search_user_icon2 input{
+    border: 3px solid #2E2E2E;
+}
+
+.search_user_icon2 input{
+    color: #A1A1A1;
+}
+
+.search_user_icon2 button{
+    background: #2E2E2E;
+    color: #FFFFFF;
+}
+
+.product_zamovlennya{
+    background: #EFEFEF;
+    border-right: 5px solid #2E2E2E;
+}
+
+.product_zamovlennya h3{
+    /* Футболка, велика */
+    color: #2E2E2E;
+}
+
+.product_zamovlennya a{
+    /* Від 6 грудня 2022 */
+    color: #2E2E2E;
+}
+
+.product_zamovlennya h4{
+    color: #2E2E2E;
+}
+
+.product_zamovlennya p{
+    color: #01B834;
+}
+
+
+/*////////////////////////////////*/
+/*Subscription*/
+
+.Regular_subscription,
+.QuickPlus_subscription,
+.QuickPro_subscription
+{
+    border-color: #2E2E2E;
+}
+
+
+.Regular_subscription h4{
+    /* Звичайна */
+    color: #000000;
+}
+
+.QuickPlus_subscription h4{
+    /* QuickPlus */
+    color: #000000;
+}
+
+.QuickPro_subscription h4{
+    /* QuickPro */
+    color: #000000;
+}
+
+.QuickPro_subscription a{
+    /* Тільки для “Бізнес” */
+    color: #A1A1A1;
+}
+
+.checkmark0,
+.checkmark1{
+    border: 1px solid #2E2E2E;
+}
+
+.checkmark1{
+    background: #2E2E2E;
+}
+
+.price_subscription.active2{
+    background-color: #FFFFFF;
+    color: #000000;
+
+}
+
+.price_subscription{
+    border: 3px solid #2E2E2E;
+    background-color: #2E2E2E;
+    color: #FFFFFF;
+}
+
+.preimushchestva p{
+   color: #000000;
+}
+
+/*/////////////////////////////////////////////*/
+/*Setting*/
+
+.setting_menu{
+    background: #EFEFEF;
+    border-color: #2E2E2E;
+}
+
+.setting_menu a{
+    color: #2E2E2E;
+}
+
+.accordion-content{
+    background-color: #EFEFEF;
+    border-color: #2E2E2E;
+}
+
+.cont label{
+    /* Ім’я */
+    color: #2E2E2E;
+}
+
+.cont input{
+    border: 1px solid #2E2E2E;
+    background: #EFEFEF;
+}
+
+.btn_setting button{
+    background: #2E2E2E;
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer*/
+
+.about_quickPost h1,
+.about_quickPost h2,
+.about_quickPost p
+{
+    color: #2E2E2E;
+}
+
+.ContentProtectionQuickPost h1,
+.ContentProtectionQuickPost p
+{
+    color: #2E2E2E;
+}
+
+.ContentProtectionQuickPost img{
+    border-right: 10px solid #2E2E2E;
+    filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, 0.25));
+}
+
+/*/////////////////////////////////////////////////////////////////////////*/
+
+.terms_of_service h1,
+.terms_of_service h2,
+.terms_of_service h3,
+.terms_of_service p,
+.terms_of_service a
+{
+    color: #2E2E2E;
+}
+
+.terms_of_service_img1 img,
+.terms_of_service_img2 img
+{
+    border-left: 10px solid #2E2E2E;
+    filter: drop-shadow(-5px 0px 5px rgba(0, 0, 0, 0.25));
+}
+
+.terms_of_service_img3 img,
+.terms_of_service_img4 img,
+.terms_of_service_img5 img
+{
+    border-right: 10px solid #2E2E2E;
+    filter: drop-shadow(5px 0px 5px rgba(0, 0, 0, 0.25));
+}

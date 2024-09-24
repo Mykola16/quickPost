@@ -239,9 +239,6 @@ form p{
     width: 225px;
 
     color: #000000;
-
-
-
 }
 
 .street_create{
@@ -314,11 +311,11 @@ form p{
     width: 310px;
     height: 50px;
 
-    /*border-top: 5px solid #2E2E2E;*/
     border-radius: 5px;
 
     cursor: pointer;
 }
+
 
 .advertisement_menu_item a{
     text-decoration: none;
@@ -406,8 +403,6 @@ form p{
     font-size: 32px;
     line-height: 100%;
 
-    color: #2E2E2E;
-
     margin: 0;
 
 }
@@ -415,15 +410,13 @@ form p{
 .cont_region{
     display: none;
     position: absolute;
-    background: #FFFFFF;
     width: 310px;
     height: 400px;
     padding: 0 15px 15px 15px;
-    color: #2E2E2E;
+
+    z-index: 9999;
 
     overflow-y: auto;
-    border-left: 5px solid #2E2E2E;
-    border-right: 5px solid #2E2E2E;
 }
 
 .cont_region a{
@@ -457,8 +450,6 @@ form p{
     /* identical to box height, or 20px */
 
     color: #A1A1A1;
-
-
 }
 
 
@@ -470,8 +461,6 @@ form p{
     font-weight: 500;
     font-size: 24px;
     line-height: 100%;
-
-    color: #2E2E2E;
 }
 
 .create_content input{
@@ -483,20 +472,16 @@ form p{
     width: 640px;
     height: 50px;
 
-    border: 3px solid #2E2E2E;
     border-radius: 15px;
-
 }
 
 .create_content textarea{
-
     padding: 15px;
     overflow: hidden; resize: none;
 
     width: 640px;
     height: 50px;
 
-    border: 3px solid #2E2E2E;
     border-radius: 15px;
 }
 
@@ -513,13 +498,11 @@ form p{
 
     /*20px між бокс фото*/
 
-
     box-sizing: border-box;
 
     width: 145px;
     height: 145px;
 
-    border: 3px solid #2E2E2E;
     border-radius: 15px;
 
     display: flex;
@@ -535,8 +518,6 @@ form p{
 
     /* Додати фото */
 
-
-
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -544,19 +525,16 @@ form p{
     line-height: 100%;
 
     padding-bottom: 1px;
-    border-bottom: 1px solid #000000;
-
-    color: #2E2E2E;
-
-
-
-
 }
 
 .file_img{
     width: 140px;
     height: 140px;
     border-radius: 15px;
+
+    object-fit: cover;
+    background-position: center;
+
 }
 
 .price_create label{
@@ -566,10 +544,6 @@ form p{
     font-weight: 500;
     font-size: 24px;
     line-height: 100%;
-
-    color: #2E2E2E;
-
-
 }
 
 
@@ -607,11 +581,6 @@ label.vip_create_item{
     font-weight: 500;
     font-size: 24px;
     line-height: 100%;
-
-
-    color: #2E2E2E;
-
-
 }
 
 .QuickPlus_create_item{
@@ -630,15 +599,11 @@ label.QuickPlus_create_item{
     font-size: 18px;
     line-height: 100%;
     /* identical to box height, or 18px */
-
-    color: #A1A1A1;
-
 }
 
 .button_create{
     width: 310px;
     height: 60px;
-    background: #2E2E2E;
     border-radius: 15px;
     margin-left: 330px;
     margin-top: 70px;
@@ -650,7 +615,6 @@ label.QuickPlus_create_item{
     font-weight: 700;
     font-size: 24px;
     line-height: 100%;
-    color: #FFFFFF;
 }
 
 
@@ -671,7 +635,6 @@ label.QuickPlus_create_item{
 
     border-width: 5px 3px 0 3px;
     border-style: solid;
-    border-color: #2E2E2E;
     border-radius: 15px 15px 0 0;
     margin-right: 20px;
 }
@@ -712,9 +675,6 @@ label.QuickPlus_create_item{
     font-weight: 400;
     font-size: 24px;
     line-height: 100%;
-
-    color: #000000;
-
 }
 
 .QuickPlus_subscription h4{
@@ -725,9 +685,6 @@ label.QuickPlus_create_item{
     font-weight: 600;
     font-size: 24px;
     line-height: 100%;
-
-    color: #000000;
-
 }
 
 .QuickPro_subscription h4{
@@ -738,9 +695,6 @@ label.QuickPlus_create_item{
     font-weight: 700;
     font-size: 24px;
     line-height: 100%;
-
-    color: #000000;
-
 }
 
 .text_only{
@@ -757,10 +711,6 @@ label.QuickPlus_create_item{
     font-weight: 400;
     font-size: 15px;
     line-height: 100%;
-
-    color: #A1A1A1;
-
-
 }
 
 .checkmark0,
@@ -768,7 +718,6 @@ label.QuickPlus_create_item{
     box-sizing: border-box;
     width: 15px;
     height: 15px;
-    border: 1px solid #2E2E2E;
     border-radius: 5px;
 
     margin-bottom: 36px;
@@ -778,9 +727,7 @@ label.QuickPlus_create_item{
 
 }
 
-.checkmark1{
-    background: #2E2E2E;
-}
+
 
 .preimushchestva{
     margin-left: 15px;
@@ -791,16 +738,9 @@ label.QuickPlus_create_item{
     padding: 0;
 }
 
-.price_subscription.active2{
-    background-color: #FFFFFF;
-    color: #000000;
 
-}
 
 .price_subscription{
-
-    border: 3px solid #2E2E2E;
-
     width: 310px;
     height: 60px;
 
@@ -812,13 +752,6 @@ label.QuickPlus_create_item{
     text-align: center;
     justify-content: center; /* Центрирование по горизонтали */
     align-items: center;     /* Центрирование по вертикали */
-
-
-    background-color: #2E2E2E;
-
-
-    color: #FFFFFF;
-
 }
 
 .price_subscription p{
@@ -832,11 +765,6 @@ label.QuickPlus_create_item{
     font-weight: 700;
     font-size: 24px;
     line-height: 100%;
-
-
-
-
-
 }
 
 
@@ -852,28 +780,18 @@ label.QuickPlus_create_item{
 }
 
 .setting_menu{
-
-
     cursor: pointer;
 
     box-sizing: border-box;
 
-
     width: 970px;
     height: 75px;
 
-    background: #EFEFEF;
     border-width: 1px 5px 1px 1px;
     border-style: solid;
-    border-color: #2E2E2E;
     border-radius: 10px;
 
-
-
-
     /*margin-bottom: 15px;*/
-
-
 }
 
 .setting_menu a{
@@ -895,11 +813,7 @@ label.QuickPlus_create_item{
     font-size: 24px;
     line-height: 29px;
 
-    color: #2E2E2E;
-
     width: 980px;
-
-
 }
 
 .setting_menu img{
@@ -907,8 +821,6 @@ label.QuickPlus_create_item{
     height: 30px;
     margin-top: 23px;
     margin-right: 15px;
-
-
 }
 
 .imge{
@@ -925,7 +837,6 @@ label.QuickPlus_create_item{
     width: 970px;
     height: 119px;
 
-    background-color: #EFEFEF;
 
     /* Rectangle 312 */
 
@@ -933,7 +844,6 @@ label.QuickPlus_create_item{
 
     border-width: 0px 5px 1px 1px;
     border-style: solid;
-    border-color: #2E2E2E;
     border-radius: 0  0  10px 10px;
 
 }
@@ -952,7 +862,6 @@ label.QuickPlus_create_item{
 
     color: #FF0303;
 
-
 }
 
 .cont label{
@@ -964,9 +873,6 @@ label.QuickPlus_create_item{
     font-size: 20px;
     line-height: 24px;
 
-    color: #2E2E2E;
-
-
 }
 
 .cont input{
@@ -975,10 +881,8 @@ label.QuickPlus_create_item{
     width: 200px;
     height: 40px;
 
-    border: 1px solid #2E2E2E;
     border-radius: 10px;
 
-    background: #EFEFEF;
 
     margin-top: 15px;
     margin-right: 25px;
@@ -997,7 +901,6 @@ label.QuickPlus_create_item{
     width: 178px;
     height: 68px;
 
-    background: #2E2E2E;
     border-radius: 15px;
 
     /* Зберегти */
@@ -1007,11 +910,6 @@ label.QuickPlus_create_item{
     font-weight: 700;
     font-size: 32px;
     line-height: 120%;
-    /* or 38px */
-
-    color: #FFFFFF;
-
-
 }
 
 .error{
@@ -1031,8 +929,6 @@ label.QuickPlus_create_item{
 
     width: 970px;
     height: 145px;
-    background: #EFEFEF;
-    border-right: 5px solid #2E2E2E;
     border-radius: 15px;
 
     cursor: pointer;
@@ -1064,9 +960,6 @@ label.QuickPlus_create_item{
     font-weight: 600;
     font-size: 20px;
     line-height: 100%;
-    /* identical to box height, or 20px */
-
-    color: #2E2E2E;
 
     margin-top: 23px;
     margin-left: 40px;
@@ -1088,16 +981,13 @@ label.QuickPlus_create_item{
     font-weight: 500;
     font-size: 20px;
     line-height: 100%;
-    /* or 20px */
-
-    color: #2E2E2E;
-
-
 }
 
 .menu_and_data{
     width: 10%;
     height: 100%;
+
+    position: relative
 }
 
 .menu_and_data img{
@@ -1134,16 +1024,14 @@ label.QuickPlus_create_item{
     justify-content: end;
     margin-top: 15px;
     margin-right: 25px;
+
+
 }
 
 .data_messages{
-    display: flex;
-    justify-content: end; /* Горизонтальное выравнивание */
-
-    align-items: end;
-    height: 80%;
-    margin-right: 25px;
-
+    position: absolute;
+    right: 25px;
+    bottom: 13px;
 }
 
 
@@ -1158,11 +1046,9 @@ label.QuickPlus_create_item{
 
     box-sizing: border-box;
 
-    width: 970px;
+    width: 980px;
     height: 800px;
 
-    background: #EFEFEF;
-    border-right: 5px solid #2E2E2E;
     border-radius: 15px;
 
     padding: 15px;
@@ -1196,8 +1082,6 @@ label.QuickPlus_create_item{
     font-size: 20px;
     line-height: 24px;
 
-    color: #2E2E2E;
-
     margin: 0;
 
 }
@@ -1223,12 +1107,7 @@ label.QuickPlus_create_item{
     margin-top: 25px;
     margin-bottom: 25px;
 
-
-
     overflow-y: auto;
-
-
-
 
 }
 
@@ -1238,8 +1117,11 @@ label.QuickPlus_create_item{
     /* Вирівнювання повідомлень вертикально */
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    height: 100%;
+    justify-content: flex-start;
+    height: auto;
+    min-height: 100%;
+
+    margin-right: 10px;
 
 }
 
@@ -1251,25 +1133,18 @@ label.QuickPlus_create_item{
     box-sizing: border-box;
     word-wrap: break-word;
 
-    background: #FFFFFF;
-    border: 2px solid #2E2E2E;
     /*border-radius: 25px 25px 25px 0px;*/
 
     max-width: 450px;
 
     margin-bottom: 15px;
 
-
     /* Доброго дня! Я б хотів купити футболку */
-
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 100%;
-    color: #2E2E2E;
-
-
 }
 
 .message-box p{
@@ -1285,15 +1160,11 @@ label.QuickPlus_create_item{
     font-weight: 500;
     font-size: 12px;
     line-height: 100%;
-    color: #A1A1A1;
 }
 
 .message-sender {
     align-self: flex-end;
     border-radius: 25px 25px 0 25px;
-
-
-
 }
 
 .message-receiver {
@@ -1374,19 +1245,25 @@ button.btn_message {
     display: block;
 
     width: 255px;
-    height: 500px;
+    height: 400px;
 
     bottom: 70px; /* Примерное расстояние от нижней части контейнера */
     left: 0; /* Разместим панель в нужном месте */
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
     padding: 10px;
     z-index: 1000; /* Убедитесь, что панель находится поверх других элементов */
 
+    border-radius: 20px 20px 0 0;
+
+}
+
+.emoji_scroll{
+
+    width: 235px;
+    height: 375px;
     overflow-y: auto; /* Вертикальный скролл при необходимости */
     overflow-x: hidden; /* Скрываем горизонтальный скролл */
 }
+
 
 .emoji-container button{
     background: none;
@@ -1448,7 +1325,6 @@ button.btn_message {
     width: 310px;
     height: 50px;
 
-    border: 3px solid #2E2E2E;
     border-radius: 15px;
 }
 
@@ -1470,8 +1346,6 @@ button.btn_message {
     font-weight: 600;
     font-size: 18px;
     line-height: 100%;
-
-    color: #A1A1A1;
 }
 
 .search_user_icon2 button{
@@ -1481,7 +1355,6 @@ button.btn_message {
     width: 150px;
     height: 50px;
 
-    background: #2E2E2E;
     border-radius: 15px;
 
     /* Пошук */
@@ -1491,7 +1364,6 @@ button.btn_message {
     font-weight: 700;
     font-size: 24px;
     line-height: 120%;
-    color: #FFFFFF;
 }
 
 .product_zamovlennya{
@@ -1499,8 +1371,6 @@ button.btn_message {
     width: 970px;
     height: 125px;
 
-    background: #EFEFEF;
-    border-right: 5px solid #2E2E2E;
     border-radius: 15px;
 
     position: relative;
@@ -1525,7 +1395,6 @@ button.btn_message {
     font-weight: 500;
     font-size: 24px;
     line-height: 100%;
-    color: #2E2E2E;
 
     margin: 0;
 }
@@ -1541,7 +1410,6 @@ button.btn_message {
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
-    color: #2E2E2E;
 
     margin: 0;
 }
@@ -1558,7 +1426,6 @@ button.btn_message {
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
-    color: #2E2E2E;
 
     margin: 0;
 }
@@ -1576,8 +1443,6 @@ button.btn_message {
     font-size: 16px;
     line-height: 100%;
     /* identical to box height, or 16px */
-
-    color: #01B834;
 
     margin: 0;
 }

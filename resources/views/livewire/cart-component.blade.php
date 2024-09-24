@@ -16,7 +16,6 @@
             <div class="cart_product_list">
                     @foreach($cartitems as $item)
                         @php
-
                             $image = 'no_image.png';
                             if ($item->product && $item->product->images && $item->product->images->count() > 0) {
                                 $image = $item->product->images[0]->img;

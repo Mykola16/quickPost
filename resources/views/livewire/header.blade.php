@@ -68,7 +68,7 @@
 
                 @auth()
                     @if(Auth::user()->utype === 'ADM')
-                        <li class="profile"><a href="{{ route('admin.dashboard') }}"><img src="{{ asset('assets/images/profile.png')}}" alt="profile"></a></li>
+                        <li class="profile"><a href="{{ route('admin.dashboard') }}"><img src="{{ asset('assets/images/profile.png')}}" alt="profile" ></a></li>
                     @else
                         <li class="profile"><a href="{{ route('dashboard') }}"><img src="{{ asset('assets/images/profile.png')}}" alt="profile"></a></li>
                     @endif
@@ -77,9 +77,27 @@
                     <li class="profile"><a href="{{ route('login') }}"><img src="{{ asset('assets/images/profile.png')}}" alt="profile"></a></li>
                 @endauth
             @endif
+
+            @if(auth()->user())
+                @php
+                    $likeCount = \App\Models\Like::where('user_id', auth()->user()->id)->count();
+                @endphp
+            @endif
+
             @if(Route::has('login'))
                 @auth()
-                    <li class="selected"><a href="{{ route('Chosen') }}"><img src="{{ asset('assets/images/selected.png')}}" alt="selected"></a></li>
+                    <li class="selected"><a href="{{ route('Chosen') }}"><img src="{{ asset('assets/images/selected.png')}}" alt="selected"></a>
+
+                        @if(auth()->user())
+                            @if($likeCount > 0)
+                                <div class="countSelected">
+                                    {{ $likeCount }}
+                                </div>
+                            @else
+
+                            @endif
+                        @endif
+                    </li>
                 @else()
                     <li class="selected"><a href="{{ route('login') }}"><img src="{{ asset('assets/images/selected.png')}}" alt="selected"></a></li>
                 @endif

@@ -30,6 +30,8 @@ class Chat extends Component
         $this->loadConversation();
     }
 
+
+
     public function loadConversation()
     {
         $conversation = Conversation::find($this->conversationID);

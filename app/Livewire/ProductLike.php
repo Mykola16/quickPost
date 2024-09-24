@@ -11,6 +11,7 @@ class ProductLike extends Component
     public $liked = false;
     public $likeCount = 0;
 
+    protected $listeners = ['likeUpdated' => 'render'];
 
     public function mount($productId)
     {
@@ -59,6 +60,7 @@ class ProductLike extends Component
 
         $this->liked = !$this->liked;
         $this->updateLikeCount();
+        $this->dispatch('headerUpdated');
     }
 
 

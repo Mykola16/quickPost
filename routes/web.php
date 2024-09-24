@@ -20,22 +20,15 @@ use App\Livewire\Admin\AdminDashboardComponent;
 use App\Livewire\CategoriesIndex;
 use App\Livewire\CategoryShow;
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+
 
 Route::get('/' , \App\Livewire\HomeComponent::class )->name('Home');
 
 
 
-//Route::get('cart',\App\Livewire\CartComponent::class)->name('Cart');
 
 
-Route::get("oformlennya", \App\Livewire\OformlennyaComponent::class)->name('Oformlennya');
 
-//Route::middleware('auth')->group(function (){
-
-//});
 
 Route::get('categories', CategoriesIndex::class)->name('categories.index');
 Route::get('categories/{category}', CategoryShow::class)->name('categories.show');
@@ -44,15 +37,68 @@ Route::get('/search', SimpleSearch::class)->name('search');
 
 Route::get('product/{id}', \App\Livewire\ProductShow::class)->name('product.show');
 Route::get('/product/edit/{id}', \App\Livewire\EditAdvertisement::class)->name('product.edit');
-
 Route::post('/product/{product}/decrement-views', [ProductController::class, 'decrementViews'])->name('decrement.views');
 
 
+Route::middleware('auth')->group(function (){
+    Route::get('create', \App\Livewire\CreateAdvertisementPRV::class)->name('Create');
+    Route::get('creation', \App\Livewire\CreateAdvertisementBinsns::class)->name('Creation');
+});
 
-Route::get('create', \App\Livewire\CreateAdvertisementPRV::class)->name('Create');
-Route::get('creation', \App\Livewire\CreateAdvertisementBinsns::class)->name('Creation');
+Route::middleware('auth')->group(function (){
+
+    Route::get("oformlennya", \App\Livewire\OformlennyaComponent::class)->name('Oformlennya');
+    Route::get('message', \App\Livewire\Message::class)->name('Message');
+    Route::get('/message/{conversationID}', \App\Livewire\Chat::class)->name('chat.view');
+    Route::get('chosen', \App\Livewire\Chosen::class)->name('Chosen');
+    Route::get('history', \App\Livewire\History::class)->name('History');
+    Route::get('reviews', \App\Livewire\Reviews::class)->name('Reviews');
+    Route::get('subscription', \App\Livewire\Subscription::class)->name('Subscription');
+    Route::get('settings', \App\Livewire\Settings::class)->name('Settings');
+});
+
+Route::middleware('auth')->group(function (){
+
+    // User Dashboard
+    Route::get('/dashboard', App\Livewire\User\UserDashboardComponent::class)->name('dashboard');
+
+    Route::middleware([\App\Http\Middleware\CheckAdmin::class])->group(function (){
+        // Admin Dashboard
+        Route::get('/admin/dashboard',\App\Livewire\Admin\AdminDashboardComponent::class)->name('admin.dashboard');
+
+        //Admin pages
+        Route::get('/admin/category',\App\Livewire\AdminCategoryPage::class)->name('admin.category');
+        Route::get('/admin/advertisement',\App\Livewire\AdminListProductPage::class)->name('admin.advertisement');
+        Route::get('/admin/users',\App\Livewire\AdminUsersPage::class)->name('admin.users');
+        Route::get('/admin/reviews',\App\Livewire\AdminReviewsPage::class)->name('admin.reviews');
+        Route::get('/admin/zamovlennya',\App\Livewire\AdminZamovlennyaPage::class)->name('admin.zamovlennya');
+    });
+});
+
+//Footers_pages
+Route::get('aboutQuickPost', \App\Livewire\FooterPages\AboutQuickPost::class)->name('about-QuickPost');
+Route::get('contentProtectionQuickPost', \App\Livewire\FooterPages\ContentProtectionQuickPost::class)->name('content-Protection-QuickPost');
+Route::get('quick-post-terms-of-service', \App\Livewire\FooterPages\QuickPostTermsOfService::class)->name('quick-post-terms-of-service');
 
 
+Route::get('auth/google',[\App\Http\Controllers\GoogleController::class, 'googlepage'])->name('Googlepage');
+Route::get('auth/google/callback',[\App\Http\Controllers\GoogleController::class, 'googlecallback'])->name('Googlecallback');
+
+Route::get('auth/facebook',[\App\Http\Controllers\FacebookController::class, 'facebookpage'])->name('Facebookpage');
+Route::get('auth/facebook/callback',[\App\Http\Controllers\FacebookController::class, 'facebookredirect'])->name('Facebookredirect');
+
+
+
+
+
+
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+//Route::get('cart',\App\Livewire\CartComponent::class)->name('Cart');
+//Route::middleware('auth')->group(function (){
+
+//});
 
 //Route::middleware([
 //    'auth:sanctum',
@@ -71,53 +117,9 @@ Route::get('creation', \App\Livewire\CreateAdvertisementBinsns::class)->name('Cr
 
 
 
-
-Route::middleware('auth')->group(function (){
-
-
-
-    Route::get('message', \App\Livewire\Message::class)->name('Message');
-    Route::get('/message/{conversationID}', \App\Livewire\Chat::class)->name('chat.view');
-    Route::get('chosen', \App\Livewire\Chosen::class)->name('Chosen');
-    Route::get('history', \App\Livewire\History::class)->name('History');
-    Route::get('reviews', \App\Livewire\Reviews::class)->name('Reviews');
-    Route::get('subscription', \App\Livewire\Subscription::class)->name('Subscription');
-    Route::get('settings', \App\Livewire\Settings::class)->name('Settings');
-
-
-});
-
 //// For Admin:
 //Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->group(function() {
 //    Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
 //});
 //
-
-Route::middleware('auth')->group(function (){
-
-    // User Dashboard
-    Route::get('/dashboard', App\Livewire\User\UserDashboardComponent::class)->name('dashboard');
-
-    Route::middleware([\App\Http\Middleware\CheckAdmin::class])->group(function (){
-        // Admin Dashboard
-        Route::get('/admin/dashboard',\App\Livewire\Admin\AdminDashboardComponent::class)->name('admin.dashboard');
-
-        //Admin pages
-        Route::get('/admin/category',\App\Livewire\AdminCategoryPage::class)->name('admin.category');
-        Route::get('/admin/advertisement',\App\Livewire\AdminListProductPage::class)->name('admin.advertisement');
-        Route::get('/admin/users',\App\Livewire\AdminUsersPage::class)->name('admin.users');
-        Route::get('/admin/reviews',\App\Livewire\AdminReviewsPage::class)->name('admin.reviews');
-        Route::get('/admin/zamovlennya',\App\Livewire\AdminZamovlennyaPage::class)->name('admin.zamovlennya');
-    });
-
-
-});
-
-Route::get('auth/google',[\App\Http\Controllers\GoogleController::class, 'googlepage'])->name('Googlepage');
-Route::get('auth/google/callback',[\App\Http\Controllers\GoogleController::class, 'googlecallback'])->name('Googlecallback');
-
-Route::get('auth/facebook',[\App\Http\Controllers\FacebookController::class, 'facebookpage'])->name('Facebookpage');
-Route::get('auth/facebook/callback',[\App\Http\Controllers\FacebookController::class, 'facebookredirect'])->name('Facebookredirect');
-
-
 

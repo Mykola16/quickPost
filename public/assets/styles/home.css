@@ -193,11 +193,9 @@ li {
 
 
 .profile{
-
     width: 84px;
     height: 70px;
     margin-left: 30px;
-
 }
 
 .selected{
@@ -209,7 +207,7 @@ li {
     height: 70px;
     margin-left: 42px;
 
-
+    position: relative;
 
 }
 
@@ -237,10 +235,13 @@ li {
 
 .search {
 
-    min-width: 640px;
+    width: 640px;
     height: 50px;
 
     border-radius: 15px;
+
+    padding-left: 15px;
+
 }
 
 
@@ -256,13 +257,13 @@ li {
 
 
 
-.search input, .search_map input{
+.search input{
 
     /* search */
 
     /* search map */
 
-    margin-left: 15px;
+    margin: 0;
     border: none;
     outline: none;
     border-radius: 15px;
@@ -272,6 +273,20 @@ li {
     font-size: 18px;
     line-height: 100%;
 
+}
+
+.search_map p{
+    margin: 0;
+
+    /* Вся Україна */
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+
+    color: #A1A1A1;
 }
 
 
@@ -299,29 +314,99 @@ li {
     height: 50px;
 
     border-radius: 15px;
-}
 
-.search_map input{
+    position: relative;
 
-    /* width: 575px;
-    height: 45px;    */
-    /* margin-top: 3px; */
+    padding-left: 15px;
 
-    width: 245px;
-    height: 40px;
-    margin-top: 3px;
+    display: flex;
+    align-items: center;
 
 }
+
+/*.search_map input{*/
+
+/*    !* width: 575px;*/
+/*    height: 45px;    *!*/
+/*    !* margin-top: 3px; *!*/
+
+/*    width: 245px;*/
+/*    height: 40px;*/
+/*    margin-top: 3px;*/
+
+/*}*/
 
 .search_map img {
     position: absolute;
     width: 32px;
     height: 32px;
-    margin-top: 6px;
-
+    top: 6px;
+    right: 15px;
 
 
 }
+
+
+
+.cont_region2{
+    display: none;
+    position: absolute;
+    background: #FFFFFF;
+    width: 310px;
+    height: 150px;
+    /*padding: 0 15px 15px 15px;*/
+    padding-left: 25px;
+    padding-bottom: 15px;
+
+    color: #2E2E2E;
+
+    z-index: 9999;
+
+
+    /*border-left: 5px solid #2E2E2E;*/
+    /*border-right: 5px solid #2E2E2E;*/
+
+    /* Rectangle 369 */
+
+    border-width: 0 3px 3px 3px;
+    border-style: solid;
+    border-color: #2E2E2E;
+    border-radius: 15px;
+
+    box-sizing: border-box;
+
+}
+
+.block_scroll{
+    width: 268px;
+    height: 134px;
+    overflow-y: auto;
+}
+
+/*.cont_region2::-webkit-scrollbar {*/
+/*    width: 12px;*/
+/*}*/
+
+/*.cont_region2::-webkit-scrollbar-track {*/
+/*    background: orange;*/
+/*    border-radius: 20px;*/
+/*}*/
+
+/*.cont_region2::-webkit-scrollbar-thumb {*/
+/*    background-color: blue;    !* цвет бегунка *!*/
+/*    border-radius: 20px;       !* округлось бегунка *!*/
+/*    border: 3px solid orange;  !* отступ вокруг бегунка *!*/
+/*}*/
+
+
+
+/*.cont_region2 a{*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.cont_region2 a:hover{*/
+/*    font-weight: 700;*/
+/*}*/
 
 /* button */
 
@@ -368,6 +453,9 @@ li {
 /*/////////////////////////////////////*/
 /*Home Context*/
 
+.btn_catH{
+    display: none;
+}
 
 .line1{
     display: flex;
@@ -649,6 +737,8 @@ img {vertical-align: middle;}
 .product_img img{
     width: 640px;
     height: 640px;
+
+    object-fit: cover;
 }
 
 .Product-cart h3{
@@ -963,6 +1053,11 @@ img {vertical-align: middle;}
     margin-bottom: 50px;
 }
 
+.Vip-product-item a.name{
+    position: absolute;
+    left: 15px;
+}
+
 .Vip-product-item {
     position: relative;
     width: 310px;
@@ -977,8 +1072,6 @@ img {vertical-align: middle;}
     height: 100%;
     object-fit: cover;
     border-radius: 0 0 15px 15px;
-
-
 }
 
 .Vip-product-item-info {
@@ -1030,10 +1123,21 @@ img {vertical-align: middle;}
 
     width: 145px;
 
+}
 
+.like_home{
+    position: absolute;
+    right: 15px;
+}
 
+.price_home p{
+    position: absolute;
+    left: 15px;
+}
 
-
+.stars img{
+    position: absolute;
+    right: 15px;
 }
 
 /* для обререзание переноса текста*/
@@ -1119,13 +1223,16 @@ img {vertical-align: middle;}
     border-radius: 15px;
 }
 
-
+.bsn_mobile{
+    display: none;
+}
 
 
 .bigness_product_item img{
     position: relative;
     width: 250px;
     height: 250px;
+    object-fit: cover;
 }
 
 .bigness_product_item a{
@@ -1217,16 +1324,16 @@ img {vertical-align: middle;}
 
 .search_zapit{
     /* Rectangle 166 */
+    padding: 0 15px;
 
     box-sizing: border-box;
 
-    width: 200px;
+    /*min-width: 200px;*/
     height: 50px;
 
     border-radius: 15px;
 
     display: flex;
-    justify-content: center; /* Горизонтальное выравнивание */
     align-items: center;     /* Вертикальное выравнивание */
 
 }
@@ -1241,6 +1348,13 @@ img {vertical-align: middle;}
     font-size: 14px;
     line-height: 100%;
     /* identical to box height, or 14px */
+}
+
+.pop_zap{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    gap: 20px;
 }
 
 /*//////////////////////////////////////////////////////////*/
@@ -1602,11 +1716,18 @@ img {vertical-align: middle;}
 
     border-radius: 15px;
     margin-bottom: 25px;
+
+    position: relative;
+
+
+
 }
 
 .product_list img{
     width: 310px;
     height: 270px;
+
+    object-fit: cover;
 }
 
 .product_list a{
@@ -1685,12 +1806,15 @@ img {vertical-align: middle;}
     display: flex;
     align-items: flex-end;
     height: 128px;
+
+    position: absolute;
+    bottom: 30px;
 }
 
 .street a{
     /* Київ, якась там вулиця. 14 черня 2024 */
     font-family: "Montserrat", sans-serif;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
 
     font-style: normal;
     font-weight: 500;
@@ -1941,6 +2065,13 @@ body.modal-open {
 /*    background: #555;*/
 /*}*/
 
+.cat_name_modal{
+    font-family: 'Montserrat',serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+}
+
 .subCategory{
     font-family: "Montserrat", sans-serif;
     font-style: normal;
@@ -1961,6 +2092,8 @@ body.modal-open {
 .menu-item a{
     text-decoration: none;
 }
+
+
 
 /*.menu-item a:hover{*/
 /*    color: #A1A1A1;*/
@@ -2562,6 +2695,33 @@ label.checkbox_item{
 
 }
 
+.countSelected{
+    position: absolute;
+    top: 0;
+    left: 50px;
+
+    background-color: #FFE710;
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    justify-content: center; /* Горизонтальное выравнивание */
+    align-items: center;     /* Вертикальное выравнивание */
+
+    border-radius: 20px;
+
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    /* or 20px */
+
+    color: #595959;
+
+
+}
+
 /* Modal Content */
 .modal-context2 {
     overflow-y: hidden;
@@ -2710,6 +2870,7 @@ label.checkbox_item{
 .footer-list li{
 
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .footer-list ul{
@@ -2805,3 +2966,7 @@ label.checkbox_item{
 /*tr:nth-child(even) {*/
 /*    background-color: #dddddd;*/
 /*}*/
+
+.box2{
+    display: none;
+}

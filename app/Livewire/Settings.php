@@ -44,6 +44,7 @@ class Settings extends Component
         $fullName = explode(' ', auth()->user()->name);
         if (Auth::user()->utype === 'BSN')
         {
+
             $this->state['name'] = auth()->user()->name;
             $this->state['email'] = auth()->user()->email;
             $this->state['phone_number'] = auth()->user()->phone_number;

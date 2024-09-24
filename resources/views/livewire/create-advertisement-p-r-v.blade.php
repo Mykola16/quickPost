@@ -19,7 +19,9 @@
                             <label>Вкажіть категорію</label><br>
                             <div class="menu" id="myBtn">
                                 <div class="menu-item" style="height: 40px; margin-top: 15px; border-right: 5px solid #2E2E2E;">
-                                    <p id="selectedCategory" style="{{ $selectedCategoryName ? 'color: #2E2E2E;' : 'color: #A1A1A1;' }}">{{ $selectedCategoryName ?? 'Категорія' }}</p>
+                                    <p id="selectedCategory" class="{{ $selectedCategoryName ? 'selected2' : 'unselected2' }}">
+                                        {{ $selectedCategoryName ?? 'Категорія' }}
+                                    </p>
                                     <img style="margin-right: 15px" src="{{ asset('assets/images/seting_menu_btn.png') }}" alt="">
                                 </div>
 
@@ -32,7 +34,7 @@
 
                                                 <div class="menu-item" data-category-id="{{ $category->id }}" onclick="showSubCategories({{ $category->id }})">
                                                     <a href="#{{$category->id}}" data-category-id="{{ $category->id }}" wire:click="selectCategory('{{ $category->id  }}')" onclick="closeModal()">
-                                                        <p style="font-family: 'Montserrat',serif; font-style: normal; font-weight: 700; font-size: 14px; color: #2E2E2E;">{{ $category->name }}</p></a>
+                                                        <p class="cat_name_modal">{{ $category->name }}</p></a>
                                                     <img src="{{ asset('assets/images/button_cat.png') }}" alt="">
                                                 </div>
                                             @endforeach
@@ -75,7 +77,7 @@
 
                             <div class="cont_region" id="cont_region">
                                 @foreach ($regions as $region)
-                                    <div style="margin-top: 15px" onclick="selectRegion('{{ $region }}')" wire:click="selectRegion('{{ $region }}')">
+                                    <div class="unselected" style="margin-top: 15px" onclick="selectRegion('{{ $region }}')" wire:click="selectRegion('{{ $region }}')">
                                         <a>{{ $region }}</a>
                                     </div>
                                 @endforeach
@@ -113,7 +115,7 @@
                         <div class="img_boxes">
                             <div style="display: flex; flex-wrap: wrap; gap: 20px">
                                 @foreach(range(0, 7) as $i)
-                                    <div class="img_box" style="background-color: #EFEFEF;" wire:key="img_box_{{ $i }}">
+                                    <div class="img_box" wire:key="img_box_{{ $i }}">
                                         @if(isset($img[$i]))
                                             <!-- Если изображение загружено, показываем его -->
                                             <img class="file_img" src="{{ $img[$i]->temporaryUrl() }}" alt="Фото {{ $i+1 }}">
@@ -125,7 +127,7 @@
                                             </label>
                                         @else
                                             <!-- Если изображение не загружено, показываем значок камеры -->
-                                            <img src="{{ asset('assets/images/кам.png') }}" alt="Значок камеры">
+                                            <img class="kamera" src="{{ asset('assets/images/кам.png') }}" alt="Значок камеры">
                                         @endif
                                     </div>
                                 @endforeach
@@ -140,7 +142,7 @@
                                 <div style="margin-top: 35px" wire:ignore>
                                     <label>Вкажіть стан товару</label><br>
                                     <div onclick="selectedRegion(this)" class="menu-item" style="height: 40px; margin-top: 15px;margin-bottom: 0;border-right: 5px solid #2E2E2E;">
-                                        <p id="selected-stane-text" style="font-size:20px; color: #A1A1A1;">стан</p>
+                                        <p id="selected-stane-text" style="font-size:20px;">стан</p>
                                         <img style="margin-right: 15px" src="{{ asset('assets/images/seting_menu_btn.png') }}" alt="">
                                     </div>
 
@@ -192,15 +194,6 @@
         </form>
     </div>
     <style>
-        .menu-item p{
-            /* стан */
-            font-family: 'Montserrat', serif;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 100%;
-            color: #A1A1A1;
-        }
     </style>
 
     <script>
@@ -233,7 +226,6 @@
         function selectRegion(region) {
             // Зміна тексту вибраної області
             document.getElementById('selected-region-text').textContent = region;
-            document.getElementById('selected-region-text').style.color = "#2E2E2E";
             var content = document.getElementById("cont_region");
 
             content.style.display = "none";
@@ -242,7 +234,6 @@
         function selectStane(stane) {
             // Зміна тексту вибраної області
             document.getElementById('selected-stane-text').textContent = stane;
-            document.getElementById('selected-stane-text').style.color = "#2E2E2E";
 
             const content2 = document.getElementById("cont_region2"); // Ваш ID для меню
             content2.style.display = "none";
