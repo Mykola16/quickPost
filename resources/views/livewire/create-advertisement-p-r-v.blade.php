@@ -70,7 +70,7 @@
 
                         <div style="margin-left: 20px; position: relative;" wire:ignore>
                             <label>Місцезнаходження</label><br>
-                            <div onclick="selectedRegion(this)" class="menu-item" style="height: 40px; margin-top: 15px;margin-bottom: 0;border-right: 5px solid #2E2E2E;">
+                            <div onclick="selectedRegion(this)" id="menu_item_reg" class="menu-item" style="height: 40px; margin-top: 15px;margin-bottom: 0;border-right: 5px solid #2E2E2E;">
                                 <p id="selected-region-text">Оберіть область</p>
                                 <img style="margin-right: 15px" src="{{ asset('assets/images/seting_menu_btn.png') }}" alt="">
                             </div>
@@ -141,7 +141,7 @@
 
                                 <div style="margin-top: 35px" wire:ignore>
                                     <label>Вкажіть стан товару</label><br>
-                                    <div onclick="selectedRegion(this)" class="menu-item" style="height: 40px; margin-top: 15px;margin-bottom: 0;border-right: 5px solid #2E2E2E;">
+                                    <div onclick="selectedRegion(this)" id="menu_item_stan" class="menu-item" style="height: 40px; margin-top: 15px;margin-bottom: 0;border-right: 5px solid #2E2E2E;">
                                         <p id="selected-stane-text" style="font-size:20px;">стан</p>
                                         <img style="margin-right: 15px" src="{{ asset('assets/images/seting_menu_btn.png') }}" alt="">
                                     </div>
@@ -227,8 +227,11 @@
             // Зміна тексту вибраної області
             document.getElementById('selected-region-text').textContent = region;
             var content = document.getElementById("cont_region");
+            var content3 = document.getElementById("menu_item_reg");
 
             content.style.display = "none";
+            content3.style.borderRadius = "5px 5px 5px 5px";
+
         }
 
         function selectStane(stane) {
@@ -236,7 +239,11 @@
             document.getElementById('selected-stane-text').textContent = stane;
 
             const content2 = document.getElementById("cont_region2"); // Ваш ID для меню
+            var content3 = document.getElementById("menu_item_stan");
+
+
             content2.style.display = "none";
+            content3.style.borderRadius = "5px 5px 5px 5px";
         }
 
     </script>

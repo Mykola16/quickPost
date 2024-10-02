@@ -98,7 +98,7 @@
                                     </div>
 
                                     @if($selectedUserId == $user->id)
-                                        <div class="menu">
+                                        <div class="menu22">
                                             <ul>
                                                 <li style="padding-top: 20px; padding-bottom: 17px;" >Редагувати</li> {{--wire:click="editUser({{ $user->id }})"--}}
                                                 <li style="padding: 17px 0;">Заблокувати</li>
@@ -141,7 +141,7 @@
     <div class="add_modal" > {{--wire:ignore--}}
         <div class="add_cont">
             <form wire:submit.prevent="{{ $selectedUserId ? 'updateUser' : 'saveUser' }}">
-                <a style="position: absolute; top: 10px; right: 10px;cursor: pointer;font-size: 25px;font-weight: 500"
+                <a class="x" style="position: absolute; top: 10px; right: 10px;cursor: pointer;font-size: 25px;font-weight: 500"
                    wire:click="closeModal">x
                 </a>
                 <label>Ім’я користувача</label><br>
@@ -185,30 +185,6 @@
     @endif
 
     <style>
-        .modal5 {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-            align-items: center;
-            justify-content: center;
-        }
-        .modal-content5 {
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            width: 500px;
-            position: relative;
-        }
-        .close-button5 {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-        }
-
         .modal-content5 button{
             width: 180px;
             height: 40px;
@@ -220,28 +196,6 @@
             font-weight: 500;
             font-size: 18px;
             line-height: 100%;
-
-            color: #FFFFFF;
-        }
-
-        .modal-content5 h2{
-            font-family: 'Montserrat', serif;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 100%;
-
-            color: #000000;
-        }
-
-        .modal-content5 p{
-            font-family: 'Montserrat', serif;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 100%;
-
-            color: #000000;
         }
     </style>
 

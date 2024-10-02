@@ -31,11 +31,11 @@
                     <img class="prod_img" src="{{Storage::url($image)}}" alt="">
                 </a>
 
-                <div class="prod_name_adm">
+                <div class="prod_name_adm" style="max-width: 60%;overflow: hidden">
                     <a href="{{ route('product.show', $product->id) }}">{{ $product->name }}</a>
                 </div>
 
-                <div class="desc_prod_adm">
+                <div class="desc_prod_adm" style="max-width: 60%;overflow: hidden">
                     <p>{{ $product->short_description }}</p>
                 </div>
 

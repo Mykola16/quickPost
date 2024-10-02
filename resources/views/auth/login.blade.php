@@ -6,10 +6,52 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 {{--    <title>@yield('title')</title>--}}
-    <title>Login</title>
+    <title>Вхід</title>
 
+    <link rel="stylesheet" href="{{ asset('assets/styles/day.css')}}" id="theme">
     <link rel="stylesheet" type="text/css" href="{{ ('assets/styles/login.css') }}">
     <link rel="icon" href="{{ asset('favicon.png') }}" type="image/x-icon">
+
+    <script>
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            const themeLink = document.getElementById('theme');
+            if (savedTheme === '1') {
+                themeLink.href = "/assets/styles/night.css";
+            } else {
+                themeLink.href = "/assets/styles/day.css";
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeSwitch = document.getElementById('switchMode').querySelector('input');
+            const themeLink = document.getElementById('theme');
+
+            // Проверяем сохраненную тему в localStorage
+            const savedTheme = localStorage.getItem('theme');
+
+            if (savedTheme) {
+                if (savedTheme === '1') {
+                    themeLink.href = "/assets/styles/night.css";
+                    themeSwitch.checked = true;
+                } else {
+                    themeLink.href = "/assets/styles/day.css";
+                    themeSwitch.checked = false;
+                }
+            }
+
+            themeSwitch.onclick = function () {
+                if (themeSwitch.checked) {
+                    themeLink.href = "/assets/styles/night.css";
+                    localStorage.setItem('theme', '1');
+                } else {
+                    themeLink.href = "/assets/styles/day.css";
+                    localStorage.setItem('theme', '0');
+                }
+            };
+        });
+    </script>
 </head>
 <body>
 
@@ -59,9 +101,9 @@
                 <div class="login-form">
 
                     <label for="email">Електронна пошта</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" autocomplete="off">
                     <label style="margin-top: 25px" for="password">Пароль</label>
-                    <input type="password" id="password" name="password">
+                    <input type="password" id="password" name="password" autocomplete="off">
 
                     @if (Route::has('password.request'))
                     <a href="{{ route('password.request') }}">
@@ -81,7 +123,7 @@
                 </div>
 
             <div class="private">
-                <a href="#">Умовами користування</a>
+                <a href="{{ route('quick-post-terms-of-service') }}">Умовами користування</a>
             </div>
             </div>
 
@@ -92,6 +134,7 @@
         </form>
     </x-authentication-card>
 </x-guest-layout>
+
 </body>
 </html>
 

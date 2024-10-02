@@ -24,7 +24,7 @@
         </div>
 
         <button class="create_btn" >
-            @if(Auth::user()->utype === 'BSN' || Auth::user()->utype === 'ADM')
+            @if(Auth::user()->utype === 'BSN') {--|| Auth::user()->utype === 'ADM'--}}
                 <a href="{{route('Creation')}}"><p>Нове оголошення</p></a>
             @else
                 <a href="{{route('Create')}}"><p>Нове оголошення</p></a>

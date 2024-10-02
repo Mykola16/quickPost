@@ -20,6 +20,7 @@ class CategoryShow extends Component
 
         $this->category = $category;
         $this->products = $category->products;
+        $this->products = $category->products()->orderBy('created_at', 'desc')->get();
     }
 
 

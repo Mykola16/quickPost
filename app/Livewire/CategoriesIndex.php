@@ -62,7 +62,7 @@ class CategoriesIndex extends Component
             $query->where('region', 'like', '%' . $this->selectedRegion . '%');
         }
 
-        $this->products = $query->get();
+        $this->products = $query->orderBy('created_at', 'desc')->get();
     }
 
     public function addToCart($id)

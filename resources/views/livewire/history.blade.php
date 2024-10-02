@@ -11,7 +11,7 @@
         <img src="{{ asset('assets/images/search_black.png')}}" alt="search_icon">
     </div>
 
-    <div style="margin-top: 35px">
+    <div style="margin-top: 35px;overflow-x: hidden; overflow-y: auto; width: 1000px;  height: 875px">
 
             @foreach($orders as $item)
 

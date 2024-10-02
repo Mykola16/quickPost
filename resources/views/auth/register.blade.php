@@ -3,10 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Реєстрація</title>
 
+    <link rel="stylesheet" href="{{ asset('assets/styles/day.css')}}" id="theme">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/register.css') }}">
     <link rel="icon" href="{{ asset('favicon.png') }}" type="image/x-icon">
+
+    <script>
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            const themeLink = document.getElementById('theme');
+            if (savedTheme === '1') {
+                themeLink.href = "/assets/styles/night.css";
+            } else {
+                themeLink.href = "/assets/styles/day.css";
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeSwitch = document.getElementById('switchMode').querySelector('input');
+            const themeLink = document.getElementById('theme');
+
+            // Проверяем сохраненную тему в localStorage
+            const savedTheme = localStorage.getItem('theme');
+
+            if (savedTheme) {
+                if (savedTheme === '1') {
+                    themeLink.href = "/assets/styles/night.css";
+                    themeSwitch.checked = true;
+                } else {
+                    themeLink.href = "/assets/styles/day.css";
+                    themeSwitch.checked = false;
+                }
+            }
+
+            themeSwitch.onclick = function () {
+                if (themeSwitch.checked) {
+                    themeLink.href = "/assets/styles/night.css";
+                    localStorage.setItem('theme', '1');
+                } else {
+                    themeLink.href = "/assets/styles/day.css";
+                    localStorage.setItem('theme', '0');
+                }
+            };
+        });
+    </script>
 </head>
 <body>
 
@@ -41,8 +83,8 @@
 
                 <div id="nav">
                     <ul>
-                        <div><li class="login"><a href="{{ route('login') }}">Увійти</a></li></div>
-                        <div><li class="registr"><a href="{{ route('register') }}">Зареєструватись</a></li></div>
+                        <div><li class="login2"><a href="{{ route('login') }}">Увійти</a></li></div>
+                        <div><li class="registr2"><a href="{{ route('register') }}">Зареєструватись</a></li></div>
                     </ul>
                 </div>
 
@@ -57,21 +99,21 @@
                     </div>
 
                     <label for="name" id="nameLabel">Iм'я призвіще</label>
-                    <input  type="text" id="name" name="name" value="{{ old('name') }}" required>
+                    <input  type="text" id="name" name="name" value="{{ old('name') }}" required autocomplete="off">
 
                     <label for="email">Електронна пошта</label>
-                    <input  type="email" id="email" name="email" value="{{ old('email') }}" required>
+                    <input  type="email" id="email" name="email" value="{{ old('email') }}" required autocomplete="off">
 
                     <div id="socialNetworkGroup" style="display: none;">
                         <label for="social_network">Соц мережі (якщо є)</label>
-                        <input  type="text" id="social_network" name="social_network" value="{{ old('social_network') }}">
+                        <input  type="text" id="social_network" name="social_network" value="{{ old('social_network') }}" autocomplete="off">
                     </div>
 
                     <label for="password">Пароль</label>
                     <input  type="password" id="password" name="password" required>
 
                     <label for="password_confirmation">Повторіть Пароль</label>
-                    <input  type="password" id="password_confirmation" name="password_confirmation" required>
+                    <input  type="password" id="password_confirmation" name="password_confirmation" required autocomplete="off">
 
                     <div style="text-align: center;">
                         <button type="submit">Зареєструватись</button>
@@ -83,7 +125,7 @@
                 </div>
 
                 <div class="private">
-                    <a href="#">Умовами користування</a>
+                    <a href="{{ route('quick-post-terms-of-service') }}">Умовами користування</a>
                 </div>
 
             </div>

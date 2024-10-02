@@ -83,8 +83,16 @@ body::-webkit-scrollbar-track {
     border: 3px solid #FFFFFF;
 }
 
+.active-region {
+    color: #FFFFFF;
+}
+
+.inactive-region {
+    color: #A1A1A1;
+}
+
 .search input, .search_map input{
-    background-color: #2A2A2A;
+    background-color: #2E2E2E;
     color: #A1A1A1;
 }
 
@@ -272,6 +280,84 @@ h1{
     color: #FFFFFF;
 }
 
+
+/*////////////////////////////////////////////*/
+/*oformennya_zamovlennya*/
+
+.oformennya_zamovlennya h1{
+    color: #FFFFFF;
+}
+
+.form_zamovlennya label {
+    /* Ім’я */
+    color: #FFFFFF;
+}
+
+.form_zamovlennya input {
+    border: 3px solid #FFFFFF;
+    background: #2E2E2E;
+    color: #FFFFFF;
+}
+
+.form_zamovlennya2 label {
+    color: #FFFFFF;
+}
+
+.form_zamovlennya2 input {
+    border: 3px solid #FFFFFF;
+    background: #2E2E2E;
+    color: #FFFFFF;
+}
+
+.form_zamovlennya2 .NovaPost, .SpOplata{
+    border: 3px solid #FFFFFF;
+    color: #A1A1A1;
+}
+
+.oformlenya_content{
+    border-color: #FFFFFF;
+}
+
+label.checkbox_item{
+    color: #FFFFFF;
+}
+
+.checkmark_zamovlennya label{
+    color: #FFFFFF;
+}
+
+/*////////////////////////////////////////////*/
+/*Кошик/*oformennya_zamovlennya**/
+
+.modal-context2 {
+    background: #2E2E2E;
+    border: 3px solid #FFFFFF;
+}
+
+.modal-context2 a {
+   color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////*/
+
+
+/*////////////////////////////////////////////*/
 /*Cart*/
 
 .cart_empty a{
@@ -537,6 +623,11 @@ h1{
 .product_list_user{
     background: #474747;
     border-right: 5px solid #FFFFFF;
+}
+
+.deleteLike h3{
+    /* Прибрати з обраного */
+    color: #FFFFFF;
 }
 
 .product_list_user a{
@@ -921,26 +1012,382 @@ button.btn_message {
 
 
 
+/*////////////////////////////////////////////////////////*/
+/*ADMIN*/
+
+.admin_profile_menu{
+    border-color: #FFFFFF;
+}
+
+.admin_name{
+    /* Привіт, admin */
+    color: #FFFFFF;
+}
+
+.admin_profile_menu_item.active1{
+    border-left: 5px solid #FFFFFF;
+    border-right: 5px solid #FFFFFF;
+}
+
+.admin_profile_menu_item img
+{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.admin_profile_menu_item p
+{
+    /* Краса та здоров’я */
+    color: #FFFFFF;
+
+}
+
+.admin_profile_menu_item:hover, .admin_profile_menu_item:focus {
+    background-color: #474747;
+}
+
+/*////////////////////////////////////////////////////////*/
+.home_admin h3{
+    color: #FFFFFF;
+}
+
+.new_static img{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.new_static p, .new_static a{
+    /* Нові оголошення */
+    color: #FFFFFF;
+}
+
+.zamov_static p, .zamov_static a{
+    /* Активні */
+    color: #FFFFFF;
+}
+
+/*Newly_add list product*/
+
+.product_list_admin{
+    background: #474747;
+    border-right: 5px solid #FFFFFF;
+}
+
+.my_product_info a{
+    color: #FFFFFF;
+}
+
+.my_product_info p{
+    color: #FFFFFF;
+}
+
+.product_right_part_user p{
+    /* 4000 грн */
+    color: #FFFFFF;
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*Category_page Admin*/
+
+.category_admin_div{
+    background: #474747;
+    border-right: 5px solid #FFFFFF;
+}
+
+.category_admin_div input{
+    color: #A1A1A1;
+    background: #474747;
+}
+
+.category_admin_div button{
+    background: #FFFFFF;
+    /* Пошук */
+    color: #2E2E2E;
+}
+
+.cat_name_admin p {
+    color: #FFFFFF;
+}
+
+.subcategoriesAdm p{
+    color: #FFFFFF;
+}
+
+.add_cont_cat{
+    background: #474747;
+    border: 3px solid #FFFFFF;
+}
+
+.add_cont_cat label{
+    /* Вкажіть назву */
+    color: #FFFFFF;
+}
+
+.add_cont_cat input{
+   color: #FFFFFF;
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////*/
+/*ProductAdminList*/
+
+.admin_product_all_list{
+    background: #474747;
+    border-right: 5px solid #FFFFFF;
+}
+
+.prod_list_adm .admin_product_all_list .prod_name_adm a{
+    /* Футболка, велика */
+    color: #FFFFFF;
+}
+
+.prod_list_adm .admin_product_all_list .desc_prod_adm p{
+    color: #FFFFFF;
+}
+
+.prod_list_adm .admin_product_all_list .price_prod_adm p{
+    /* 4000 грн */
+    color: #FFFFFF;
+}
+
+.prod_list_adm .count_like{
+    color: #FFFFFF;
+}
+
+.prod_list_adm .admin_product_all_list .sms,
+.prod_list_adm .admin_product_all_list .ban,
+.prod_list_adm .admin_product_all_list .warning{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.users_admin_page input{
+    border: 3px solid #FFFFFF;
+    background: #2A2A2A;
+}
+
+
+.users_admin_page button{
+    background: #FFFFFF;
+    color: #2E2E2E;
+}
+
+.search_user_icon img{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.users_div{
+    background: #474747;
+    border-right: 5px solid #FFFFFF;
+}
+
+.cont_table td{
+    /* Ім’я користувача */
+    color: #FFFFFF;
+}
+
+.point{
+    background-color: #FFFFFF;
+}
+
+.add_user{
+    background: #FFFFFF;
+}
+
+.add_user p{
+    /* Додати */
+    color: #2E2E2E;
+}
+
+.add_cont input{
+    background: #474747;
+}
+
+/*//////////////////////////////////////////////////////*/
+/*Modal*/
+
+
+.add_cont{
+
+    background: #474747;
+    border: 3px solid #FFFFFF;
+}
+
+.add_cont label{
+    /* Ім’я користувача */
+    color: #FFFFFF;
+}
+
+.add_cont input{
+    border: 3px solid #FFFFFF;
+    background: #474747;
+    color: #FFFFFF;
+}
+
+.add_cont button{
+    background: #FFFFFF;
+    color: #2E2E2E;
+}
+
+.x{
+    color: #FFFFFF;
+}
+
+.rol_user{
+    background: #474747;
+    border: 3px solid #FFFFFF;
+}
+
+.rol_user a{
+    /* Роль */
+    color: #FFFFFF;
+}
+
+.rol_user img{
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.cont_role{
+    background: #474747;
+    border-color: #FFFFFF;
+}
+
+.cont_role p{
+    color: #FFFFFF;
+}
+
+.menu22 {
+    background: #474747;
+    border: 3px solid #FFFFFF;
+}
+
+.menu22 li:hover {
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.menu22 li {
+    border-bottom: 1px solid #FFFFFF;
+
+    border-bottom: 1px solid #FFFFFF;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////*/
+
+/*login*/
+
+.login-container {
+    background-color: #474747;
+    border: 3px solid #FFFFFF;
+}
+
+.login-container h2 {
+    color: #FFFFFF;
+}
+
+.social-login img {
+    filter: invert(1) grayscale(1) brightness(2);
+}
+
+.divider {
+    color: #FFFFFF;
+}
+
+.login{
+    /*margin-left: 38px;*/
+    border-bottom: 3px solid #FFFFFF;
+}
+
+.login a{
+    color: #FFFFFF;
+}
+
+.registr a:hover{
+    color: #FFFFFF;
+}
+
+.login-form label {
+    color: #FFFFFF;
+}
+
+.login-form input {
+    background: #474747;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+}
+
+.login-form a {
+    color: #FFFFFF;
+}
+
+.login-form button {
+    background-color: #FFFFFF;
+    color: #2E2E2E;
+}
+
+/* Під час входу ви погоджуєтесь з нашими  */
+.terms {
+    color: #FFFFFF;
+}
+
+.private a{
+    color: #FFFFFF;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////*/
+
+/*register*/
+
+.dropdown-label {
+    color: #FFFFFF;
+}
+
+.dropdown-container {
+    background-color: #474747;
+}
+
+.dropdown-select {
+    border-left: 5px solid #FFFFFF;
+    border-right: 5px solid #FFFFFF;
+
+    color: #FFFFFF;
+
+    background-color: #474747;
+}
+
+select:focus {
+    outline: none !important;
+    border-color: #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+input:focus {
+    outline: none !important;
+    border-color: #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+.login2 a{
+    color: #A1A1A1;
+}
+
+.registr2 a{
+
+    color: #FFFFFF;
+}
+
+.login2 a:hover{
+    color: #FFFFFF;
+}
+
+.registr2{
+
+    border-bottom: 3px solid #FFFFFF;
+
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*////////////////////////////////////////////////////////////////////////////*/
 /*footer*/
 
 .about_quickPost h1,

@@ -11,11 +11,11 @@
 
         <div>
             <div class="search_map" onclick="selectedRegion(this)" id="map_btn">
-                <p id="selected-region-text" style="cursor: pointer; color: {{ $selectedRegion === 'Вся Україна' ? '#A1A1A1' : '#2E2E2E' }};">
+                <p id="selected-region-text" class="{{ $selectedRegion === 'Вся Україна' ? 'inactive-region' : 'active-region' }}">
                     @if($selectedRegion)
                         {{ $selectedRegion }}
                     @else
-                        <p>Вся Україна</p>
+                        Вся Україна
                     @endif
                 </p>
 

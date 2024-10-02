@@ -72,7 +72,7 @@
                 <input type="file" id="photo" wire:model="photo" style="display: none;" accept="image/*">
 
                     <div class="input_container">
-                        <input id="messageInput" wire:model.defer="body" type="text" maxlength="102">
+                        <input id="messageInput" wire:model.defer="body" type="text" maxlength="90" autocomplete="off">
                         <img id="micClick2" class="micIcon2" src="{{ asset('assets/images/mic_icon.png')}}" alt="mic_icon">
                         <button class="btn_message" type="submit"><img src="{{ asset('assets/images/chat_send.png') }}"></button>
                     </div>

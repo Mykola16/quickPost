@@ -50,11 +50,31 @@
                     </div>
 
                     <div class="form_zamovlennya" style="margin-top: 25px">
+{{--                        <div>--}}
+{{--                            <label>Область</label><br>--}}
+{{--                            <input wire:model="Oblast"><br>--}}
+{{--                            @error('Oblast') <span class="error">{{ $message }}</span> @enderror--}}
+{{--                        </div>--}}
+
                         <div>
+                        <div style="position: relative;" wire:ignore>
                             <label>Область</label><br>
-                            <input wire:model="Oblast"><br>
-                            @error('Oblast') <span class="error">{{ $message }}</span> @enderror
+                            <div onclick="selectedRegion(this)" id="menu_item_reg" class="menu-item" style="height: 60px; margin-top: 15px;margin-bottom: 0;border-right: 5px solid #2E2E2E;">
+                                <p id="selected-region-text">Оберіть область</p>
+                                <img style="margin-right: 15px" src="{{ asset('assets/images/seting_menu_btn.png') }}" alt="">
+                            </div>
+
+                            <div class="cont_region" id="cont_region">
+                                @foreach ($regions as $region)
+                                    <div class="unselected" style="margin-top: 15px" onclick="selectRegion('{{ $region }}')" wire:click="selectRegion('{{ $region }}')">
+                                        <a>{{ $region }}</a>
+                                    </div>
+                                @endforeach
+                            </div>
                         </div>
+                        @error('selectedRegion') <span class="error">{{ $message }}</span> @enderror
+                        </div>
+
                         <div style="margin-left: 20px">
                             <label>№ відділення пошти</label><br>
                             <input wire:model="number_viddilennya"><br>
@@ -150,4 +170,46 @@
 
 
     </div>
+
+    <script>
+        function selectedRegion(element) {
+            const content = element.nextElementSibling;
+
+            const icon = element.querySelector('img');
+
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                element.style.borderRadius = "5px 5px 5px 5px";
+
+
+                if (icon) {
+                    icon.src = "assets/images/seting_menu_btn.png";
+                }
+
+            } else {
+                content.style.display = "block";
+                element.style.borderRadius = "5px 5px 0 0";
+                content.style.borderRadius = "0 0 5px 5px";
+
+
+                if (icon) {
+                    icon.src = "assets/images/btn_v_setting.png";
+                }
+            }
+        }
+
+        function selectRegion(region) {
+
+
+            // Зміна тексту вибраної області
+            document.getElementById('selected-region-text').textContent = region;
+            var content = document.getElementById("cont_region");
+            var content3 = document.getElementById("menu_item_reg");
+
+            content.style.display = "none";
+            content3.style.borderRadius = "5px 5px 5px 5px";
+        }
+
+
+    </script>
 </div>

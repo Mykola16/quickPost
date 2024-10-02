@@ -2,34 +2,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
     padding: 100px;
 }
 
 
-
-select:focus {
-    outline: none !important;
-    border-color: #2E2E2E !important;
-    box-shadow: none !important;
-}
-
-input:focus {
-    outline: none !important;
-    border-color: #2E2E2E !important;
-    box-shadow: none !important;
-}
-
-
-
 .login-container {
-    background-color: #EFEFEF;
     border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 550px;
-    border: 3px solid black;
-
 }
 
 .login-container h2 {
@@ -42,10 +22,6 @@ input:focus {
     font-weight: 700;
     font-size: 24px;
     line-height: 100%;
-
-
-    color: #2E2E2E;
-
 }
 
 
@@ -82,11 +58,6 @@ input:focus {
     font-weight: 400;
     font-size: 20px;
     line-height: 100%;
-
-
-    color: #2E2E2E;
-
-
 }
 
 
@@ -148,52 +119,27 @@ ul{
     /*padding-right: 30px;*/
 }
 
-
-
-.login a{
-    color: #A1A1A1;
-}
-
-.registr a{
-
-    color: #2E2E2E;
-}
-
-.login a:hover{
-    color: #2E2E2E;
-}
-
-.registr{
-
-
+.registr2{
 
     padding-bottom: 5px;
     padding-left: 7px;
     padding-right: 8px;
-    border-bottom: 3px solid black;
-
 }
 
-label {
-
-
-    color: #2E2E2E;
-}
+/*label {*/
+/*    color: #2E2E2E;*/
+/*}*/
 
 
 
 .dropdown-container {
     display: flex;
     align-items: center;
-    background-color: #EFEFEF;
-
-
 }
+
 .dropdown-label {
     margin-right: 10px;
     /* Регестрація як */
-
-
 
     font-family: 'Montserrat', serif;
     font-style: normal;
@@ -201,26 +147,18 @@ label {
     font-size: 20px;
     line-height: 100%;
     /* identical to box height, or 20px */
-
-    color: #2E2E2E;
-
-
 }
+
 .dropdown-select {
-    border-left: 5px solid #2E2E2E;
-    border-right: 5px solid #2E2E2E;
     border-radius: 5px;
     font-size: 16px;
     width: 500px;
     height: 40px;
-    background-color: #EFEFEF;
     margin-left: 25px;
 
     border-top: none;
     border-bottom: none;
 }
-
-
 
 
 /* label, input email */
@@ -239,8 +177,6 @@ label {
     line-height: 100%;
     /* identical to box height, or 20px */
 
-    color: #2E2E2E;
-
     display: block;
     margin-top: 25px;
 
@@ -249,12 +185,11 @@ label {
 
 
 .login-form input {
-    background-color: #EFEFEF;
     box-sizing: border-box;
 
     width: 500px;
     height: 40px;
-    border: 1px solid black;
+
     border-radius: 15px;
 	margin-left: 25px;
 
@@ -265,12 +200,10 @@ label {
 }
 
 
-
 .login-form a {
     display: block;
     font-size: 20px;
 	font-weight: 300;
-    color: #2E2E2E;
     text-decoration: none;
     margin-bottom: 35px;
 	margin-left: 15px;
@@ -280,7 +213,6 @@ label {
     width: 240px;
     height: 50px;
 
-    background: #2E2E2E;
     border-radius: 15px;
 
     cursor: pointer;
@@ -289,28 +221,13 @@ label {
 
     /* Зареєструватись */
 
-
     font-family: 'Montserrat', serif;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 100%;
     /* identical to box height, or 24px */
-
-    color: #FFFFFF;
-
-
 }
-
-.login-form button:hover {
-    background-color: #000000;
-}
-
-
-
-
-
-
 
 
 /* Під час входу ви погоджуєтесь з нашими  */
@@ -323,8 +240,6 @@ label {
     line-height: 100%;
     /* or 20px */
     text-align: center;
-
-    color: #2E2E2E;
 }
 
 /* .pass {
@@ -346,8 +261,6 @@ label {
     font-weight: 550;
     font-size: 20px;
     line-height: 100%;
-
-    color: #2E2E2E;
 }
 
 

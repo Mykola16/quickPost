@@ -23,7 +23,7 @@ class Chosen extends Component
                 ->from('likes')
                 ->where('user_id', auth()->id())
                 ->where('liked', true);
-        })->get();
+        })->orderBy('created_at', 'desc')->get();
     }
 
     public function deleteLike($productId)

@@ -11,7 +11,7 @@ class History extends Component
 {
     public function render()
     {
-        $orders = Order::where('user_id', Auth::user()->id)->orderBy('created_at')->get();
+        $orders = Order::where('user_id', Auth::user()->id)->orderBy('created_at', 'desc')->get();
         return view('livewire.history', compact('orders'))
             ->layout("layouts.profile");
     }

@@ -31,6 +31,10 @@ li {
     display: flex;
 }
 
+input{
+    border: none;
+    outline: none;
+}
 
 /*//////////////////////////////////////*/
 /*HOME PAGE*/
@@ -217,8 +221,6 @@ li {
     width: 74px;
     height: 70px;
     margin-left: 41px;
-
-
 }
 
 
@@ -322,6 +324,14 @@ li {
     display: flex;
     align-items: center;
 
+}
+
+.active-region {
+    cursor: pointer;
+}
+
+.inactive-region {
+    cursor: pointer;
 }
 
 /*.search_map input{*/
@@ -836,6 +846,8 @@ img {vertical-align: middle;}
     margin-top: 20px;
     margin-right: 20px;
 
+    object-fit: cover;
+    background-position: center;
 }
 
 .button_buy{
@@ -1886,9 +1898,6 @@ img {vertical-align: middle;}
     line-height: 100%;
     /* or 16px */
     text-decoration-line: underline;
-
-    color: #2E2E2E;
-
     cursor: pointer;
 
 }
@@ -2312,6 +2321,10 @@ body.modal-open {
     font-weight: 500;
     font-size: 20px;
     line-height: 100%;
+
+    white-space: nowrap;
+    overflow: hidden;
+    width: 160%;
 }
 
 .cart_product_price{
@@ -2461,10 +2474,6 @@ body.modal-open {
     font-size: 32px;
     line-height: 100%;
     /* identical to box height, or 32px */
-
-    color: #2E2E2E;
-
-
 }
 
 .oformennya{
@@ -2492,11 +2501,6 @@ body.modal-open {
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
-
-    color: #2E2E2E;
-
-
-
 }
 
 .form_zamovlennya input {
@@ -2510,10 +2514,7 @@ body.modal-open {
     width: 310px;
     height: 60px;
 
-    border: 3px solid #2E2E2E;
     border-radius: 15px;
-
-
 }
 
 .form_zamovlennya2{
@@ -2532,8 +2533,6 @@ body.modal-open {
     /* identical to box height */
 
     color: #A1A1A1;
-
-
 }
 
 .form_zamovlennya2 label {
@@ -2545,11 +2544,6 @@ body.modal-open {
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
-
-    color: #2E2E2E;
-
-
-
 }
 
 .form_zamovlennya2 input {
@@ -2563,10 +2557,7 @@ body.modal-open {
     width: 640px;
     height: 60px;
 
-    border: 3px solid #2E2E2E;
     border-radius: 15px;
-
-
 }
 
 .form_zamovlennya2 .NovaPost, .SpOplata{
@@ -2585,7 +2576,6 @@ body.modal-open {
     width: 640px;
     height: 60px;
 
-    border: 3px solid #2E2E2E;
     border-radius: 15px;
 
     font-family: "Montserrat", sans-serif;
@@ -2615,7 +2605,6 @@ body.modal-open {
     height: 80px;
 
     border-style: solid;
-    border-color: #2E2E2E;
     border-width: 0 3px 3px 3px;
     border-radius: 0 0 15px 15px;
 }
@@ -2635,8 +2624,6 @@ label.checkbox_item{
     font-weight: 500;
     font-size: 18px;
     line-height: 100%;
-
-    color: #2E2E2E;
 }
 
 .checkmark_zamovlennya{
@@ -2656,10 +2643,6 @@ label.checkbox_item{
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
-
-    color: #2E2E2E;
-
-
 }
 
 
@@ -2735,20 +2718,13 @@ label.checkbox_item{
     /* Rectangle 461 */
 
     box-sizing: border-box;
-
-
-    background: #FFFFFF;
-    border: 3px solid #2E2E2E;
     border-radius: 15px;
-
 }
 
 
 
 .modal-context2 a {
     /* Кошик */
-
-
 
     font-family: "Montserrat", sans-serif;
     font-style: normal;

@@ -4,7 +4,7 @@
 
         <div class="forgot_pass_div">
             <div style="display: flex; justify-content: center;margin-bottom:50px">
-                <h1>Введіть свою електронну адресу ми надішлемо вам лист</h1>
+                <h1 style="width: 426px;" >Введіть свою електронну адресу ми надішлемо вам лист</h1>
             </div>
 
             <form method="POST" action="{{ route('password.email') }}">
@@ -37,7 +37,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: white;
         padding: 100px;
     }
 
